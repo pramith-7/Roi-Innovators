@@ -49,7 +49,8 @@ module.exports = {
       },
 
     backgroundImage: {
-        'gradient-black-blue': 'linear-gradient(90deg, rgba(0,11,59,1) 18%, rgba(0,30,48,1) 100%)', // Custom gradient
+        'gradient-black-blue': 'linear-gradient(13deg, rgba(0,11,39,1) 0%, rgba(0,34,70,1) 50%, rgba(0,11,39,1) 100%)',
+        'gradient-button' : 'linear-gradient(13deg, rgba(0,226,244,1) 0%, rgba(0,56,200,1) 100%)' 
       },
     },
   },

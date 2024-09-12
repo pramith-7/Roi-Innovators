@@ -10,13 +10,13 @@ const Video = () => {
   const [isOpen, setOpen] = useState(false);
 
   return (
-    <section id="home" className="relative z-10 py-16 md:py-20 lg:py-32">
+    <section id="home" className="relative z-10 py-20 md:py-20 lg:py-32">
       <div className="container">
         <SectionTitle
-          title="What we are capable doing ?"
+          title="What We Are Capable Doing ?"
           paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
           center
-          mb="80px"
+        
         />
 
         <div className="-mx-4 flex flex-wrap">
@@ -60,6 +60,14 @@ const Video = () => {
       <div className="absolute bottom-0 left-0 right-0 z-[-1]">
         <img src="/images/video/shape.svg" alt="shape" className="w-full" />
       </div>
+
+      <div className="flex justify-center items-center w-full m-auto">
+      <button  className="bg-primary dark:bg-gradient-button md:py-4 py-2 md:px-10 px-5 md:text-xl font-bold flex justify-center items-center md:rounded-xl rounded-md border-primary border shadow-2xl m-5 hover:scale-110 hover:shadow-glow transition-all duration-300 text-white">
+  Get a Free Consultation
+</button>
+
+</div>
+
     </section>
   );
 };
