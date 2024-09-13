@@ -19,7 +19,9 @@ module.exports = {
       black: "#090E34",
       dark: "#1D2144",
       primary: "#4A6CF7",
+      iceblue: "#38B6FF",
       yellow: "#FBB040",
+      gradientbutton : "bg-gradient-to-r from-cyan-200 to-blue-700",
       "body-color": "#959CB1",
     },
     screens: {
@@ -50,7 +52,8 @@ module.exports = {
 
     backgroundImage: {
         'gradient-black-blue': 'linear-gradient(13deg, rgba(0,11,39,1) 0%, rgba(0,34,70,1) 50%, rgba(0,11,39,1) 100%)',
-        'gradient-button' : 'linear-gradient(13deg, rgba(0,226,244,1) 0%, rgba(0,56,200,1) 100%)' 
+        'gradient-button' : 'linear-gradient(13deg, rgba(0,226,244,1) 0%, rgba(0,56,200,1) 100%)', 
+        'gradientbutton' : 'linear-gradient(13deg, rgba(0,226,244,1) 0%, rgba(0,56,200,1) 100%)' 
       },
     },
   },
