@@ -10,63 +10,38 @@ const Video = () => {
   const [isOpen, setOpen] = useState(false);
 
   return (
-    <section id="home" className="relative z-10 py-20 md:py-20 lg:py-32">
+    <section id="home" className="relative z-10 py-5 md:py-20 lg:py-18">
+      <div className="absolute md:right-[10%] opacity-55 justify-center z-[-1] transition -translate-y-72">
+        <div className="w-[1000px] h-[400px] rounded-full bg-gradientbg blur-[100px]"> </div>
+      </div>
+
       <div className="container">
         <SectionTitle
           title="What We Are Capable Doing ?"
           paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
           center
-        
+
         />
 
-        <div className="-mx-4 flex flex-wrap">
-          <div className="w-full px-4">
-            <div
-              className="wow fadeInUp mx-auto max-w-[770px] overflow-hidden rounded-md"
-              data-wow-delay=".15s"
-            >
-              <div className="relative aspect-[77/40] items-center justify-center">
-                <Image src="/images/video/video.jpg" alt="video image" fill />
-                <div className="absolute top-0 right-0 flex h-full w-full items-center justify-center">
-                  <button
-                    onClick={() => setOpen(true)}
-                    className="flex h-[70px] w-[70px] items-center justify-center rounded-full bg-white bg-opacity-75 text-primary transition hover:bg-opacity-100"
-                  >
-                    <svg
-                      width="16"
-                      height="18"
-                      viewBox="0 0 16 18"
-                      className="fill-current"
-                    >
-                      <path d="M15.5 8.13397C16.1667 8.51888 16.1667 9.48112 15.5 9.86602L2 17.6603C1.33333 18.0452 0.499999 17.564 0.499999 16.7942L0.5 1.20577C0.5 0.43597 1.33333 -0.0451549 2 0.339745L15.5 8.13397Z" />
-                    </svg>
-                  </button>
-                </div>
-              </div>
-            </div>
+        <div className="flex justify-center items-center w-full">
+          <div className="w-full h-[300px] md:h-[400px] max-w-4xl aspect-w-16 aspect-h-80">
+            <iframe
+              className="w-full h-full"
+              src="https://www.youtube.com/embed/UK1zH4L2DOQ?si=U01QUBkIwOQbquQ_"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
           </div>
         </div>
       </div>
 
-      <ModalVideo
-        channel="youtube"
-        autoplay={true}
-        start={true}
-        isOpen={isOpen}
-        videoId="L61p2uyiMSo"
-        onClose={() => setOpen(false)}
-      />
-
-      <div className="absolute bottom-0 left-0 right-0 z-[-1]">
-        <img src="/images/video/shape.svg" alt="shape" className="w-full" />
-      </div>
-
       <div className="flex justify-center items-center w-full m-auto">
-      <button  className="bg-primary dark:bg-gradient-button md:py-4 py-2 md:px-10 px-5 md:text-xl font-bold flex justify-center items-center md:rounded-xl rounded-md border-primary border shadow-2xl m-5 hover:scale-110 hover:shadow-glow transition-all duration-300 text-white">
-  Get a Free Consultation
-</button>
-
-</div>
+        <button className="bg-primary dark:bg-gradient-to-r from-cyan-400 to-blue-800 md:py-4 py-2 md:px-10 px-5 md:text-xl font-bold flex justify-center items-center md:rounded-xl rounded-md border-primary border m-5 dark:hover:bg-gradient-to-tr hover:scale-110 transition-all cursor-pointer duration-300 text-white">
+          Get a Free Consultation
+        </button>
+      </div>
 
     </section>
   );
