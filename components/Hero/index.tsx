@@ -1,5 +1,4 @@
 "use client";
-
 import Image from "next/image";
 import { useState } from "react";
 import SectionTitle from "../Common/SectionTitle";
@@ -15,10 +14,10 @@ const Video = () => {
         <div className="w-[1000px] h-[400px] rounded-full bg-gradientbg blur-[100px]"> </div>
       </div>
 
-      <div className="container">
+      <div className="container px-10">
         <SectionTitle
-          title="What We Are Capable Doing ?"
-          paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
+          title="WHAT WE ARE CAPABLE OF DOING ?"
+          paragraph="RoiInnovator is a place, where we transform your middle-class business into a powerful digital presence tool for business growth."
           center
 
         />

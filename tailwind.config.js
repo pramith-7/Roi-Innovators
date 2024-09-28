@@ -29,6 +29,7 @@ module.exports = {
       backgroundImage: {
         'gradient-black-blue': 'linear-gradient(13deg, rgba(0,11,39,1) 0%, rgba(0,34,70,1) 50%, rgba(0,11,39,1) 100%)',
         'gradientbg' : 'linear-gradient(13deg, rgba(55,67,211,1) 0%, rgba(42,255,167,1) 70%)',
+        'gradientbg2' : 'linear-gradient(13deg, rgba(55,67,211,1) 0%, rgba(42,255,167,1) 100%)',
       },
       boxShadow: {
         signUp: "0px 5px 10px rgba(4, 10, 34, 0.2)",
