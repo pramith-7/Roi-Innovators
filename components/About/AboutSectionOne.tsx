@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { motion , useInView } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
 const checkIcon = (
@@ -22,38 +22,44 @@ const AboutSectionOne = () => {
     </p>
   );
 
-    // Create a reference for the element
-    const ref = useRef(null);
-    // Hook to detect if the element is in view
-    const isInView = useInView(ref, { once: true }); 
+  // Create a reference for the element
+  const ref = useRef(null);
+  // Hook to detect if the element is in view
+  const isInView = useInView(ref, { once: true });
 
   return (
-    <section id="about" className="pt-16 md:pt-20 lg:pt-28">
+    <section id="about" className="pt-16 md:pt-20 lg:pt-28 relative overflow-x-clip">
+
+      <div className="absolute opacity-55 justify-center z-[-1] transition -translate-x-96">
+        <div className="w-[400px] h-[800px] rounded-full blur-[100px] bg-gradientbg2 "> </div>
+      </div>
+      <div className="absolute right-0 translate-x-80 opacity-55 z-[-1]">
+    <div className="w-[340px] h-[800px] rounded-full blur-[100px] bg-gradientbg2"></div>
+  </div>
+
       <div className="container px-10">
-        <div className="pb-16 dark:border-white/[.15] md:pb-20 lg:pb-28">
+        <div className="pb-16 border-white/[.15] md:pb-20 lg:pb-28">
           <div className="-mx-4 flex flex-wrap items-center">
             <div className="w-full px-4 lg:w-1/2">
 
-              <div className="absolute opacity-55 justify-center z-[-1] transition -translate-x-96">
-                <div className="w-[400px] h-[800px] rounded-full blur-[100px] bg-gradientbg2 "> </div>
-              </div>
-          
-          <motion.div
-                 ref={ref} // Attach the ref to the element
-                 initial={{ x: -100, opacity: 0 }}
-                 animate={isInView ? { opacity: 1 , x: 0 } : { opacity: 0 , x:-100 }} // Only animate when in view
-                 transition={{ duration: 1, delay: 0.5, ease: "easeOut" }}
-                 className="wow fadeInUp"
-          >
-              <h1 className="mb-3 mbtext-3xl font-bold !leading-tight text-black dark:text-white text-3xl md:text-[45px]">
-                About Our Company
-              </h1>
-              <p className="text-justify !leading-relaxed text-body-color md:text-lg text-sm">
-                We were just four boys when we hit rock bottom, our lowest point. It dawned on us that inevitably, a day would come when
-                we would have to take care of our families and provide for them. It was at this juncture that one of our friends had an
-                ingenious idea to offer a service tailored for average business owners, a means to enhance their business sales.
-              </p>
-          </motion.div>
+
+
+              <motion.div
+                ref={ref} // Attach the ref to the element
+                initial={{ x: -100, opacity: 0 }}
+                animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -100 }} // Only animate when in view
+                transition={{ duration: 1, delay: 0.5, ease: "easeOut" }}
+                className="wow fadeInUp"
+              >
+                <h1 className="mb-3 mbtext-3xl font-bold !leading-tight text-white text-3xl md:text-[45px]">
+                  About Our Company
+                </h1>
+                <p className="text-justify !leading-relaxed text-body-color md:text-lg text-sm">
+                  We were just four boys when we hit rock bottom, our lowest point. It dawned on us that inevitably, a day would come when
+                  we would have to take care of our families and provide for them. It was at this juncture that one of our friends had an
+                  ingenious idea to offer a service tailored for average business owners, a means to enhance their business sales.
+                </p>
+              </motion.div>
 
               <div
                 className="wow fadeInUp mb-12 max-w-[570px] lg:mb-0"
@@ -65,30 +71,27 @@ const AboutSectionOne = () => {
 
             <div className="w-full px-4 lg:w-1/2">
 
-            <div className="absolute opacity-55 right-0 justify-center z-[-1] transition translate-x-96">
-                <div className="w-[400px] h-[800px] rounded-full blur-[100px] bg-gradientbg "> </div>
-              </div>
 
 
-            <motion.div
-              ref={ref} // Attach the ref to the element
-              initial={{ x: 100, opacity: 0 }}
-              animate={isInView ? { opacity: 1 , x: 0 } : { opacity: 0 , x:100 }} // Only animate when in view
-              transition={{ duration: 1, delay: 0.5, ease: "easeOut" }}
-              className="wow fadeInUp"
-          >
-              <div
-                className="wow fadeInUp relative mx-auto aspect-[25/24] max-w-[500px] lg:mr-5 border-2 border-iceblue hover:scale-105 transition-all duration-300"
-                data-wow-delay=".2s"
+              <motion.div
+                ref={ref} // Attach the ref to the element
+                initial={{ x: 100, opacity: 0 }}
+                animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 100 }} // Only animate when in view
+                transition={{ duration: 1, delay: 0.5, ease: "easeOut" }}
+                className="wow fadeInUp"
               >
-                <Image
-                  src="/images/logo/logo.png"
-                  alt="about-image"
-                  fill
-                  className="mx-auto max-w-full"
-                />
-              </div>
-          </motion.div>
+                <div
+                  className="wow fadeInUp relative mx-auto aspect-[25/24] max-w-[500px] lg:mr-5 border-2 border-iceblue hover:scale-105 transition-all duration-300"
+                  data-wow-delay=".2s"
+                >
+                  <Image
+                    src="/images/logo/logo.png"
+                    alt="about-image"
+                    fill
+                    className="mx-auto max-w-full"
+                  />
+                </div>
+              </motion.div>
             </div>
           </div>
         </div>
