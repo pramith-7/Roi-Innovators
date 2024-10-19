@@ -29,7 +29,6 @@ const Video = () => {
           title="WHAT WE ARE CAPABLE OF DOING ?"
           paragraph="RoiInnovator is a place, where we transform your middle-class business into a powerful digital presence tool for business growth."
           center
-
         />
         </motion.div>
 

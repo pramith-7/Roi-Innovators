@@ -6,6 +6,7 @@ import Hero from "@/components/Hero";
 import Pricing from "@/components/Pricing";
 import Testimonials from "@/components/Testimonials";
 import { Inter } from "@next/font/google";
+import Pagination from "@/components/pagination";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,6 +17,7 @@ export default function Home() {
       <Hero />
       <AboutSectionOne />
       <Brands />
+      <Pagination />
       {/* <Features /> */}
       {/* <Video />   */}
       <Pricing />
