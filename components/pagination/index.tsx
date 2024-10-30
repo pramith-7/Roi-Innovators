@@ -138,33 +138,28 @@ export default function TabsComponent() {
       <div id="default-styled-tab-content">
         {/* Web Development & Web Design Tab Content */}
         {activeTab === 'profile' && (
-          <div
-            className="p-4 rounded-lg bg-gray-800"
+        <>
+          <div 
+            className="p-4 rounded-lg bg-gray-900 border-2 border-gray-800"
             id="styled-profile"
             role="tabpanel"
             aria-labelledby="profile-tab"
-          >
-            <CoursePreview
-              title="Mastering Web Development & Web Design"
-              videoTitle="Introduction to Web Development"
-              videoDescription="Learn the fundamentals of HTML, CSS, and JavaScript to build interactive and responsive web pages."
-              modules={[
-                {
-                  title: 'Module 1: HTML Basics',
-                  content: 'An introduction to the structure of web pages with HTML.',
-                },
-                {
-                  title: 'Module 2: CSS for Styling',
-                  content: 'Learn how to style your web pages using CSS.',
-                },
-                {
-                  title: 'Module 3: JavaScript Essentials',
-                  content: 'Understand the basics of JavaScript for interactivity.',
-                },
-              ]}
-            />
-          </div>
+            >
+        <div className='pb-5'>
+         <h1 className='bg-gray-800 p-2 font-semibold md:text-2xl rounded-md'> Introduction </h1>
+         <p className= 'p-2 text-md font-light text-justify'> At ROIInnovators, we craft custom websites that blend stunning design with flawless functionality. 
+          Our web design services ensure your site reflects your brand’s identity, while our development team builds responsive, SEO-optimized 
+          websites that deliver a seamless user experience across all devices. Whether it’s a sleek landing page or a full e-commerce platform, 
+          we bring your vision to life and drive real business results. Let us transform your online presence today! 
+          </p>
+        </div>
+        <div className='pb-5'>
+        <h1 className='bg-gray-800 p-2 font-semibold md:text-2xl rounded-md'> Milestone Map </h1>
+        </div>
+         </div>
+         </>
         )}
+        
 
         {/* Social Media Management Tab Content */}
         {activeTab === 'dashboard' && (
