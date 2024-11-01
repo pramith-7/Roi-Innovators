@@ -1,6 +1,6 @@
 "use client";
 import { useState } from 'react';
-import SectionTitle from '../Common/SectionTitle';
+import Roadmap from '@/Components/Roadmap';
 
 export default function TabsComponent() {
   const [activeTab, setActiveTab] = useState('profile');
@@ -154,7 +154,9 @@ export default function TabsComponent() {
           </p>
         </div>
         <div className='pb-5'>
+        
         <h1 className='bg-gray-800 p-2 font-semibold md:text-2xl rounded-md'> Milestone Map </h1>
+        <Roadmap />
         </div>
          </div>
          </>
