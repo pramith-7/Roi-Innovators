@@ -1,55 +1,52 @@
 "use client";
 import { useState } from 'react';
-import Roadmap from '@/Components/Roadmap';
+import Roadmap from '@/components/Roadmap';
+import { motion } from 'framer-motion';
+import backimage from '@/public/images/background1.jpg';
 
 export default function TabsComponent() {
-  const [activeTab, setActiveTab] = useState('profile');
+  const [activeTab, setActiveTab] = useState(null);
 
   return (
-    <div className="container md:px-10 px-4 mt-10">
+    <div className="mt-10 m-auto container lg:px-10">
       {/* Tabs Navigation */}
       <div className="mb-4 border-gray-700">
-
-  
         <h1 className='text-white mbtext-3xl font-bold !leading-tight text-3xl md:text-[45px] text-center p-4 xl:px-72 '>
-            Here's What You're Gonna Get in Each Service
+          Here's What You're Gonna Get in Each Service
         </h1>
 
         <p className="!leading-relaxed text-body-color md:text-lg text-sm text-center pt-10 pb-2">
           Select a Service
         </p>
 
-
         <ul
           className="flex flex-wrap text-xs md:text-base text-center justify-center"
           role="tablist"
         >
           {/* Profile Tab */}
-         <li className="lg:w-auto w-1/2 p-1" role="presentation">
+          <li className="lg:w-auto w-1/2 p-1" role="presentation">
             <button
-              className={`p-2 border-2 rounded-lg w-full lg:w-48 lg:h-20 ${
-                activeTab === 'profile'
-                  ? 'text-iceblue border-iceblue shadow-[0_0_15px_5px_rgba(56,182,255,0.2)]'
-                  : 'text-gray-400 hover:border-gray-300 border-gray-700 hover:text-gray-300'
-              }`}
+              className={`p-2 border-2 rounded-lg w-full lg:w-48 lg:h-20 ${activeTab === 'profile'
+                ? 'text-iceblue border-iceblue shadow-[0_0_15px_5px_rgba(56,182,255,0.2)]'
+                : 'text-gray-400 hover:border-gray-300 border-gray-700 hover:text-gray-300'
+                }`}
               onClick={() => setActiveTab('profile')}
               type="button"
               role="tab"
               aria-controls="profile"
               aria-selected={activeTab === 'profile'}
             >
-              Web Design 
+              Web Design
             </button>
           </li>
 
           {/* Social Media Management Tab */}
           <li className="lg:w-auto w-1/2 p-1" role="presentation">
             <button
-              className={`p-2 border-2 rounded-lg w-full lg:w-48 lg:h-20 ${
-                activeTab === 'dashboard'
+              className={`p-2 border-2 rounded-lg w-full lg:w-48 lg:h-20 ${activeTab === 'dashboard'
                 ? 'text-iceblue border-iceblue shadow-[0_0_15px_5px_rgba(56,182,255,0.2)] '
                 : 'text-gray-400 hover:border-gray-300 border-gray-700 hover:text-gray-300'
-            }`}
+                }`}
               onClick={() => setActiveTab('dashboard')}
               type="button"
               role="tab"
@@ -63,11 +60,10 @@ export default function TabsComponent() {
           {/* Paid Advertising Tab */}
           <li className="lg:w-auto w-1/2 p-1" role="presentation">
             <button
-              className={`p-2 border-2 rounded-lg w-full lg:w-48 lg:h-20 ${
-                activeTab === 'settings'
+              className={`p-2 border-2 rounded-lg w-full lg:w-48 lg:h-20 ${activeTab === 'settings'
                 ? 'text-iceblue border-iceblue shadow-[0_0_15px_5px_rgba(56,182,255,0.2)] '
                 : 'text-gray-400 hover:border-gray-300 border-gray-700 hover:text-gray-300'
-            }`}
+                }`}
               onClick={() => setActiveTab('settings')}
               type="button"
               role="tab"
@@ -81,54 +77,51 @@ export default function TabsComponent() {
           {/* Mobile App Development Tab */}
           <li className="lg:w-auto w-1/2 p-1" role="presentation">
             <button
-              className={`p-2 border-2 rounded-lg w-full lg:w-48 lg:h-20 ${
-                activeTab === 'contacts'
+              className={`p-2 border-2 rounded-lg w-full lg:w-48 lg:h-20 ${activeTab === 'contacts'
                 ? 'text-iceblue border-iceblue shadow-[0_0_15px_5px_rgba(56,182,255,0.2)] '
                 : 'text-gray-400 hover:border-gray-300 border-gray-700 hover:text-gray-300'
-            }`}
+                }`}
               onClick={() => setActiveTab('contacts')}
               type="button"
               role="tab"
               aria-controls="contacts"
               aria-selected={activeTab === 'contacts'}
             >
-              Mobile App Development 
+              Mobile App Development
             </button>
           </li>
 
-          {/* Copy Writing Tab */}   
-           <li className="lg:w-auto w-1/2 p-1" role="presentation">
+          {/* Copy Writing Tab */}
+          <li className="lg:w-auto w-1/2 p-1" role="presentation">
             <button
-              className={`p-2 border-2 rounded-lg w-full lg:w-48 lg:h-20 ${
-                activeTab === 'Copy Writing'
+              className={`p-2 border-2 rounded-lg w-full lg:w-48 lg:h-20 ${activeTab === 'Copy Writing'
                 ? 'text-iceblue border-iceblue shadow-[0_0_15px_5px_rgba(56,182,255,0.2)] '
                 : 'text-gray-400 hover:border-gray-300 border-gray-700 hover:text-gray-300'
-            }`}
+                }`}
               onClick={() => setActiveTab('Copy Writing')}
               type="button"
               role="tab"
               aria-controls="Copy Writing"
               aria-selected={activeTab === 'Copy Writing'}
             >
-              Copy Writing 
+              Copy Writing
             </button>
           </li>
 
           {/* Content Creation Tab */}
           <li className="lg:w-auto w-1/2 p-1" role="presentation">
             <button
-              className={`p-2 border-2 rounded-lg w-full lg:w-48 lg:h-20 ${
-                activeTab === 'Content Creation'
+              className={`p-2 border-2 rounded-lg w-full lg:w-48 lg:h-20 ${activeTab === 'Content Creation'
                 ? 'text-iceblue border-iceblue shadow-[0_0_15px_5px_rgba(56,182,255,0.2)]  shadow-[0_0_15px_5px_rgba(56,182,255,0.2)] '
                 : 'text-gray-400 hover:border-gray-300 border-gray-700 hover:text-gray-300'
-            }`}
+                }`}
               onClick={() => setActiveTab('Content Creation')}
               type="button"
               role="tab"
               aria-controls="Content Creation"
               aria-selected={activeTab === 'Content Creation'}
             >
-              Content Creation 
+              Content Creation
             </button>
           </li>
         </ul>
@@ -138,30 +131,59 @@ export default function TabsComponent() {
       <div id="default-styled-tab-content">
         {/* Web Development & Web Design Tab Content */}
         {activeTab === 'profile' && (
-        <>
-          <div 
-            className="p-4 rounded-lg bg-gray-900 border-2 border-gray-800"
-            id="styled-profile"
-            role="tabpanel"
-            aria-labelledby="profile-tab"
+          <>
+
+            <div
+              className="p-4 rounded-lg bg-slate-950/40 bg-cover bg-center border-2 border-gray-800"
+              id="styled-profile"
+              role="tabpanel"
+              aria-labelledby="profile-tab"
             >
-        <div className='pb-5'>
-         <h1 className='bg-gray-800 p-2 font-semibold md:text-2xl rounded-md'> Introduction </h1>
-         <p className= 'p-2 text-md font-light text-justify'> At ROIInnovators, we craft custom websites that blend stunning design with flawless functionality. 
-          Our web design services ensure your site reflects your brand’s identity, while our development team builds responsive, SEO-optimized 
-          websites that deliver a seamless user experience across all devices. Whether it’s a sleek landing page or a full e-commerce platform, 
-          we bring your vision to life and drive real business results. Let us transform your online presence today! 
-          </p>
-        </div>
-        <div className='pb-5'>
-        
-        <h1 className='bg-gray-800 p-2 font-semibold md:text-2xl rounded-md'> Milestone Map </h1>
-        <Roadmap />
-        </div>
-         </div>
-         </>
+             
+              <motion.div
+                initial={{ translateY: -50, opacity: 0 }}
+                animate={{ translateY: 0, opacity: 1 }}
+                transition={{ duration: 0.7 }}
+              >
+                <h1 className='md:text-4xl text-black my-7 py-3 text-center font-bold bg-sky-600 rounded-md'> Web Design </h1>
+              </motion.div>
+
+              <motion.div
+                initial={{ translateY: -50, opacity: 0 }}
+                animate={{ translateY: 0, opacity: 1 }}
+                transition={{ duration: 0.7, delay: 0.3 }}
+              >
+                <div className='pb-5'>
+                  <h1 className='my-2 border-iceblue border p-2 font-semibold md:text-2xl rounded-md'> (01). Introduction </h1>
+                  <p className='p-2 text-md text-gray-300 font-extralight text-justify'> At ROIInnovators, we craft custom websites that blend stunning design with flawless functionality.
+                    Our web design services ensure your site reflects your brand’s identity, while our development team builds responsive, SEO-optimized
+                    websites that deliver a seamless user experience across all devices. Whether it’s a sleek landing page or a full e-commerce platform,
+                    we bring your vision to life and drive real business results. Let us transform your online presence today!
+                  </p>
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ translateY: -50, opacity: 0 }}
+                animate={{ translateY: 0, opacity: 1 }}
+                transition={{ duration: 0.7, delay: 0.6 }}
+              >
+                <div className='pb-5'>
+                  <h1 className='my-2 border-iceblue border p-2 font-semibold md:text-2xl rounded-md'> (02). Milestone Map </h1>
+                  <Roadmap />
+                  <hr />
+                </div>
+                <div className='flex w-full justify-center'>
+                  <button className="bg-primary dark:bg-gradient-to-r from-cyan-400 to-blue-800 md:py-4 py-2 md:px-10 px-5 md:text-xl font-bold flex justify-center items-center md:rounded-xl rounded-md border-primary border m-5 dark:hover:bg-gradient-to-tr hover:scale-110 transition-all cursor-pointer duration-300 text-white">
+                    Get Started
+                  </button>
+                </div>
+              </motion.div>
+
+            </div>
+          </>
         )}
-        
+
 
         {/* Social Media Management Tab Content */}
         {activeTab === 'dashboard' && (
@@ -347,11 +369,10 @@ function CoursePreview({ title, videoTitle, videoDescription, modules }) {
             <div key={index} className="mb-2">
               <button
                 onClick={() => toggleModule(index)}
-                className={`w-full flex justify-between items-center p-4 text-left rounded-lg transition ${
-                  activeModule === index
-                    ? 'bg-blue-600 text-white'
-                    : 'bg-gray-700 text-white hover:bg-gray-600'
-                }`}
+                className={`w-full flex justify-between items-center p-4 text-left rounded-lg transition ${activeModule === index
+                  ? 'bg-blue-600 text-white'
+                  : 'bg-gray-700 text-white hover:bg-gray-600'
+                  }`}
               >
                 <span>{module.title}</span>
                 <span>{activeModule === index ? '-' : '+'}</span>

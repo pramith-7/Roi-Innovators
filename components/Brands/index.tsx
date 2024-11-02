@@ -55,7 +55,7 @@ const SingleBrand = ({ brand }: { brand: Brand }) => {
   const { href, image, name } = brand;
 
   return (
-    <div className="grayscale hover:grayscale-0 flex w-full max-w-full items-center justify-center py-[15px]">
+    <div className="grayscale hover:grayscale-0 flex w-full items-center justify-center py-[15px] max-w-full">
       <p className="relative md:h-14 md:w-14 h-8 w-8">
         <Image src={image} alt={name} fill />  
       </p>

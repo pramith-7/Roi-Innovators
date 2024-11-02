@@ -37,7 +37,7 @@ const AboutSectionOne = () => {
     <div className="w-[340px] h-[800px] rounded-full blur-[100px] bg-gradientbg2"></div>
   </div>
 
-      <div className="container px-10">
+      <div className="container xl:px-10">
         <div className="pb-16 border-white/[.15] md:pb-20 lg:pb-28">
           <div className="-mx-4 flex flex-wrap items-center">
             <div className="w-full px-4 lg:w-1/2">

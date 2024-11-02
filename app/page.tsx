@@ -6,7 +6,7 @@ import Hero from "@/components/Hero";
 import Pricing from "@/components/Pricing";
 import Testimonials from "@/components/Testimonials";
 import { Inter } from "@next/font/google";
-import Pagination from "@/components/pagination";
+import Pagination from "@/components/Pagination";
 
 const inter = Inter({ subsets: ["latin"] });
 

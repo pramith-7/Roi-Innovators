@@ -17,7 +17,7 @@ const Video = () => {
         <div className="w-[1000px] h-[400px] rounded-full bg-gradientbg blur-[100px]"> </div>
       </div>
 
-      <div className="container px-10">
+      <div className="container xl:px-10">
         <motion.div
           ref={ref} // Attach the ref to the element
           initial={{ opacity: 0 , y: -100  }}

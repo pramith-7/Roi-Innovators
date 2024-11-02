@@ -7,13 +7,13 @@ import { useRef } from "react";
 const WebDesignForm = () => {
 
   // Create a reference for the element
-  const ref = useRef(null);
+  const ref1 = useRef(null);
   const ref2 = useRef(null);
   const ref3 = useRef(null);
   const ref4 = useRef(null);
-  const ref5 = useRef(null);
+  
   // Hook to detect if the element is in view
-  const isInView = useInView(ref, { once: true });
+  const isInView = useInView(ref1, { once: true });
 
   return (
     <>
@@ -24,18 +24,18 @@ const WebDesignForm = () => {
         <div className="lg:w-full">
           <form className="">
             <motion.div
-              ref={ref} // Attach the ref to the element
+              ref={ref1} // Attach the ref to the element
               initial={{ y: -100, opacity: 0 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -100 }} // Only animate when in view
               transition={{ duration: 1, delay: 0, ease: "easeOut" }}
               className="wow fadeInUp"
             >
-              <h1 className='text-2xl font-bold py-3'> (i) Business Overview </h1>
+              <h1 className='text-2xl font-bold py-3'> (1) Business Overview </h1>
 
               <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="nature">
                 What is the nature of your business?
               </label>
-              <div className='grid md:grid-cols-4 grid-cols-2 pb-5 gap-1'>
+              <div className='grid md:grid-cols-4 grid-cols-2 pb-10 gap-1'>
                 <div>
                   <label htmlFor='ecommerce'>
                     <input
@@ -122,7 +122,7 @@ const WebDesignForm = () => {
               transition={{ duration: 1, delay: 0.5, ease: "easeOut" }}
               className="wow fadeInUp"
             >
-              <h1 className='text-2xl font-bold pt-10'> (ii) Website Goals </h1>
+              <h1 className='text-2xl font-bold py-3'> (02) Website Goals </h1>
               <div className='pb-5'>
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="goal">
                   What are the primary goals of your website ?
@@ -158,13 +158,13 @@ const WebDesignForm = () => {
               transition={{ duration: 1, delay: 1, ease: "easeOut" }}
               className="wow fadeInUp"
             >
-              <h1 className='text-2xl font-bold pt-3'> (iii)  Core Features </h1>
+              <h1 className='text-2xl font-bold py-3'> (04)  Core Features </h1>
 
               <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="feature">
                 What core features do you need on your website ?
               </label>
 
-              <div className='grid md:grid-cols-4 grid-cols-2 pb-5 gap-1'>
+              <div className='grid md:grid-cols-4 grid-cols-2 pb-10 gap-1'>
                 <div>
                   <label htmlFor='shopping-cart'>
                     <input
@@ -218,7 +218,7 @@ const WebDesignForm = () => {
                 Are there any specific integrations required?
               </label>
 
-              <div className='grid lg:grid-cols-4 grid-cols-2 pb-5 gap-1'>
+              <div className='grid lg:grid-cols-4 grid-cols-2 pb-10 gap-1'>
                 <div>
                   <input
                     id='payment-gateway'
@@ -265,10 +265,10 @@ const WebDesignForm = () => {
               </div>
 
 
-              <label className="md:text-lg text-md block text-gray-400 font-sans mb-22" htmlFor="cms">
+              <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="cms">
                 Do you need a content management system (CMS) like WordPress, Shopify, or custom-built?
               </label>
-              <div className='grid md:grid-cols-4 grid-cols-2 pb-5 '>
+              <div className='grid md:grid-cols-4 grid-cols-2 pb-10 '>
                 <div>
                   <label htmlFor='yes'>
                     <input
@@ -305,7 +305,7 @@ const WebDesignForm = () => {
               transition={{ duration: 1, delay: 1.5, ease: "easeOut" }}
               className="wow fadeInUp"
             >
-              <h1 className='text-2xl font-bold pt-10'> (iv) Design & User Experience </h1>
+              <h1 className='text-2xl font-bold py-3'> (04) Design & User Experience </h1>
               <div className='pb-5'>
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="preferences">
                   Do you have any specific design preferences or brand guidelines? (e.g., color schemes, fonts, logos)
@@ -336,7 +336,7 @@ const WebDesignForm = () => {
                 What is the desired user experience?
               </label>
 
-              <div className='grid md:grid-cols-4 grid-cols-2 pb-2 gap-1'>
+              <div className='grid md:grid-cols-4 grid-cols-2 pb-10 gap-1'>
                 <div>
                   <input
                     id='easy-navigation'
@@ -375,11 +375,11 @@ const WebDesignForm = () => {
 
 
 
-              <h1 className='text-2xl font-bold pt-10'> (v) Content </h1>
+              <h1 className='text-2xl font-bold py-3'> (05) Content </h1>
               <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="content">
                 What kind of content will be on the website?
               </label>
-              <div className='grid md:grid-cols-4 grid-cols-2 pb-2 gap-1'>
+              <div className='grid md:grid-cols-4 grid-cols-2 pb-10 gap-1'>
                 <div>
                   <input
                     id='text'
@@ -429,10 +429,10 @@ const WebDesignForm = () => {
 
 
 
-              <label className="md:text-lg text-md block text-gray-400 font-sans mb-22" htmlFor="content-creation">
+              <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="content-creation">
                 Will you need content creation services?
               </label>
-              <div className='grid md:grid-cols-4 grid-cols-2 pb-2 '>
+              <div className='grid md:grid-cols-4 grid-cols-2 pb-10 '>
                 <div>
                   <label htmlFor='yes'>
                     <input
@@ -469,7 +469,7 @@ const WebDesignForm = () => {
               transition={{ duration: 1, delay: 2, ease: "easeOut" }}
               className="wow fadeInUp"
             >
-              <h1 className='text-2xl font-bold pt-10'> (vi) SEO Analytics </h1>
+              <h1 className='text-2xl font-bold py-3'> (06) SEO Analytics </h1>
               <div className='pb-5'>
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="model">
                   What are the specific SEO services do you need ?
@@ -484,10 +484,10 @@ const WebDesignForm = () => {
                 />
               </div>
 
-              <label className="md:text-lg text-md block text-gray-400 font-sans mb-22" htmlFor="tracking">
+              <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="tracking">
                 Would you like to track user behaviour? (ex:- Google Analytics, Heatmaps)
               </label>
-              <div className='grid md:grid-cols-4 grid-cols-2 pb-2 '>
+              <div className='grid md:grid-cols-4 grid-cols-2 pb-10 '>
                 <div>
                   <label htmlFor='yes'>
                     <input
@@ -517,7 +517,7 @@ const WebDesignForm = () => {
 
 
 
-              <h1 className='text-2xl font-bold pt-10'> (vii) Security and Maintainance </h1>
+              <h1 className='text-2xl font-bold py-3'> (07) Security and Maintainance </h1>
               <div className='pb-5'>
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="security">
                   What level of security is required?
@@ -532,10 +532,10 @@ const WebDesignForm = () => {
                 />
               </div>
 
-              <label className="md:text-lg text-md block text-gray-400 font-sans mb-22" htmlFor="maintainance">
+              <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="maintainance">
                 Do you require maintenance services from the developer?
               </label>
-              <div className='grid md:grid-cols-4 grid-cols-2 pb-2 '>
+              <div className='grid md:grid-cols-4 grid-cols-2 pb-10 '>
                 <div>
                   <label htmlFor='yes'>
                     <input
@@ -571,7 +571,7 @@ const WebDesignForm = () => {
               transition={{ duration: 1, delay: 2.5, ease: "easeOut" }}
               className="wow fadeInUp"
             >
-              <h1 className='text-2xl font-bold pt-10'> (viii) Timeline & Budget </h1>
+              <h1 className='text-2xl font-bold py-3'> (08) Timeline & Budget </h1>
               <div className='pb-5'>
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="timeline">
                   What is your desired timeline for the project?
@@ -601,7 +601,7 @@ const WebDesignForm = () => {
               </div>
 
 
-              <h1 className='text-2xl font-bold pt-10'> (ix) Additional </h1>
+              <h1 className='text-2xl font-bold py-3'> (09) Additional </h1>
               <div>
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="additional">
                   Are there any additional features or special requests?
@@ -612,12 +612,12 @@ const WebDesignForm = () => {
 
 
 
-              <h1 className='text-2xl font-bold pt-10'> (x) Hosting & Domain </h1>
+              <h1 className='text-2xl font-bold py-3'> (10) Hosting & Domain </h1>
               <div>
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="assistant">
                   will you need assistance with domain name and hosting provider ?
                 </label>
-                <div className='grid md:grid-cols-4 grid-cols-2 pb-5 '>
+                <div className='grid md:grid-cols-4 grid-cols-2 pb-10'>
                   <div>
                     <label htmlFor='yes'>
                       <input
@@ -651,7 +651,7 @@ const WebDesignForm = () => {
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="assistant">
                   What is your preference for hosting?
                 </label>
-                <div className='grid md:grid-cols-4 grid-cols-2 pb-5 '>
+                <div className='grid md:grid-cols-4 grid-cols-2 pb-10'>
                   <div>
                     <label htmlFor='dedicated'>
                       <input
