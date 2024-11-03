@@ -1,5 +1,8 @@
+"use client";
 import { Brand } from "@/types/brand";
 import Image from "next/image";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 
 const brandsData: Brand[] = [
   {
@@ -30,8 +33,19 @@ const brandsData: Brand[] = [
 ];
 
 const Brands = () => {
+
+    const ref = useRef(null);
+    const isInView = useInView(ref, { once: true });
+
   return (
-    <section className="pt-16">    
+    <section className="pt-16">   
+     <motion.div
+                ref={ref} 
+                initial={{opacity: 0 }}
+                animate={isInView ? { opacity: 1} : { opacity: 0}}
+                transition={{ duration: 1, delay: 0, ease: "easeOut" }}
+                className="wow fadeInUp"
+              >
       <div className="flex flex-wrap">
         <div className="w-full">
           <div
@@ -44,6 +58,7 @@ const Brands = () => {
           </div>
         </div>
       </div>
+      </motion.div> 
     </section>
   );
 };

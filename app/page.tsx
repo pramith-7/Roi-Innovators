@@ -1,8 +1,9 @@
+import Hero from "@/components/Hero";
 import AboutSectionOne from "@/components/About/AboutSectionOne";
 import Brands from "@/components/Brands";
 import ScrollUp from "@/components/Common/ScrollUp";
 import Contact from "@/components/Contact";
-import Hero from "@/components/Hero";
+import Video from "@/components/Video";
 import Pricing from "@/components/Pricing";
 import Testimonials from "@/components/Testimonials";
 import { Inter } from "@next/font/google";
@@ -14,9 +15,10 @@ export default function Home() {
   return (
     <>
       {/* <Roadmap /> */}
-      <ScrollUp />
       <Hero />
+      <ScrollUp />
       <AboutSectionOne />
+      <Video />
       <Brands />
       <Pagination />
       {/* <Features /> */}
