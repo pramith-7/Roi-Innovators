@@ -1,226 +1,81 @@
 "use client";
-
-import Image from "next/image";
-import { useState } from "react";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 import SectionTitle from "../Common/SectionTitle";
 
-import ModalVideo from "react-modal-video";
 
 const Video = () => {
-  const [isOpen, setOpen] = useState(false);
+
+  // Create a reference for the element
+  const ref = useRef(null);
+  // Hook to detect if the element is in view
+  const isInView = useInView(ref, { once: true });
 
   return (
-    <>
-    {/* 1. Web Design */}
-    <section className="relative z-10 pb-20">
-      <div className="container">
-        <SectionTitle
-          title="Short Video About Each Service"
-          paragraph=""
-          center
-          
-        />
-        <p className="text-center text-3xl mb-5 text-iceblue"> Web Design </p>
+    <section id="home" className="relative z-10 py-5 md:py-10 lg:py-18 overflow-x-clip">
 
-        <div className="-mx-4 flex flex-wrap">
-          <div className="w-full px-4">
-            <div
-              className="wow fadeInUp mx-auto max-w-[770px] overflow-hidden rounded-md"
-              data-wow-delay=".15s"
-            >
-              <div className="relative aspect-[77/40] items-center justify-center">
-                <Image src="/images/video/video.jpg" alt="video image" fill />
-                <div className="absolute top-0 right-0 flex h-full w-full items-center justify-center">
-                  <button
-                    onClick={() => setOpen(true)}
-                    className="flex h-[70px] w-[70px] items-center justify-center rounded-full bg-white bg-opacity-75 text-primary transition hover:bg-opacity-100"
-                  >
-                    <svg
-                      width="16"
-                      height="18"
-                      viewBox="0 0 16 18"
-                      className="fill-current"
-                    >
-                      <path d="M15.5 8.13397C16.1667 8.51888 16.1667 9.48112 15.5 9.86602L2 17.6603C1.33333 18.0452 0.499999 17.564 0.499999 16.7942L0.5 1.20577C0.5 0.43597 1.33333 -0.0451549 2 0.339745L15.5 8.13397Z" />
-                    </svg>
-                  </button>
-                </div>
-              </div>
+      <div className="absolute opacity-55 justify-center z-[-1] transition -translate-x-96">
+        <div className="w-[400px] h-[800px] rounded-full blur-[100px] bg-gradientbg2 "> </div>
+      </div>
+      <div className="absolute right-0 translate-x-80 opacity-55 z-[-1]">
+        <div className="w-[340px] h-[800px] rounded-full blur-[100px] bg-gradientbg2"></div>
+      </div>
+
+      <div className="container xl:px-10">
+        <motion.div
+          ref={ref} // Attach the ref to the element
+          initial={{ opacity: 0, y: -40 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -100 }} // Only animate when in view
+          transition={{ duration: 0.5, delay: 0, ease: "easeOut" }}
+          className="wow fadeInUp"
+        >
+          <SectionTitle
+            title="WHAT WE ARE CAPABLE OF DOING ?"
+            paragraph="RoiInnovator is a place, where we transform your middle-class business into a powerful digital presence tool for business growth."
+            center
+          />
+        </motion.div>
+
+
+        <motion.div
+          ref={ref} // Attach the ref to the element
+          initial={{ opacity: 0, y: -40 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -40 }} // Only animate when in view
+          transition={{ duration: 0.5, delay: 0.5, ease: "easeOut" }}
+        >
+          <div className="flex justify-center items-center w-full">
+
+            <div className="w-full h-[300px] md:h-[400px] max-w-4xl aspect-w-16 aspect-h-80">
+
+              <iframe
+                className="w-full h-full"
+                src="https://www.youtube.com/embed/UK1zH4L2DOQ?si=U01QUBkIwOQbquQ_"
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
 
-      <ModalVideo
-        channel="youtube"
-        autoplay={true}
-        start={true}
-        isOpen={isOpen}
-        videoId="L61p2uyiMSo"
-        onClose={() => setOpen(false)}
-      />
+
+
+      <div className="flex justify-center items-center w-full m-auto">
+        <motion.div
+          ref={ref} // Attach the ref to the element
+          initial={{ opacity: 0, y: -40 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -40 }} // Only animate when in view
+          transition={{ duration: 0.5, delay: 1, ease: "easeOut" }}
+        >
+          <button className="bg-primary dark:bg-gradient-to-r from-cyan-400 to-blue-800 md:py-4 py-2 md:px-10 px-5 md:text-xl font-bold flex justify-center items-center md:rounded-xl rounded-md border-primary border m-5 dark:hover:bg-gradient-to-tr hover:scale-110 transition-all cursor-pointer duration-300 text-white">
+            Get a Free Consultation
+          </button>
+        </motion.div>
+      </div>
     </section>
-
-
-
-
-{/* 2.Content Creation */}
-<section className="relative z-10 pb-20">
-<div className="container">
-<SectionTitle
-          title=""
-          paragraph=""
-          center
-        
-        />
-<p className="text-center text-3xl mb-5 text-iceblue"> Content Creation </p>
-  <div className="-mx-4 flex flex-wrap">
-    <div className="w-full px-4">
-      <div
-        className="wow fadeInUp mx-auto max-w-[770px] overflow-hidden rounded-md"
-        data-wow-delay=".15s"
-      >
-        <div className="relative aspect-[77/40] items-center justify-center">
-          <Image src="/images/video/video.jpg" alt="video image" fill />
-          <div className="absolute top-0 right-0 flex h-full w-full items-center justify-center">
-            <button
-              onClick={() => setOpen(true)}
-              className="flex h-[70px] w-[70px] items-center justify-center rounded-full bg-white bg-opacity-75 text-primary transition hover:bg-opacity-100"
-            >
-              <svg
-                width="16"
-                height="18"
-                viewBox="0 0 16 18"
-                className="fill-current"
-              >
-                <path d="M15.5 8.13397C16.1667 8.51888 16.1667 9.48112 15.5 9.86602L2 17.6603C1.33333 18.0452 0.499999 17.564 0.499999 16.7942L0.5 1.20577C0.5 0.43597 1.33333 -0.0451549 2 0.339745L15.5 8.13397Z" />
-              </svg>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<ModalVideo
-  channel="youtube"
-  autoplay={true}
-  start={true}
-  isOpen={isOpen}
-  videoId="L61p2uyiMSo"
-  onClose={() => setOpen(false)}
-/>
-</section>
-
-
-
-
-{/* 3.Social Meida Management*/}
-<section className="relative z-10 pb-20">
-<div className="container">
-<SectionTitle
-    title=""
-    paragraph=""
-    center
-   
-  />
-<p className="text-center text-3xl mb-5 text-iceblue"> Social Media Management </p>
-
-  <div className="-mx-4 flex flex-wrap">
-    <div className="w-full px-4">
-      <div
-        className="wow fadeInUp mx-auto max-w-[770px] overflow-hidden rounded-md"
-        data-wow-delay=".15s"
-      >
-        <div className="relative aspect-[77/40] items-center justify-center">
-          <Image src="/images/video/video.jpg" alt="video image" fill />
-          <div className="absolute top-0 right-0 flex h-full w-full items-center justify-center">
-            <button
-              onClick={() => setOpen(true)}
-              className="flex h-[70px] w-[70px] items-center justify-center rounded-full bg-white bg-opacity-75 text-primary transition hover:bg-opacity-100"
-            >
-              <svg
-                width="16"
-                height="18"
-                viewBox="0 0 16 18"
-                className="fill-current"
-              >
-                <path d="M15.5 8.13397C16.1667 8.51888 16.1667 9.48112 15.5 9.86602L2 17.6603C1.33333 18.0452 0.499999 17.564 0.499999 16.7942L0.5 1.20577C0.5 0.43597 1.33333 -0.0451549 2 0.339745L15.5 8.13397Z" />
-              </svg>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<ModalVideo
-  channel="youtube"
-  autoplay={true}
-  start={true}
-  isOpen={isOpen}
-  videoId="L61p2uyiMSo"
-  onClose={() => setOpen(false)}
-/>
-</section>
-
-
-
-
-
-{/* 3.Social Meida Management*/}
-<section className="relative z-10 pb-20">
-<div className="container">
-<SectionTitle
-    title=""
-    paragraph=""
-    center
-  
-  />
-<p className="text-center text-3xl mb-5 text-iceblue"> Paid Advertising </p>
-
-  <div className="-mx-4 flex flex-wrap">
-    <div className="w-full px-4">
-      <div
-        className="wow fadeInUp mx-auto max-w-[770px] overflow-hidden rounded-md"
-        data-wow-delay=".15s"
-      >
-        <div className="relative aspect-[77/40] items-center justify-center">
-          <Image src="/images/video/video.jpg" alt="video image" fill />
-          <div className="absolute top-0 right-0 flex h-full w-full items-center justify-center">
-            <button
-              onClick={() => setOpen(true)}
-              className="flex h-[70px] w-[70px] items-center justify-center rounded-full bg-white bg-opacity-75 text-primary transition hover:bg-opacity-100"
-            >
-              <svg
-                width="16"
-                height="18"
-                viewBox="0 0 16 18"
-                className="fill-current"
-              >
-                <path d="M15.5 8.13397C16.1667 8.51888 16.1667 9.48112 15.5 9.86602L2 17.6603C1.33333 18.0452 0.499999 17.564 0.499999 16.7942L0.5 1.20577C0.5 0.43597 1.33333 -0.0451549 2 0.339745L15.5 8.13397Z" />
-              </svg>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<ModalVideo
-  channel="youtube"
-  autoplay={true}
-  start={true}
-  isOpen={isOpen}
-  videoId="L61p2uyiMSo"
-  onClose={() => setOpen(false)}
-/>
-</section>
-
-</>
   );
 };
 
