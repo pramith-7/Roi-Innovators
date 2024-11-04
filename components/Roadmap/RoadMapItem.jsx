@@ -6,7 +6,8 @@ const RoadMapItem = ({ stage, goal , activities, isEven }) => {
       }`}
     >
       <div className="roadmap-item__marker"></div>
-      <div className="roadmap-item__content">
+    
+      <div className="roadmap-item__content shadow-[0_0_15px_5px_rgba(56,182,255,0.1)]">
         <h3 className="roadmap-item__stage"> {stage} </h3>     
            <dl className="text-left align-top">           
               <dl className="font-semibold"> Goal : </dl>

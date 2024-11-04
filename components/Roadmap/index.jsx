@@ -1,14 +1,18 @@
 import RoadMapItem from '@/components/Roadmap/RoadMapItem';
-import { roadmapData } from '@/components/Roadmap/RoadmapData';
+import { 
+  webDesignData , 
+  socialMediaManagementData , 
+  mobileAppDevelopmentData ,  
+  paidAdvertisingData , 
+  copywritingData } from '@/components/Roadmap/RoadmapData';
 
-const RoadMap = () => {
+export const WebDesign = () => {
   return (
     <div className="">
       <section className="roadmap">
           <div className="roadmap__timeline">
-          <div className="roadmap__line"></div>
-
-          {roadmapData.map((item, index) => (
+          <div className="roadmap__line"> </div>
+          {webDesignData.map((item, index) => (
             <RoadMapItem
               key={item.id}
               stage={item.stage}
@@ -23,4 +27,25 @@ const RoadMap = () => {
   );
 };
 
-export default RoadMap;
+
+export const SocialMediaManagement = () => {
+  return (
+    <div className="">
+      <section className="roadmap">
+          <div className="roadmap__timeline">
+          <div className="roadmap__line"> </div>
+          {socialMediaManagementData.map((item, index) => (
+            <RoadMapItem
+              key={item.id}
+              stage={item.stage}
+              goal={item.goal}
+              activities={item.activities}
+              isEven={index % 2 === 0}
+            />
+          ))}
+        </div>
+      </section>
+    </div>
+  );
+};
+
