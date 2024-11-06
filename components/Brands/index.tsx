@@ -1,5 +1,8 @@
+"use client";
 import { Brand } from "@/types/brand";
 import Image from "next/image";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 
 const brandsData: Brand[] = [
   {
@@ -30,13 +33,24 @@ const brandsData: Brand[] = [
 ];
 
 const Brands = () => {
+
+    const ref = useRef(null);
+    const isInView = useInView(ref, { once: true });
+
   return (
-    <section className="pt-16">    
-      <div className="-mx-4 flex flex-wrap">
+    <section className="pt-16">   
+     <motion.div
+                ref={ref} 
+                initial={{opacity: 0 }}
+                animate={isInView ? { opacity: 1} : { opacity: 0}}
+                transition={{ duration: 1, delay: 0, ease: "easeOut" }}
+                className="wow fadeInUp"
+              >
+      <div className="flex flex-wrap">
         <div className="w-full">
           <div
-            className="wow border-4 border-iceblue fadeInUp m-auto grid grid-cols-2 lg:grid-cols-4 gap-6 place-items-center rounded-md w-full px-8 py-4"
-            data-wow-delay=".1s"
+            className="wow border-t-4 border-b-4 border-iceblue fadeInUp m-auto grid grid-cols-2 lg:grid-cols-4 gap-6 place-items-center w-full px-8 py-4"
+            
           >
             {brandsData.map((brand) => (
               <SingleBrand key={brand.id} brand={brand} />
@@ -44,6 +58,7 @@ const Brands = () => {
           </div>
         </div>
       </div>
+      </motion.div> 
     </section>
   );
 };
@@ -55,7 +70,7 @@ const SingleBrand = ({ brand }: { brand: Brand }) => {
   const { href, image, name } = brand;
 
   return (
-    <div className="grayscale hover:grayscale-0 flex w-full max-w-full items-center justify-center py-[15px]">
+    <div className="grayscale hover:grayscale-0 flex w-full items-center justify-center py-[15px] max-w-full">
       <p className="relative md:h-14 md:w-14 h-8 w-8">
         <Image src={image} alt={name} fill />  
       </p>

@@ -28,27 +28,17 @@ const AboutSectionOne = () => {
   const isInView = useInView(ref, { once: true });
 
   return (
-    <section id="about" className="pt-16 md:pt-20 lg:pt-28 relative overflow-x-clip">
-
-      <div className="absolute opacity-55 justify-center z-[-1] transition -translate-x-96">
-        <div className="w-[400px] h-[800px] rounded-full blur-[100px] bg-gradientbg2 "> </div>
-      </div>
-      <div className="absolute right-0 translate-x-80 opacity-55 z-[-1]">
-    <div className="w-[340px] h-[800px] rounded-full blur-[100px] bg-gradientbg2"></div>
-  </div>
-
-      <div className="container px-10">
+    <section id="about" className="my-10 relative overflow-x-clip">
+      <div className="container xl:px-10">
         <div className="pb-16 border-white/[.15] md:pb-20 lg:pb-28">
           <div className="-mx-4 flex flex-wrap items-center">
             <div className="w-full px-4 lg:w-1/2">
-
-
 
               <motion.div
                 ref={ref} // Attach the ref to the element
                 initial={{ x: -100, opacity: 0 }}
                 animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -100 }} // Only animate when in view
-                transition={{ duration: 1, delay: 0.5, ease: "easeOut" }}
+                transition={{ duration: 1, delay: 0, ease: "easeOut" }}
                 className="wow fadeInUp"
               >
                 <h1 className="mb-3 mbtext-3xl font-bold !leading-tight text-white text-3xl md:text-[45px]">
@@ -77,7 +67,7 @@ const AboutSectionOne = () => {
                 ref={ref} // Attach the ref to the element
                 initial={{ x: 100, opacity: 0 }}
                 animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 100 }} // Only animate when in view
-                transition={{ duration: 1, delay: 0.5, ease: "easeOut" }}
+                transition={{ duration: 1, delay: 0, ease: "easeOut" }}
                 className="wow fadeInUp"
               >
                 <div
