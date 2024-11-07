@@ -1,6 +1,6 @@
 "use client";
 import { useState, useRef } from 'react';
-import { WebDesign, SocialMediaManagement } from '@/components/Roadmap';
+import { WebDesign, SocialMediaManagement , PaidAdvertising , MobileAppDevelopment , Copywriting , Contentcreation } from '@/components/Roadmap';
 import { motion, useInView } from 'framer-motion';
 
 export default function TabsComponent() {
@@ -212,10 +212,10 @@ export default function TabsComponent() {
                 >
                   <div className='pb-5'>
                     <h1 className='my-2 border-iceblue border p-2 font-semibold md:text-2xl rounded-md shadow-[0_0_15px_5px_rgba(56,182,255,0.1)]'> (01). Introduction </h1>
-                    <p className='p-2 text-md text-gray-300 font-extralight text-justify'> At ROIInnovators, we craft custom websites that blend stunning design with flawless functionality.
-                      Our web design services ensure your site reflects your brand’s identity, while our development team builds responsive, SEO-optimized
-                      websites that deliver a seamless user experience across all devices. Whether it’s a sleek landing page or a full e-commerce platform,
-                      we bring your vision to life and drive real business results. Let us transform your online presence today!
+                    <p className='p-2 text-md text-gray-300 font-extralight text-justify'> 
+                      At <span className='font-bold'>ROIInnovators</span>, we craft custom websites that blend stunning design with flawless functionality. 
+                      Our web design services ensure your site reflects your brand’s identity, while our development team builds responsive, SEO-optimized websites that deliver a seamless user experience across all devices. 
+                      Whether it’s a sleek landing page or a full e-commerce platform, we bring your vision to life and drive real business results. Let us transform your online presence today!
                     </p>
                   </div>
                 </motion.div>
@@ -271,9 +271,9 @@ export default function TabsComponent() {
                   <div className='pb-5'>
                     <h1 className='my-2 border-iceblue border p-2 font-semibold md:text-2xl rounded-md shadow-[0_0_15px_5px_rgba(56,182,255,0.1)]'> (01). Introduction </h1>
                     <p className='p-2 text-md text-gray-300 font-extralight text-justify'>
-                    At ROIInnovators, we manage your social media so you can focus on growing your business. We create engaging content, build brand awareness, 
-                    and foster meaningful connections with your audience across platforms like Facebook, Instagram, TikTok and LinkedIn. Our data-driven strategies 
-                    ensure consistent growth and measurable results. Let us handle your social media presence, and watch your business thrive!
+                    At <span className='font-bold'>ROIInnovators</span>, our paid advertising services are designed to drive targeted traffic and boost conversions. 
+                      We create tailored ad campaigns across platforms like Google, Facebook, TikTok and Instagram, optimizing every dollar to ensure maximum ROI. 
+                      From strategy to execution, we help you reach the right audience and achieve measurable results that grow your business. Let’s turn clicks into customers!
                     </p>
                   </div>
                 </motion.div>
@@ -315,7 +315,7 @@ export default function TabsComponent() {
                   animate={{ translateY: 0, opacity: 1 }}
                   transition={{ duration: 0.7 }}
                 >
-                  <h1 className='md:text-4xl text-black my-7 py-3 text-center font-bold bg-sky-600 rounded-md'> Web Design </h1>
+                  <h1 className='md:text-4xl text-black my-7 py-3 text-center font-bold bg-sky-600 rounded-md'> Paid Advertising </h1>
                 </motion.div>
 
                 <motion.div
@@ -325,10 +325,10 @@ export default function TabsComponent() {
                 >
                   <div className='pb-5'>
                     <h1 className='my-2 border-iceblue border p-2 font-semibold md:text-2xl rounded-md shadow-[0_0_15px_5px_rgba(56,182,255,0.1)]'> (01). Introduction </h1>
-                    <p className='p-2 text-md text-gray-300 font-extralight text-justify'> At ROIInnovators, we craft custom websites that blend stunning design with flawless functionality.
-                      Our web design services ensure your site reflects your brand’s identity, while our development team builds responsive, SEO-optimized
-                      websites that deliver a seamless user experience across all devices. Whether it’s a sleek landing page or a full e-commerce platform,
-                      we bring your vision to life and drive real business results. Let us transform your online presence today!
+                    <p className='p-2 text-md text-gray-300 font-extralight text-justify'> At <span className='font-bold'>ROIInnovators</span>, our paid advertising services are designed to drive targeted traffic and boost conversions. 
+                      We create tailored ad campaigns across platforms like Google, Facebook, TikTok and Instagram, optimizing every dollar to ensure maximum ROI. 
+                      From strategy to execution, we help you reach the right audience and achieve measurable results that grow your business. Let’s turn clicks into customers!
+
                     </p>
                   </div>
                 </motion.div>
@@ -340,7 +340,7 @@ export default function TabsComponent() {
                 >
                   <div className='pb-5'>
                     <h1 className='my-2 border-iceblue border p-2 font-semibold md:text-2xl rounded-md shadow-[0_0_15px_5px_rgba(56,182,255,0.1)]'> (02). Milestone Map </h1>
-                    <WebDesign />
+                    <PaidAdvertising />
                     <hr className='border-iceblue shadow-[0_0_15px_5px_rgba(56,182,255,0.1)]' />
                   </div>
                   <div className='flex w-full justify-center'>
@@ -370,7 +370,7 @@ export default function TabsComponent() {
                   animate={{ translateY: 0, opacity: 1 }}
                   transition={{ duration: 0.7 }}
                 >
-                  <h1 className='md:text-4xl text-black my-7 py-3 text-center font-bold bg-sky-600 rounded-md'> Web Design </h1>
+                  <h1 className='md:text-4xl text-black my-7 py-3 text-center font-bold bg-sky-600 rounded-md'> Mobile App Development </h1>
                 </motion.div>
 
                 <motion.div
@@ -380,10 +380,9 @@ export default function TabsComponent() {
                 >
                   <div className='pb-5'>
                     <h1 className='my-2 border-iceblue border p-2 font-semibold md:text-2xl rounded-md shadow-[0_0_15px_5px_rgba(56,182,255,0.1)]'> (01). Introduction </h1>
-                    <p className='p-2 text-md text-gray-300 font-extralight text-justify'> At ROIInnovators, we craft custom websites that blend stunning design with flawless functionality.
-                      Our web design services ensure your site reflects your brand’s identity, while our development team builds responsive, SEO-optimized
-                      websites that deliver a seamless user experience across all devices. Whether it’s a sleek landing page or a full e-commerce platform,
-                      we bring your vision to life and drive real business results. Let us transform your online presence today!
+                    <p className='p-2 text-md text-gray-300 font-extralight text-justify'> <span className="font-bold">ROIInnovators</span>, we create custom mobile apps that elevate your business. 
+                    From concept to launch, we develop intuitive, high-performance apps for iOS and Android, designed to engage users and streamline your operations. 
+                    Whether it’s an app to boost customer interaction or simplify internal processes, we deliver innovative solutions tailored to your goals. Let’s turn your app idea into reality!
                     </p>
                   </div>
                 </motion.div>
@@ -395,7 +394,7 @@ export default function TabsComponent() {
                 >
                   <div className='pb-5'>
                     <h1 className='my-2 border-iceblue border p-2 font-semibold md:text-2xl rounded-md shadow-[0_0_15px_5px_rgba(56,182,255,0.1)]'> (02). Milestone Map </h1>
-                    <WebDesign />
+                    <MobileAppDevelopment/>
                     <hr className='border-iceblue shadow-[0_0_15px_5px_rgba(56,182,255,0.1)]' />
                   </div>
                   <div className='flex w-full justify-center'>
@@ -425,7 +424,7 @@ export default function TabsComponent() {
                   animate={{ translateY: 0, opacity: 1 }}
                   transition={{ duration: 0.7 }}
                 >
-                  <h1 className='md:text-4xl text-black my-7 py-3 text-center font-bold bg-sky-600 rounded-md'> Web Design </h1>
+                  <h1 className='md:text-4xl text-black my-7 py-3 text-center font-bold bg-sky-600 rounded-md'> Copy Writing </h1>
                 </motion.div>
 
                 <motion.div
@@ -435,10 +434,10 @@ export default function TabsComponent() {
                 >
                   <div className='pb-5'>
                     <h1 className='my-2 border-iceblue border p-2 font-semibold md:text-2xl rounded-md shadow-[0_0_15px_5px_rgba(56,182,255,0.1)]'> (01). Introduction </h1>
-                    <p className='p-2 text-md text-gray-300 font-extralight text-justify'> At ROIInnovators, we craft custom websites that blend stunning design with flawless functionality.
-                      Our web design services ensure your site reflects your brand’s identity, while our development team builds responsive, SEO-optimized
-                      websites that deliver a seamless user experience across all devices. Whether it’s a sleek landing page or a full e-commerce platform,
-                      we bring your vision to life and drive real business results. Let us transform your online presence today!
+                    <p className='p-2 text-md text-gray-300 font-extralight text-justify'> At <span className='font-bold'>ROIInnovators</span>, our copywriting services focus on crafting compelling text that grabs attention and drives action. 
+                      Copywriting is the art of creating persuasive content for websites, ads, and social media that speaks directly to your audience and encourages them to engage with your business. 
+                      Whether you need catchy headlines or engaging product descriptions, we’ll help tell your story and boost conversions with words that work!
+
                     </p>
                   </div>
                 </motion.div>
@@ -450,7 +449,7 @@ export default function TabsComponent() {
                 >
                   <div className='pb-5'>
                     <h1 className='my-2 border-iceblue border p-2 font-semibold md:text-2xl rounded-md shadow-[0_0_15px_5px_rgba(56,182,255,0.1)]'> (02). Milestone Map </h1>
-                    <WebDesign />
+                    <Copywriting />
                     <hr className='border-iceblue shadow-[0_0_15px_5px_rgba(56,182,255,0.1)]' />
                   </div>
                   <div className='flex w-full justify-center'>
@@ -480,7 +479,7 @@ export default function TabsComponent() {
                   animate={{ translateY: 0, opacity: 1 }}
                   transition={{ duration: 0.7 }}
                 >
-                  <h1 className='md:text-4xl text-black my-7 py-3 text-center font-bold bg-sky-600 rounded-md'> Web Design </h1>
+                  <h1 className='md:text-4xl text-black my-7 py-3 text-center font-bold bg-sky-600 rounded-md'> Content Creation </h1>
                 </motion.div>
 
                 <motion.div
@@ -490,10 +489,10 @@ export default function TabsComponent() {
                 >
                   <div className='pb-5'>
                     <h1 className='my-2 border-iceblue border p-2 font-semibold md:text-2xl rounded-md shadow-[0_0_15px_5px_rgba(56,182,255,0.1)]'> (01). Introduction </h1>
-                    <p className='p-2 text-md text-gray-300 font-extralight text-justify'> At ROIInnovators, we craft custom websites that blend stunning design with flawless functionality.
-                      Our web design services ensure your site reflects your brand’s identity, while our development team builds responsive, SEO-optimized
-                      websites that deliver a seamless user experience across all devices. Whether it’s a sleek landing page or a full e-commerce platform,
-                      we bring your vision to life and drive real business results. Let us transform your online presence today!
+                    <p className='p-2 text-md text-gray-300 font-extralight text-justify'> At <span className='font-bold'>ROIInnovators</span>, we create captivating content that speaks to your audience and elevates your brand. 
+                      From eye-catching visuals to engaging videos, we craft content tailored to your business goals. To get you started, we’re offering one free video—no strings attached! 
+                      Let’s showcase what we can do and help your business stand out online.
+
                     </p>
                   </div>
                 </motion.div>
@@ -505,7 +504,7 @@ export default function TabsComponent() {
                 >
                   <div className='pb-5'>
                     <h1 className='my-2 border-iceblue border p-2 font-semibold md:text-2xl rounded-md shadow-[0_0_15px_5px_rgba(56,182,255,0.1)]'> (02). Milestone Map </h1>
-                    <WebDesign />
+                    <Contentcreation />
                     <hr className='border-iceblue shadow-[0_0_15px_5px_rgba(56,182,255,0.1)]' />
                   </div>
                   <div className='flex w-full justify-center'>

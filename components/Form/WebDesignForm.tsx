@@ -11,12 +11,19 @@ const WebDesignForm = () => {
   const ref2 = useRef(null);
   const ref3 = useRef(null);
   const ref4 = useRef(null);
-  
+
   // Hook to detect if the element is in view
   const isInView = useInView(ref1, { once: true });
 
   return (
     <>
+      <div className="absolute top-[50%] opacity-55 justify-center z-[-1] transition -translate-x-96">
+        <div className="w-[350px] h-[800px] rounded-full blur-[100px] bg-gradientbg2 "> </div>
+      </div>
+      <div className="absolute top-[300%] right-0 translate-x-96 opacity-55 z-[-1]">
+        <div className="w-[340px] h-[800px] rounded-full blur-[100px] bg-gradientbg2"></div>
+      </div>
+
       <h2 className="p-4 text-center text-4xl font-bold text-iceblue mb-4 border-b-2 border-iceblue">- Web Design - </h2>
       <div className="container mx-auto px-2 md:px-20 flex flex-col lg:flex-row lg:space-x-12" id="Contact">
         {/* Contact Form */}
@@ -31,6 +38,19 @@ const WebDesignForm = () => {
               className="wow fadeInUp"
             >
               <h1 className='text-2xl font-bold py-3'> (1) Business Overview </h1>
+              
+              <div className='pb-5'>
+                <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="company">
+                  What the name of your Company / Business ?
+                </label>
+                <input
+                  id="company"
+                  name="company"
+                  type="text"
+                  className="w-full md:text-lg text-md p-2 md:p-3 border border-iceblue rounded-sm md:rounded-md bg-transparent font-light text-gray-200"
+                  required
+                />
+              </div>
 
               <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="nature">
                 What is the nature of your business?
@@ -606,7 +626,7 @@ const WebDesignForm = () => {
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="additional">
                   Are there any additional features or special requests?
                 </label>
-                <textarea className='p-2 md:p-3 w-full h-40 bg-transparent border border-iceblue focus:border-2 rounded-sm md:rounded-md focus:border-white'>
+                <textarea name="additional" className='p-2 md:p-3 w-full h-40 bg-transparent border border-iceblue focus:border-2 rounded-sm md:rounded-md focus:border-white'>
                 </textarea>
               </div>
 
