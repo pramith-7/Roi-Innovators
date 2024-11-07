@@ -49,3 +49,66 @@ export const SocialMediaManagement = () => {
   );
 };
 
+export const mobileAppDevelopment = () => {
+  return (
+    <div className="">
+      <section className="roadmap">
+          <div className="roadmap__timeline">
+          <div className="roadmap__line"> </div>
+          {mobileAppDevelopmentData.map((item, index) => (
+            <RoadMapItem
+              key={item.id}
+              stage={item.stage}
+              goal={item.goal}
+              activities={item.activities}
+              isEven={index % 2 === 0}
+            />
+          ))}
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export const paidAdvertising = () => {
+  return (
+    <div className="">
+      <section className="roadmap">
+          <div className="roadmap__timeline">
+          <div className="roadmap__line"> </div>
+          {paidAdvertisingData.map((item, index) => (
+            <RoadMapItem
+              key={item.id}
+              stage={item.stage}
+              goal={item.goal}
+              activities={item.activities}
+              isEven={index % 2 === 0}
+            />
+          ))}
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export const copywriting = () => {
+  return (
+    <div className="">
+      <section className="roadmap">
+          <div className="roadmap__timeline">
+          <div className="roadmap__line"> </div>
+          {copywritingData.map((item, index) => (
+            <RoadMapItem
+              key={item.id}
+              stage={item.stage}
+              goal={item.goal}
+              activities={item.activities}
+              isEven={index % 2 === 0}
+            />
+          ))}
+        </div>
+      </section>
+    </div>
+  );
+};
+

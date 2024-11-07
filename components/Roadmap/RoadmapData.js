@@ -209,7 +209,7 @@ export const copywritingData = [
     id: 5,
     stage: 'Final Approval & Optimization',
     goal: 'Finalize the copy for distribution or publishing.',
-    activities: 'Refine the copy for SEO, readability, and effectiveness. Ensure it’s optimized for the intended platform (web, social, print, etc.).'
+    activities: 'Refine the copy for SEO, readability, and effectiveness. Ensure it\’s optimized for the intended platform (web, social, print, etc.).'
   },
   {
     id: 6,
