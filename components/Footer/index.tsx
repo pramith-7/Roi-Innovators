@@ -12,25 +12,26 @@ const Footer = () => {
           <div className="-mx-4 flex flex-wrap">
             <div className="w-full px-4 md:w-1/2 lg:w-4/12 xl:w-5/12">
               <div className="mb-12 max-w-[360px] lg:mb-16">
+                <div className="flex">
                 <Link href="/" className="mb-8 inline-block">
-                 
                   <Image
-                    src="images/logo/logo.svg"
+                    src="/images/logo/logo.png"
                     alt="logo"
-                    className="w-full block"
+                    className="w-10 h-10 border-2 border-iceblue block"
                     width={140}
                     height={30}
                   />
                 </Link>
+                <span className="justify-content-center mx-2 my-1 text-2xl font-bold text-iceblue"> ROI Innovators </span>
+                </div>
                 <p className="mb-9 text-base font-medium leading-relaxed text-body-color">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Integer lobortis.
+                Make Your Business Into a Powerful Digital Presence.
                 </p>
                 <div className="flex items-center">
                   <a
                     href="/"
                     aria-label="social-link"
-                    className="mr-6 text-[#CED3F6] hover:text-primary"
+                    className="mr-6 text-[#CED3F6] hover:text-iceblue"
                   >
                     <svg
                       width="9"
@@ -44,7 +45,7 @@ const Footer = () => {
                   <a
                     href="/"
                     aria-label="social-link"
-                    className="mr-6 text-[#CED3F6] hover:text-primary"
+                    className="mr-6 text-[#CED3F6] hover:text-iceblue"
                   >
                     <svg
                       width="19"
@@ -58,7 +59,7 @@ const Footer = () => {
                   <a
                     href="/"
                     aria-label="social-link"
-                    className="mr-6 text-[#CED3F6] hover:text-primary"
+                    className="mr-6 text-[#CED3F6] hover:text-iceblue"
                   >
                     <svg
                       width="18"
@@ -72,7 +73,7 @@ const Footer = () => {
                   <a
                     href="/"
                     aria-label="social-link"
-                    className="mr-6 text-[#CED3F6] hover:text-primary"
+                    className="mr-6 text-[#CED3F6] hover:text-iceblue"
                   >
                     <svg
                       width="17"
@@ -96,7 +97,7 @@ const Footer = () => {
                   <li>
                     <a
                       href="/"
-                      className="mb-4 inline-block text-base font-medium text-body-color hover:text-primary"
+                      className="mb-4 inline-block text-base font-medium text-body-color hover:text-iceblue"
                     >
                       {" "}
                       Blog{" "}
@@ -105,7 +106,7 @@ const Footer = () => {
                   <li>
                     <a
                       href="/"
-                      className="mb-4 inline-block text-base font-medium text-body-color hover:text-primary"
+                      className="mb-4 inline-block text-base font-medium text-body-color hover:text-iceblue"
                     >
                       {" "}
                       Pricing{" "}
@@ -114,7 +115,7 @@ const Footer = () => {
                   <li>
                     <a
                       href="/"
-                      className="mb-4 inline-block text-base font-medium text-body-color hover:text-primary"
+                      className="mb-4 inline-block text-base font-medium text-body-color hover:text-iceblue"
                     >
                       {" "}
                       About{" "}
@@ -133,7 +134,7 @@ const Footer = () => {
                   <li>
                     <a
                       href="/"
-                      className="mb-4 inline-block text-base font-medium text-body-color hover:text-primary"
+                      className="mb-4 inline-block text-base font-medium text-body-color hover:text-iceblue"
                     >
                       {" "}
                       TOS{" "}
@@ -142,7 +143,7 @@ const Footer = () => {
                   <li>
                     <a
                       href="/"
-                      className="mb-4 inline-block text-base font-medium text-body-color hover:text-primary"
+                      className="mb-4 inline-block text-base font-medium text-body-color hover:text-iceblue"
                     >
                       {" "}
                       Privacy Policy{" "}
@@ -151,7 +152,7 @@ const Footer = () => {
                   <li>
                     <a
                       href="/"
-                      className="mb-4 inline-block text-base font-medium text-body-color hover:text-primary"
+                      className="mb-4 inline-block text-base font-medium text-body-color hover:text-iceblue"
                     >
                       {" "}
                       Refund Policy{" "}
@@ -170,7 +171,7 @@ const Footer = () => {
                   <li>
                     <a
                       href="/"
-                      className="mb-4 inline-block text-base font-medium text-body-color hover:text-primary"
+                      className="mb-4 inline-block text-base font-medium text-body-color hover:text-iceblue"
                     >
                       {" "}
                       Open Support Ticket{" "}
@@ -179,7 +180,7 @@ const Footer = () => {
                   <li>
                     <a
                       href="/"
-                      className="mb-4 inline-block text-base font-medium text-body-color hover:text-primary"
+                      className="mb-4 inline-block text-base font-medium text-body-color hover:text-iceblue"
                     >
                       {" "}
                       Terms of Use{" "}
@@ -188,7 +189,7 @@ const Footer = () => {
                   <li>
                     <a
                       href="/"
-                      className="mb-4 inline-block text-base font-medium text-body-color hover:text-primary"
+                      className="mb-4 inline-block text-base font-medium text-body-color hover:text-iceblue"
                     >
                       {" "}
                       About{" "}

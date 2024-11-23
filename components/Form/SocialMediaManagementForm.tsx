@@ -56,7 +56,7 @@ const WebDesignForm = () => {
               <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="nature">
                 What is the nature of your business?
               </label>
-              <div className='grid md:grid-cols-4 grid-cols-2 pb-10 gap-1'>
+              <div className='grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 pb-10 gap-1'>
                 <div>
                   <label htmlFor='ecommerce'>
                     <input
@@ -162,7 +162,7 @@ const WebDesignForm = () => {
               Which social media platforms are you currently using ?
               </label>
 
-              <div className='grid md:grid-cols-4 grid-cols-2 pb-10 gap-1'>
+              <div className='grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 pb-10 gap-1'>
                 <div>
                   <label htmlFor='platform'>
                     <input
@@ -247,7 +247,7 @@ const WebDesignForm = () => {
               <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="content">
               What types of content have you been sharing ?
               </label>
-              <div className='grid md:grid-cols-4 grid-cols-2 pb-10 gap-1'>
+              <div className='grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 pb-10 gap-1'>
                 <div>
                   <input
                     id='text'
@@ -302,7 +302,7 @@ const WebDesignForm = () => {
               What are your primary goals for social media?
               </label>
 
-              <div className='grid md:grid-cols-4 grid-cols-2 pb-10 gap-1'>
+              <div className='grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 pb-10 gap-1'>
                 <div>
                   <label htmlFor='primarygoal'>
                     <input
@@ -366,7 +366,7 @@ const WebDesignForm = () => {
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="campaign">
                 Are there any specific campaigns or promotions you want to focus on?
                 </label>
-                <div className='grid md:grid-cols-4 grid-cols-2 pb-10'>
+                <div className='grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 pb-10'>
                   <div>
                     <label htmlFor='campaign'>
                       <input
@@ -399,7 +399,7 @@ const WebDesignForm = () => {
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="traffic">
                 Do you want to grow your followers, increase engagement, or drive traffic to your website?
                 </label>
-                <div className='grid md:grid-cols-4 grid-cols-2 pb-10'>
+                <div className='grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 pb-10'>
                   <div>
                     <label htmlFor='traffic'>
                       <input
@@ -449,7 +449,7 @@ const WebDesignForm = () => {
               What types of content do you think resonate most with your audience?
               </label>
 
-              <div className='grid md:grid-cols-4 grid-cols-2 pb-10 gap-1'>
+              <div className='grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 pb-10 gap-1'>
                 <div>
                   <label htmlFor='contenttype'>
                     <input
@@ -513,7 +513,7 @@ const WebDesignForm = () => {
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="person">
                 do you have someone who takes photos, writes posts, creates graphics?
                 </label>
-                <div className='grid md:grid-cols-4 grid-cols-2 pb-10'>
+                <div className='grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 pb-10'>
                   <div>
                     <label htmlFor='person'>
                       <input
@@ -547,7 +547,7 @@ const WebDesignForm = () => {
                 Would you like assistance with content creation? (ex:- photography, video production, graphic design)
 
                 </label>
-                <div className='grid md:grid-cols-4 grid-cols-2 pb-10'>
+                <div className='grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 pb-10'>
                   <div>
                     <label htmlFor='assistant'>
                       <input
@@ -598,7 +598,7 @@ const WebDesignForm = () => {
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="guidline">
                 Do you have established brand guidelines ? (e.g., color schemes, fonts, logos)
                 </label>
-                <div className='grid md:grid-cols-4 grid-cols-2 pb-10'>
+                <div className='grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 pb-10'>
                   <div>
                     <label htmlFor='guidline'>
                       <input
@@ -631,7 +631,7 @@ const WebDesignForm = () => {
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="tone">
                 How would you describe your brand’s voice and tone? 
                 </label>
-                <div className='grid md:grid-cols-4 grid-cols-2 pb-10'>
+                <div className='grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 pb-10'>
                   <div>
                     <label htmlFor='tone'>
                       <input
@@ -701,7 +701,7 @@ const WebDesignForm = () => {
               <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="plan">
               Do you have a plan for handling customer inquiries and feedback on social media?
                 </label>
-                <div className='grid md:grid-cols-4 grid-cols-2 pb-10'>
+                <div className='grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 pb-10'>
                   <div>
                     <label htmlFor='plan'>
                       <input
@@ -742,6 +742,348 @@ const WebDesignForm = () => {
                   required
                 />
               </div>
+
+
+              <h1 className='text-2xl font-bold py-3'> (07). Advertising & Promotions
+              </h1>
+              <div className='pb-5'>
+                <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="campaign">
+                Have you run any paid advertising campaigns on social media before? If so, how did they perform ?
+                </label>
+                <input
+                  id="campaign"
+                  name="campaign"
+                  type="text"
+                  className="w-full md:text-lg text-md p-2 md:p-3 border border-iceblue rounded-sm md:rounded-md bg-transparent font-light text-gray-200"
+                  required
+                />
+              </div>
+
+              <div className='pb-5'>
+                <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="budget">
+                What is your budget for social media advertising?
+                </label>
+                <span className=''> LKR </span>
+                <input
+                  id="budget"
+                  name="budget"
+                  type="number"
+                  className="w-1/3 md:w-3/12 md:text-lg text-md p-2 md:p-3 border border-iceblue rounded-sm md:rounded-md bg-transparent font-light text-gray-200"
+                  required
+                />
+                 <span className=''> /= </span>
+              </div>
+
+              <div className='pb-5'>
+                <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="upcomingpromotion">
+                Do you have any upcoming promotions or events you want to highlight?
+                </label>
+                <input
+                  id="upcomingpromotion"
+                  name="upcomingpromotion"
+                  type="text"
+                  className="w-full md:text-lg text-md p-2 md:p-3 border border-iceblue rounded-sm md:rounded-md bg-transparent font-light text-gray-200"
+                  required
+                />
+              </div>
+
+
+
+              <h1 className='text-2xl font-bold py-3'> (08). Competitor Analysis
+              </h1>
+              <div className='pb-5'>
+                <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="competitor">
+                Who are your main competitors, and how are they using social media?
+                </label>
+                <input
+                  id="competitor"
+                  name="competitor"
+                  type="text"
+                  className="w-full md:text-lg text-md p-2 md:p-3 border border-iceblue rounded-sm md:rounded-md bg-transparent font-light text-gray-200"
+                  required
+                />
+              </div>
+
+              <div className='pb-5'>
+                <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="competitors">
+                Are there any specific competitors whose social media presence you admire?
+                </label>
+                <input
+                  id="competitors"
+                  name="competitors"
+                  type="text"
+                  className="w-full md:text-lg text-md p-2 md:p-3 border border-iceblue rounded-sm md:rounded-md bg-transparent font-light text-gray-200"
+                  required
+                />
+              </div>
+
+              <div className='pb-5'>
+                <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="differentiate">
+                What differentiates your business from your competitors on social media?
+                </label>
+                <input
+                  id="differentiate"
+                  name="differentiate"
+                  type="text"
+                  className="w-full md:text-lg text-md p-2 md:p-3 border border-iceblue rounded-sm md:rounded-md bg-transparent font-light text-gray-200"
+                  required
+                />
+              </div>
+
+              <h1 className='text-2xl font-bold py-3'> (09). Measurement & Reporting
+              </h1>
+              <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="kpi">
+              What key performance indicators (KPIs) are most important to you?
+              </label>
+              <div className='grid md:grid-cols-2 grid-cols-1 pb-10 gap-1'>
+                <div>
+                  <label htmlFor='Answer1'>
+                    <input
+                      id='click-through-rate'
+                      name="kpi"
+                      type="radio"
+                      value="click-through-rate"
+                      className="w-4 h-4"
+                      required
+                    />
+                  </label>
+                  <label htmlFor='kpi'> Click-Through Rate (CTR) </label>
+                </div>
+
+                <div>
+                  <input
+                    id='engagement-rate'
+                    name="kpi"
+                    type="radio"
+                    value="engagement-rate"
+                    className="w-4 h-4"
+                    required
+                  />
+                  <label htmlFor='kpi'>  Engagement Rate </label>
+                </div>   
+
+                <div>
+                  <input
+                    id='follower-growth'
+                    name="kpi"
+                    type="radio"
+                    value="follower-growth"
+                    className="w-4 h-4"
+                    required
+                  />
+                  <label htmlFor='kpi'>  Follower Growth </label>
+                </div>                 
+              </div>
+
+              <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="performance">
+              How frequently do you want to receive performance reports ?
+              </label>
+              <div className='grid md:grid-cols-3 grid-cols-1 pb-10 gap-1'>
+                <div>
+                  <label htmlFor='Answer1'>
+                    <input
+                      id='weekly'
+                      name="performance"
+                      type="radio"
+                      value="weekly"
+                      className="w-4 h-4"
+                      required
+                    />
+                  </label>
+                  <label htmlFor='kpi'> Weekly </label>
+                </div>
+
+                <div>
+                  <input
+                    id='bi-weekly'
+                    name="performance"
+                    type="radio"
+                    value="bi-weekly"
+                    className="w-4 h-4"
+                    required
+                  />
+                  <label htmlFor='kpi'>  Bi-Weekly </label>
+                </div>  
+
+                <div>
+                  <input
+                    id='monthly'
+                    name="performance"
+                    type="radio"
+                    value="monthly"
+                    className="w-4 h-4"
+                    required
+                  />
+                  <label htmlFor='kpi'>  Monthly </label>
+                </div>          
+              </div>
+
+
+              <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="metrics">
+              What metrics would you like to focus on?
+              </label>
+
+              <div className='grid md:grid-cols-3 grid-cols-2 pb-10 gap-1'>
+                <div>
+                    <input
+                      id='ROI'
+                      name="feature"
+                      type="checkbox"
+                      value="ROI"
+                      className="w-4 h-4"
+                    />          
+                  <label htmlFor='metrics'> ROI </label>
+                </div>
+
+                <div>
+                  <input
+                    id='conversion-rate'
+                    name="feature"
+                    type="checkbox"
+                    value="conversion-rate"
+                    className="w-4 h-4"
+                  />
+                  <label htmlFor='metrics'> Conversion Rate </label>
+                </div>
+
+                <div>
+                  <input
+                    id='reach'
+                    name="feature"
+                    type="checkbox"
+                    value="reach"
+                    className="w-4 h-4"
+                  />  
+                  <label htmlFor='metrics'> Reach </label>
+                </div>
+              </div>
+
+
+              <h1 className='text-2xl font-bold py-3'> (10). Budget & Resources
+              </h1>
+              <div className='pb-5'>
+                <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="socialmediabudget">
+                What is your budget for social media management?
+                </label>
+                <input
+                  id="socialmediabudget"
+                  name="socialmediabudget"
+                  type="text"
+                  className="w-full md:text-lg text-md p-2 md:p-3 border border-iceblue rounded-sm md:rounded-md bg-transparent font-light text-gray-200"
+                  required
+                />
+              </div>
+
+              <div className='pb-5'>
+                <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="strategy">
+                Are there any resources you can provide to support your social media strategy? (e.g., product images, customer testimonials)
+                </label>
+                <input
+                  id="strategy"
+                  name="strategy"
+                  type="text"
+                  className="w-full md:text-lg text-md p-2 md:p-3 border border-iceblue rounded-sm md:rounded-md bg-transparent font-light text-gray-200"
+                  required
+                />
+              </div>
+
+              <div className='pb-5'>
+                <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="tools">
+                Do you have any specific tools or software you prefer to use?
+                </label>
+                <input
+                  id="tools"
+                  name="tools"
+                  type="text"
+                  className="w-full md:text-lg text-md p-2 md:p-3 border border-iceblue rounded-sm md:rounded-md bg-transparent font-light text-gray-200"
+                  required
+                />
+              </div>
+
+
+              <h1 className='text-2xl font-bold py-3'> (11). Future Plans
+              </h1>
+              <div className='pb-5'>
+                <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="new-product">
+                  Are there any new products, services, or locations you plan to introduce ?
+                </label>
+                <input
+                  id="new-product"
+                  name="new-product"
+                  type="text"
+                  className="w-full md:text-lg text-md p-2 md:p-3 border border-iceblue rounded-sm md:rounded-md bg-transparent font-light text-gray-200"
+                  required
+                />
+              </div>
+
+              <div className='pb-5'>
+                <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="promotion">
+                Do you have any seasonal promotions or events that should be highlighted?
+                </label>
+                <input
+                  id="promotion"
+                  name="promotion"
+                  type="text"
+                  className="w-full md:text-lg text-md p-2 md:p-3 border border-iceblue rounded-sm md:rounded-md bg-transparent font-light text-gray-200"
+                  required
+                />
+              </div>
+
+              <div className='pb-5'>
+                <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="presence">
+                How do you see your social media presence evolving in the next 6-12 months?
+                </label>
+                <input
+                  id="presence"
+                  name="presence"
+                  type="text"
+                  className="w-full md:text-lg text-md p-2 md:p-3 border border-iceblue rounded-sm md:rounded-md bg-transparent font-light text-gray-200"
+                  required
+                />
+              </div>
+
+
+              <h1 className='text-2xl font-bold py-3'> (12). Additional Preferences
+              </h1>
+              <div className='pb-5'>
+                <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="platforms">
+                  Are there any specific platforms you would like to focus on or avoid?
+                </label>
+                <input
+                  id="platforms"
+                  name="platforms"
+                  type="text"
+                  className="w-full md:text-lg text-md p-2 md:p-3 border border-iceblue rounded-sm md:rounded-md bg-transparent font-light text-gray-200"
+                  required
+                />
+              </div>
+
+              <div className='pb-5'>
+                <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="post-time">
+                  Do you have any preferred times for posting?
+                </label>
+                <input
+                  id="post-time"
+                  name="post-time"
+                  type="text"
+                  className="w-full md:text-lg text-md p-2 md:p-3 border border-iceblue rounded-sm md:rounded-md bg-transparent font-light text-gray-200"
+                  required
+                />
+              </div>
+
+              <div className='pb-5'>
+                <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="trends">
+                  Are there any industry trends or topics you want to capitalise on?
+                </label>
+                <input
+                  id="trends"
+                  name="trends"
+                  type="text"
+                  className="w-full md:text-lg text-md p-2 md:p-3 border border-iceblue rounded-sm md:rounded-md bg-transparent font-light text-gray-200"
+                  required
+                />
+              </div>
+
 
 
 
