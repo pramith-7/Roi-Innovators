@@ -100,21 +100,21 @@ const Footer = () => {
                       className="mb-4 inline-block text-base font-medium text-body-color hover:text-iceblue"
                     >
                       {" "}
-                      Blog{" "}
+                      Home{" "}
                     </a>
                   </li>
                   <li>
                     <a
-                      href="/"
+                      href="/#contact"
                       className="mb-4 inline-block text-base font-medium text-body-color hover:text-iceblue"
                     >
                       {" "}
-                      Pricing{" "}
+                      Contact{" "}
                     </a>
                   </li>
                   <li>
                     <a
-                      href="/"
+                      href="/#about"
                       className="mb-4 inline-block text-base font-medium text-body-color hover:text-iceblue"
                     >
                       {" "}
@@ -128,7 +128,7 @@ const Footer = () => {
             <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-2/12 xl:w-2/12">
               <div className="mb-12 lg:mb-16">
                 <h2 className="mb-10 text-xl font-bold text-white">
-                  Terms
+                  Other Links
                 </h2>
                 <ul>
                   <li>
@@ -137,25 +137,25 @@ const Footer = () => {
                       className="mb-4 inline-block text-base font-medium text-body-color hover:text-iceblue"
                     >
                       {" "}
-                      TOS{" "}
+                      Introduction{" "}
                     </a>
                   </li>
                   <li>
                     <a
-                      href="/"
+                      href="/#benifits"
                       className="mb-4 inline-block text-base font-medium text-body-color hover:text-iceblue"
                     >
                       {" "}
-                      Privacy Policy{" "}
+                      Benifits{" "}
                     </a>
                   </li>
                   <li>
                     <a
-                      href="/"
+                      href="/#service"
                       className="mb-4 inline-block text-base font-medium text-body-color hover:text-iceblue"
                     >
                       {" "}
-                      Refund Policy{" "}
+                      Services{" "}
                     </a>
                   </li>
                 </ul>

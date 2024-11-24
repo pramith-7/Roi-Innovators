@@ -142,3 +142,24 @@ li {
   }
 
 }
+
+
+/* Simple CSS animation for fireworks */
+.fireworks-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  pointer-events: none; /* To ensure it doesn't block interactions */
+}
+
+.fireworks {
+  /* Your custom CSS for the fireworks animation */
+  background: url('https://i.pinimg.com/originals/ec/c2/12/ecc2124116aa5a0ee1bc466c7b69dd8a.gif');  
+  opacity: 0.2;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size:cover;
+  height: 100%;
+}

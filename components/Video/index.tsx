@@ -12,7 +12,7 @@ const Video = () => {
   const isInView = useInView(ref, { once: true });
 
   return (
-    <section id="home" className="relative z-10 py-5 md:py-10 lg:py-18 overflow-x-clip">
+    <section id="video" className="relative z-10 py-5 md:py-10 lg:py-18 overflow-x-clip">
 
       <div className="absolute opacity-55 justify-center z-[-1] transition -translate-x-96">
         <div className="w-[400px] h-[800px] rounded-full blur-[100px] bg-gradientbg2 "> </div>
@@ -70,9 +70,11 @@ const Video = () => {
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -40 }} // Only animate when in view
           transition={{ duration: 0.5, delay: 1, ease: "easeOut" }}
         >
+          <a href="#service">
           <button className="bg-primary dark:bg-gradient-to-r from-cyan-400 to-blue-800 md:py-4 py-2 md:px-10 px-5 md:text-xl font-bold flex justify-center items-center md:rounded-xl rounded-md border-primary border m-5 dark:hover:bg-gradient-to-tr hover:scale-110 transition-all cursor-pointer duration-300 text-white">
             Get a Free Consultation
           </button>
+          </a>
         </motion.div>
       </div>
     </section>
