@@ -77,7 +77,7 @@ li {
 }
 
 .roadmap-item__content {
-  background-color: #090E34;
+  margin-bottom: 15px;
   border:2px solid #38B6FF;
   padding: 1rem;
   border-radius: 0.5rem;
