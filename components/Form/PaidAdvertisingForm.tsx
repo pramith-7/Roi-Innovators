@@ -17,7 +17,7 @@ const PaidAdvertisingForm = () => {
 
   return (
     <>
-      <h2 className="p-4 text-center text-4xl font-bold text-iceblue mb-4 border-b-2 border-iceblue">- Paid Advertising - </h2>
+      <h2 className="p-4 text-center text-4xl font-bold text-iceblue mb-4 border-b-2 border-iceblue"> Paid Advertising </h2>
       <div className="container mx-auto px-2 md:px-20 flex flex-col lg:flex-row lg:space-x-12" id="Contact">
         {/* Contact Form */}
 
@@ -30,7 +30,7 @@ const PaidAdvertisingForm = () => {
               transition={{ duration: 1, delay: 0, ease: "easeOut" }}
               className="wow fadeInUp"
             >
-              <h1 className='text-2xl font-bold py-3'> (1) Business Overview </h1>
+              <h1 className='text-2xl font-bold py-3'> 1. Business Overview </h1>
 
               <div className='pb-5'>
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="company">
@@ -38,7 +38,7 @@ const PaidAdvertisingForm = () => {
                 </label>
                 <input
                   id="company"
-                  name="company"
+                  name="Company_Name"
                   type="text"
                   placeholder='type here the answer'
                   className="w-full md:text-lg text-md p-2 md:p-3 border border-iceblue placeholder-slate-700 rounded-sm md:rounded-md bg-transparent font-light text-gray-200"
@@ -54,9 +54,9 @@ const PaidAdvertisingForm = () => {
                   <label htmlFor='Answer1'>
                     <input
                       id='answer1'
-                      name="primarygoal"
+                      name="Primary_Goal"
                       type="radio"
-                      value="e-commerce"
+                      value="Increasing Brand Awareness"
                       className="w-4 h-4"
                       required
                     />
@@ -67,9 +67,9 @@ const PaidAdvertisingForm = () => {
                 <div>
                   <input
                     id='Answer2'
-                    name="primarygoal"
+                    name="Primary_Goal"
                     type="radio"
-                    value="service-based"
+                    value="Driving Website Traffic"
                     className="w-4 h-4"
                     required
                   />
@@ -79,9 +79,9 @@ const PaidAdvertisingForm = () => {
                 <div>
                   <input
                     id='Answer3'
-                    name="primarygoal"
+                    name="Primary_Goal"
                     type="radio"
-                    value="informational"
+                    value="Generating Leads"
                     className="w-4 h-4"
                     required
                   />
@@ -91,9 +91,9 @@ const PaidAdvertisingForm = () => {
                 <div>
                   <input
                     id='Answer4'
-                    name="primarygoal"
+                    name="Primary_Goal"
                     type="radio"
-                    value="blog"
+                    value="Boosting Sales"
                     className="w-4 h-4"
                     required
                   />
@@ -103,9 +103,9 @@ const PaidAdvertisingForm = () => {
                 <div>
                   <input
                     id='Answer5'
-                    name="primarygoal"
+                    name="Primary_Goal"
                     type="radio"
-                    value="blog"
+                    value="Promoting Specific Products/Services"
                     className="w-4 h-4"
                     required
                   />
@@ -121,9 +121,9 @@ const PaidAdvertisingForm = () => {
                   <label htmlFor='Answer1'>
                     <input
                       id='answer1'
-                      name="secondarygoal"
+                      name="Secondary_Goal"
                       type="radio"
-                      value="e-commerce"
+                      value="Growing Social Media Followers"
                       className="w-4 h-4"
                       required
                     />
@@ -134,9 +134,9 @@ const PaidAdvertisingForm = () => {
                 <div>
                   <input
                     id='Answer2'
-                    name="secondarygoal"
+                    name="Secondary_Goal"
                     type="radio"
-                    value="service-based"
+                    value="Building an Email List"
                     className="w-4 h-4"
                     required
                   />
@@ -152,9 +152,9 @@ const PaidAdvertisingForm = () => {
                   <label htmlFor='Answer1'>
                     <input
                       id='answer1'
-                      name="action"
+                      name="Action"
                       type="radio"
-                      value="e-commerce"
+                      value="Make a Purchase"
                       className="w-4 h-4"
                       required
                     />
@@ -165,9 +165,9 @@ const PaidAdvertisingForm = () => {
                 <div>
                   <input
                     id='Answer2'
-                    name="action"
+                    name="Action"
                     type="radio"
-                    value="service-based"
+                    value="Sign-Up for a Newsletter"
                     className="w-4 h-4"
                     required
                   />
@@ -177,9 +177,9 @@ const PaidAdvertisingForm = () => {
                 <div>
                   <input
                     id='Answer3'
-                    name="action"
+                    name="Action"
                     type="radio"
-                    value="service-based"
+                    value="Visit Your Store"
                     className="w-4 h-4"
                     required
                   />
@@ -196,7 +196,8 @@ const PaidAdvertisingForm = () => {
               transition={{ duration: 1, delay: 0.5, ease: "easeOut" }}
               className="wow fadeInUp"
             >
-              <h1 className='text-2xl font-bold py-3'> (02) Target Audience </h1>
+            <hr className='mt-10 mb-5'/>
+              <h1 className='text-2xl font-bold py-3'> 02. Target Audience </h1>
               <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="audiance">
               Who is your target audience for these ads? 
               </label>
@@ -205,9 +206,9 @@ const PaidAdvertisingForm = () => {
                   <label htmlFor='Answer1'>
                     <input
                       id='answer1'
-                      name="audiance"
+                      name="Target_Audience"
                       type="radio"
-                      value="e-commerce"
+                      value="Age"
                       className="w-4 h-4"
                       required
                     />
@@ -218,9 +219,9 @@ const PaidAdvertisingForm = () => {
                 <div>
                   <input
                     id='Answer2'
-                    name="audiance"
+                    name="Target_Audience"
                     type="radio"
-                    value="service-based"
+                    value="Gender"
                     className="w-4 h-4"
                     required
                   />
@@ -230,9 +231,9 @@ const PaidAdvertisingForm = () => {
                 <div>
                   <input
                     id='Answer3'
-                    name="audiance"
+                    name="Target_Audience"
                     type="radio"
-                    value="service-based"
+                    value="Location"
                     className="w-4 h-4"
                     required
                   />
@@ -242,9 +243,9 @@ const PaidAdvertisingForm = () => {
                 <div>
                   <input
                     id='Answer4'
-                    name="audiance"
+                    name="Target_Audience"
                     type="radio"
-                    value="service-based"
+                    value="Interests"
                     className="w-4 h-4"
                     required
                   />
@@ -254,9 +255,9 @@ const PaidAdvertisingForm = () => {
                 <div>
                   <input
                     id='Answer5'
-                    name="audiance"
+                    name="Target_Audience"
                     type="radio"
-                    value="service-based"
+                    value="Buying Behaviour"
                     className="w-4 h-4"
                     required
                   />
@@ -269,7 +270,7 @@ const PaidAdvertisingForm = () => {
                 </label>
                 <input
                   id="persona"
-                  name="persona"
+                  name="Customer_Persona"
                   type="text"
                   className="w-full md:text-lg text-md p-2 md:p-3 border border-iceblue placeholder-slate-700 rounded-sm md:rounded-md bg-transparent font-light text-gray-200"
                   placeholder="type here the answer"
@@ -282,7 +283,7 @@ const PaidAdvertisingForm = () => {
                 </label>
                 <input
                   id="demographics"
-                  name="demographics"
+                  name="Demographics_Groups"
                   type="text"
                   placeholder='type here the answer'
                   className="w-full md:text-lg text-md p-2 md:p-3 border border-iceblue placeholder-slate-700 rounded-sm md:rounded-md bg-transparent font-light text-gray-200"
@@ -298,7 +299,8 @@ const PaidAdvertisingForm = () => {
               transition={{ duration: 1, delay: 1, ease: "easeOut" }}
               className="wow fadeInUp"
             >
-              <h1 className='text-2xl font-bold py-3'> (03)  Ad Platforms & Budget </h1>
+              <hr className='mt-10 mb-5'/>
+              <h1 className='text-2xl font-bold py-3'> 03.  Ad Platforms & Budget </h1>
 
               <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="platform">
               Which platforms do you want to run your ads on?
@@ -309,9 +311,9 @@ const PaidAdvertisingForm = () => {
                   <label htmlFor='Answer1'>
                     <input
                       id='Answer1'
-                      name="platform"
+                      name="Platforms"
                       type="checkbox"
-                      value="Answer1"
+                      value="Facebook"
                       className="w-4 h-4"
                     />
                   </label>
@@ -321,9 +323,9 @@ const PaidAdvertisingForm = () => {
                 <div>
                   <input
                     id='Answer2'
-                    name="platform"
+                    name="Platforms"
                     type="checkbox"
-                    value="Answer2"
+                    value="Instagram"
                     className="w-4 h-4"
                   />
                   <label htmlFor='Answer2'> Instagram </label>
@@ -332,9 +334,9 @@ const PaidAdvertisingForm = () => {
                 <div>
                   <input
                     id='Answer3'
-                    name="platform"
+                    name="Platforms"
                     type="checkbox"
-                    value="Answer3"
+                    value="Google"
                     className="w-4 h-4"
                   />
                   <label htmlFor='Answer3'> Google </label>
@@ -343,9 +345,9 @@ const PaidAdvertisingForm = () => {
                 <div>
                   <input
                     id='Answer4'
-                    name="platform"
+                    name="Platforms"
                     type="checkbox"
-                    value="Answer4'"
+                    value="LinkedIn'"
                     className="w-4 h-4"
                   />
                   <label htmlFor='Answer4'> LinkedIn </label>
@@ -360,9 +362,9 @@ const PaidAdvertisingForm = () => {
                   <label htmlFor='Answer1'>
                     <input
                       id='answer1'
-                      name="budget"
+                      name="Monthly_Budget"
                       type="radio"
-                      value="e-commerce"
+                      value="Total Budget"
                       className="w-4 h-4"
                       required
                     />
@@ -373,9 +375,9 @@ const PaidAdvertisingForm = () => {
                 <div>
                   <input
                     id='Answer2'
-                    name="budget"
+                    name="Monthly_Budget"
                     type="radio"
-                    value="service-based"
+                    value="Budget per Platform"
                     className="w-4 h-4"
                     required
                   />
@@ -389,7 +391,7 @@ const PaidAdvertisingForm = () => {
                 </label>
                 <input
                   id="ads"
-                  name="ads"
+                  name="Paid_Ads"
                   type="text"
                   placeholder='type here the answer'
                   className="w-full md:text-lg text-md p-2 md:p-3 border border-iceblue placeholder-slate-700 rounded-sm md:rounded-md bg-transparent font-light text-gray-200"
@@ -406,7 +408,8 @@ const PaidAdvertisingForm = () => {
               transition={{ duration: 1, delay: 1.5, ease: "easeOut" }}
               className="wow fadeInUp"
             >
-              <h1 className='text-2xl font-bold py-3'> (04) Ad Content & Creative </h1>
+              <hr className='mt-10 mb-5'/>
+              <h1 className='text-2xl font-bold py-3'> 04. Ad Content & Creative </h1>
 
               <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="content">
               What type of ad content do you prefer?
@@ -417,9 +420,9 @@ const PaidAdvertisingForm = () => {
                   <label htmlFor='Answer1'>
                     <input
                       id='Answer1'
-                      name="content"
+                      name="Ad_Content_Type"
                       type="checkbox"
-                      value="Answer1"
+                      value="Images"
                       className="w-4 h-4"
                     />
                   </label>
@@ -429,9 +432,9 @@ const PaidAdvertisingForm = () => {
                 <div>
                   <input
                     id='Answer2'
-                    name="content"
+                    name="Ad_Content_Type"
                     type="checkbox"
-                    value="Answer2"
+                    value="Videos"
                     className="w-4 h-4"
                   />
                   <label htmlFor='Answer2'> Videos </label>
@@ -440,9 +443,9 @@ const PaidAdvertisingForm = () => {
                 <div>
                   <input
                     id='Answer3'
-                    name="content"
+                    name="Ad_Content_Type"
                     type="checkbox"
-                    value="Answer3"
+                    value="Carousels"
                     className="w-4 h-4"
                   />
                   <label htmlFor='Answer3'> Carousels </label>
@@ -451,9 +454,9 @@ const PaidAdvertisingForm = () => {
                 <div>
                   <input
                     id='Answer4'
-                    name="content"
+                    name="Ad_Content_Type"
                     type="checkbox"
-                    value="Answer4'"
+                    value="Slideshows"
                     className="w-4 h-4"
                   />
                   <label htmlFor='Answer4'> Slideshows </label>
@@ -462,9 +465,9 @@ const PaidAdvertisingForm = () => {
                 <div>
                   <input
                     id='Answer5'
-                    name="content"
+                    name="Ad_Content_Type"
                     type="checkbox"
-                    value="Answer5'"
+                    value="Stories"
                     className="w-4 h-4"
                   />
                   <label htmlFor='Answer5'> Stories </label>
@@ -480,9 +483,9 @@ const PaidAdvertisingForm = () => {
                   <label htmlFor='Answer1'>
                     <input
                       id='Answer1'
-                      name="creative"
+                      name="Creative"
                       type="checkbox"
-                      value="Answer1"
+                      value="Product Photos"
                       className="w-4 h-4"
                     />
                   </label>
@@ -492,9 +495,9 @@ const PaidAdvertisingForm = () => {
                 <div>
                   <input
                     id='Answer2'
-                    name="creative"
+                    name="Creative"
                     type="checkbox"
-                    value="Answer2"
+                    value="Videos"
                     className="w-4 h-4"
                   />
                   <label htmlFor='Answer2'> Videos </label>
@@ -503,9 +506,9 @@ const PaidAdvertisingForm = () => {
                 <div>
                   <input
                     id='Answer3'
-                    name="creative"
+                    name="Creative"
                     type="checkbox"
-                    value="Answer3"
+                    value="Graphic design"
                     className="w-4 h-4"
                   />
                   <label htmlFor='Answer3'> Graphic design </label>
@@ -520,9 +523,9 @@ const PaidAdvertisingForm = () => {
                   <label htmlFor='Answer1'>
                     <input
                       id='Answer1'
-                      name="cta"
+                      name="CTA"
                       type="radio"
-                      value="Answer1"
+                      value="Shop Now"
                       className="w-4 h-4"
                       required
                     />
@@ -533,9 +536,9 @@ const PaidAdvertisingForm = () => {
                 <div>
                   <input
                     id='Answer2'
-                    name="cta"
+                    name="CTA"
                     type="radio"
-                    value="Answer2"
+                    value="Learn More"
                     className="w-4 h-4"
                     required
                   />
@@ -545,9 +548,9 @@ const PaidAdvertisingForm = () => {
                 <div>
                   <input
                     id='Answer3'
-                    name="cta"
+                    name="CTA"
                     type="radio"
-                    value="Answer3"
+                    value="Sign Up"
                     className="w-4 h-4"
                     required
                   />
@@ -561,7 +564,7 @@ const PaidAdvertisingForm = () => {
                 </label>
                 <input
                   id="preferences"
-                  name="preferences"
+                  name="Preferences"
                   type="text"
                   className="w-full md:text-lg text-md p-2 md:p-3 border border-iceblue rounded-sm md:rounded-md bg-transparent font-light text-gray-200"
                   required
@@ -573,7 +576,7 @@ const PaidAdvertisingForm = () => {
                 </label>
                 <input
                   id="promotion"
-                  name="promotion"
+                  name="Promotion"
                   type="text"
                   placeholder='type here the answer'
                   className="w-full md:text-lg text-md p-2 md:p-3 border border-iceblue placeholder-slate-700 rounded-sm md:rounded-md bg-transparent font-light text-gray-200"
@@ -585,8 +588,8 @@ const PaidAdvertisingForm = () => {
 
 
             {/* this is the fifth section */}
-
-              <h1 className='text-2xl font-bold py-3'> (05) Campaign Strategy </h1>
+            <hr className='mt-10 mb-5'/>
+              <h1 className='text-2xl font-bold py-3'> 05. Campaign Strategy </h1>
               <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="offers">
               Do you have any specific offers or promotions to include in the ad campaign?
               </label>
@@ -595,9 +598,9 @@ const PaidAdvertisingForm = () => {
                   <label htmlFor='Answer1'>
                     <input
                       id='Answer1'
-                      name="offers"
+                      name="Offers"
                       type="radio"
-                      value="Answer1"
+                      value="Discounts"
                       className="w-4 h-4"
                       required
                     />
@@ -608,9 +611,9 @@ const PaidAdvertisingForm = () => {
                 <div>
                   <input
                     id='Answer2'
-                    name="offers"
+                    name="Offers"
                     type="radio"
-                    value="Answer2"
+                    value="Free Trials"
                     className="w-4 h-4"
                     required
                   />
@@ -620,9 +623,9 @@ const PaidAdvertisingForm = () => {
                 <div>
                   <input
                     id='Answer3'
-                    name="offers"
+                    name="Offers"
                     type="radio"
-                    value="Answer3"
+                    value="Limited-Time Offers"
                     className="w-4 h-4"
                     required
                   />
@@ -636,9 +639,9 @@ const PaidAdvertisingForm = () => {
                 <div>
                   <input
                     id='Answer5-1'
-                    name="focus"
+                    name="FocusedOn"
                     type="checkbox"
-                    value="Answer5-1"
+                    value="Holiday Sales"
                     className="w-4 h-4"
                     required
                   />
@@ -648,9 +651,9 @@ const PaidAdvertisingForm = () => {
                 <div>
                   <input
                     id='Answer5-2'
-                    name="focus"
+                    name="FocusedOn"
                     type="checkbox"
-                    value="Answer5-2"
+                    value="Local Events"
                     className="w-4 h-4"
                   />
                   <label htmlFor='Answer5-2'>  Local Events </label>
@@ -659,9 +662,9 @@ const PaidAdvertisingForm = () => {
                 <div>
                   <input
                     id='Answer5-3'
-                    name="focus"
+                    name="FocusedOn"
                     type="checkbox"
-                    value="Answer5-3"
+                    value="Product Launches"
                     className="w-4 h-4"
                   />
                   <label htmlFor='Answer5-3'> Product Launches </label>
@@ -676,9 +679,9 @@ const PaidAdvertisingForm = () => {
                   <label htmlFor='Answer1'>
                     <input
                       id='Answer5-1'
-                      name="frequencyads"
+                      name="Frequency_Ads"
                       type="radio"
-                      value="Answer5-1"
+                      value="Always-on Campaigns"
                       className="w-4 h-4"
                       required
                     />
@@ -689,9 +692,9 @@ const PaidAdvertisingForm = () => {
                 <div>
                   <input
                     id='Answer5-2'
-                    name="frequencyads"
+                    name="Frequency_Ads"
                     type="radio"
-                    value="Answer5-2"
+                    value="Seasonal Campaigns"
                     className="w-4 h-4"
                     required
                   />
@@ -707,9 +710,9 @@ const PaidAdvertisingForm = () => {
                   <label htmlFor='Answer1'>
                     <input
                       id='Answer5-1'
-                      name="strategy"
+                      name="Preferred_Bidding_Strategy"
                       type="radio"
-                      value="Answer5-1"
+                      value="Cost per Click (CPC)"
                       className="w-4 h-4"
                       required
                     />
@@ -722,7 +725,7 @@ const PaidAdvertisingForm = () => {
                     id='Answer5-2'
                     name="strategy"
                     type="radio"
-                    value="Answer5-2"
+                    value="Cost per Thousand Impressions"
                     className="w-4 h-4"
                     required
                   />
@@ -734,7 +737,7 @@ const PaidAdvertisingForm = () => {
                     id='Answer5-3'
                     name="strategy"
                     type="radio"
-                    value="Answer5-3"
+                    value="Conversion Optimization"
                     className="w-4 h-4"
                     required
                   />
@@ -751,14 +754,15 @@ const PaidAdvertisingForm = () => {
               transition={{ duration: 1, delay: 2, ease: "easeOut" }}
               className="wow fadeInUp"
             >
-              <h1 className='text-2xl font-bold py-3'> (06) Competitor Analysis </h1>
+              <hr className='mt-10 mb-5'/>
+              <h1 className='text-2xl font-bold py-3'> 06. Competitor Analysis </h1>
               <div className='pb-5'>
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="competitors">
                 Who are your main competitors, and have you observed their advertising strategies?
                 </label>
                 <input
                   id="competitors"
-                  name="competitors"
+                  name="Competitors"
                   type="text"
                   placeholder='type here the answer'
                   className="w-full md:text-lg text-md p-2 md:p-3 border border-iceblue placeholder-slate-700 rounded-sm md:rounded-md bg-transparent font-light text-gray-200"
@@ -766,14 +770,13 @@ const PaidAdvertisingForm = () => {
                 />
               </div>
 
-              <h1 className='text-2xl font-bold py-3'> (06) Competitor Analysis </h1>
               <div className='pb-5'>
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="admire">
                     Are there any specific competitors whose ads you admire?
                 </label>
                 <input
                   id="admire"
-                  name="admire"
+                  name="Admired_Ads"
                   type="text"
                   placeholder='type here the answer'
                   className="w-full md:text-lg text-md p-2 md:p-3 border border-iceblue placeholder-slate-700 rounded-sm md:rounded-md bg-transparent font-light text-gray-200"
@@ -781,14 +784,13 @@ const PaidAdvertisingForm = () => {
                 />
               </div>
 
-              <h1 className='text-2xl font-bold py-3'> (06) Competitor Analysis </h1>
               <div className='pb-5'>
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="competition">
                 How do you want your ads to stand out from the competition?
                 </label>
                 <input
                   id="competition"
-                  name="competition"
+                  name="Competition_Standout"
                   type="text"
                   placeholder='type here the answer'
                   className="w-full md:text-lg text-md p-2 md:p-3 border border-iceblue placeholder-slate-700 rounded-sm md:rounded-md bg-transparent font-light text-gray-200"
@@ -798,8 +800,8 @@ const PaidAdvertisingForm = () => {
 
               
             {/* this is seventh section */}
-
-              <h1 className='text-2xl font-bold py-3'> (07) Tracking & Performance Metrics </h1>
+            <hr className='mt-10 mb-5'/>
+              <h1 className='text-2xl font-bold py-3'> 07. Tracking & Performance Metrics </h1>
 
               <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="kpi">
               What key performance indicators (KPIs) are most important to you?
@@ -809,7 +811,7 @@ const PaidAdvertisingForm = () => {
                   <label htmlFor='Answer1'>
                     <input
                       id='Answer7-1'
-                      name="kpi"
+                      name="KPIs"
                       type="radio"
                       value="Answer7-1"
                       className="w-4 h-4"
@@ -822,9 +824,9 @@ const PaidAdvertisingForm = () => {
                 <div>
                   <input
                     id='Answer7-2'
-                    name="kpi"
+                    name="KPIs"
                     type="radio"
-                    value="Answer7-2"
+                    value="Conversion Rate"
                     className="w-4 h-4"
                     required
                   />
@@ -834,9 +836,9 @@ const PaidAdvertisingForm = () => {
                 <div>
                   <input
                     id='Answer7-3'
-                    name="kpi"
+                    name="KPIs"
                     type="radio"
-                    value="Answer7-3"
+                    value="Cost per Acquisition (CPA)"
                     className="w-4 h-4"
                     required
                   />
@@ -846,9 +848,9 @@ const PaidAdvertisingForm = () => {
                 <div>
                   <input
                     id='Answer7-4'
-                    name="kpi"
+                    name="KPIs"
                     type="radio"
-                    value="Answer7-4"
+                    value="Return on Ad Spend (ROAS)"
                     className="w-4 h-4"
                     required
                   />
@@ -864,9 +866,9 @@ const PaidAdvertisingForm = () => {
                   <label htmlFor='Answer1'>
                     <input
                       id='Answer7-1'
-                      name="tools"
+                      name="Tracking_Tools"
                       type="radio"
-                      value="Answer7-1"
+                      value="Google Analytics"
                       className="w-4 h-4"
                       required
                     />
@@ -877,9 +879,9 @@ const PaidAdvertisingForm = () => {
                 <div>
                   <input
                     id='Answer7-2'
-                    name="tools"
+                    name="Tracking_Tools"
                     type="radio"
-                    value="Answer7-2"
+                    value="Facebook Pixel"
                     className="w-4 h-4"
                     required
                   />
@@ -895,9 +897,9 @@ const PaidAdvertisingForm = () => {
                   <label htmlFor='Answer1'>
                     <input
                       id='Answer7-1'
-                      name="performance"
+                      name="Reports_Frequency"
                       type="radio"
-                      value="Answer7-1"
+                      value="Weekly"
                       className="w-4 h-4"
                       required
                     />
@@ -908,9 +910,9 @@ const PaidAdvertisingForm = () => {
                 <div>
                   <input
                     id='Answer7-2'
-                    name="performance"
+                    name="Reports_Frequency"
                     type="radio"
-                    value="Answer7-2"
+                    value="Bi-Weekly"
                     className="w-4 h-4"
                     required
                   />
@@ -920,9 +922,9 @@ const PaidAdvertisingForm = () => {
                 <div>
                   <input
                     id='Answer7-3'
-                    name="performance"
+                    name="Reports_Frequency"
                     type="radio"
-                    value="Answer7-3"
+                    value="Monthly"
                     className="w-4 h-4"
                     required
                   />
@@ -937,7 +939,7 @@ const PaidAdvertisingForm = () => {
                 </label>
                 <input
                   id="security"
-                  name="security"
+                  name="Focused_Metrics"
                   type="text"
                   className="w-full md:text-lg text-md p-2 md:p-3 border border-iceblue placeholder-slate-700 rounded-sm md:rounded-md bg-transparent font-light text-gray-200"
                   placeholder='ex:- SSL certificate, Data protection, User Authentication'
@@ -953,7 +955,8 @@ const PaidAdvertisingForm = () => {
               transition={{ duration: 1, delay: 2.5, ease: "easeOut" }}
               className="wow fadeInUp"
             >
-              <h1 className='text-2xl font-bold py-3'> (08) Ad Targeting Preferences </h1>
+              <hr className='mt-10 mb-5'/>
+              <h1 className='text-2xl font-bold py-3'> 08. Ad Targeting Preferences </h1>
 
               <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="preferences">
               Do you have any specific targeting preferences?
@@ -962,9 +965,9 @@ const PaidAdvertisingForm = () => {
                 <div>
                   <input
                     id='Answer8-1'
-                    name="preferences"
+                    name="Targeting_Preferences"
                     type="checkbox"
-                    value="Answer8-1"
+                    value="Retargeting Website Visitors"
                     className="w-4 h-4"
                     required
                   />
@@ -974,9 +977,9 @@ const PaidAdvertisingForm = () => {
                 <div>
                   <input
                     id='Answer8-2'
-                    name="preferences"
+                    name="Targeting_Preferences"
                     type="checkbox"
-                    value="Answer8-2"
+                    value="Lookalike Audiences"
                     className="w-4 h-4"
                   />
                   <label htmlFor='Answer8-2'>  Lookalike Audiences </label>
@@ -985,9 +988,9 @@ const PaidAdvertisingForm = () => {
                 <div>
                   <input
                     id='Answer8-3'
-                    name="preferences"
+                    name="Targeting_Preferences"
                     type="checkbox"
-                    value="Answer8-3"
+                    value="Geographic Targeting"
                     className="w-4 h-4"
                   />
                   <label htmlFor='Answer8-3'> Geographic Targeting </label>
@@ -1002,9 +1005,9 @@ const PaidAdvertisingForm = () => {
                   <label htmlFor='Answer1'>
                     <input
                       id='Answer8-1'
-                      name="customaudiance"
+                      name="Custom_Audiance"
                       type="radio"
-                      value="Answer8-1"
+                      value="Email List"
                       className="w-4 h-4"
                       required
                     />
@@ -1015,9 +1018,9 @@ const PaidAdvertisingForm = () => {
                 <div>
                   <input
                     id='Answer8-2'
-                    name="customaudiance"
+                    name="Custom_Audiance"
                     type="radio"
-                    value="Answer8-2"
+                    value="Previous Customers"
                     className="w-4 h-4"
                     required
                   />
@@ -1031,7 +1034,7 @@ const PaidAdvertisingForm = () => {
                 </label>
                 <input
                   id="different"
-                  name="different"
+                  name="A/B_Tests"
                   type="text"
                   className="w-full md:text-lg text-md p-2 md:p-3 border border-iceblue placeholder-slate-700 rounded-sm md:rounded-md bg-transparent font-light text-gray-200"
                   placeholder='type here the answer'
@@ -1040,8 +1043,8 @@ const PaidAdvertisingForm = () => {
               </div>
 
             {/* this is nineth section */}
-
-              <h1 className='text-2xl font-bold py-3'> (09) Compliance & Brand Safety </h1>
+            <hr className='mt-10 mb-5'/>
+              <h1 className='text-2xl font-bold py-3'> 09. Compliance & Brand Safety </h1>
 
               <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="guidline">
               Are there any brand safety guidelines or sensitive topics you want to avoid?
@@ -1051,9 +1054,9 @@ const PaidAdvertisingForm = () => {
                   <label htmlFor='Answer1'>
                     <input
                       id='Answer9-1'
-                      name="guidline"
+                      name="Avoid_Topics"
                       type="radio"
-                      value="Answer9-1"
+                      value="Content types"
                       className="w-4 h-4"
                       required
                     />
@@ -1064,9 +1067,9 @@ const PaidAdvertisingForm = () => {
                 <div>
                   <input
                     id='Answer9-2'
-                    name="guidline"
+                    name="Avoid_Topics"
                     type="radio"
-                    value="Answer9-2"
+                    value="Language"
                     className="w-4 h-4"
                     required
                   />
@@ -1078,7 +1081,7 @@ const PaidAdvertisingForm = () => {
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="disclaimers">
                 Do you have any legal disclaimers or terms that need to be included in the ads?
                 </label>
-                <textarea name="disclaimers" className='p-2 md:p-3 w-full h-40 bg-transparent border border-iceblue focus:border-2 rounded-sm md:rounded-md focus:border-white'>
+                <textarea name="Disclaimers" className='p-2 md:p-3 w-full h-40 bg-transparent border border-iceblue focus:border-2 rounded-sm md:rounded-md focus:border-white'>
                 </textarea>
               </div>
 
@@ -1086,13 +1089,13 @@ const PaidAdvertisingForm = () => {
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="regulation">
                 Are there any industry regulations we need to consider when creating your ads?
                 </label>
-                <textarea name="regulatioin" className='p-2 md:p-3 w-full h-40 bg-transparent border border-iceblue focus:border-2 rounded-sm md:rounded-md focus:border-white'>
+                <textarea name="Industry_Regulations" className='p-2 md:p-3 w-full h-40 bg-transparent border border-iceblue focus:border-2 rounded-sm md:rounded-md focus:border-white'>
                 </textarea>
               </div>
 
 
-
-              <h1 className='text-2xl font-bold py-3'> (10) Budget Allocation & Scaling </h1>
+              <hr className='mt-5 mb-5'/>
+              <h1 className='text-2xl font-bold py-3'> 10. Budget Allocation & Scaling </h1>
               <div>
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="allocating">
                 How do you want to allocate your budget across different platforms or campaigns?
@@ -1102,9 +1105,9 @@ const PaidAdvertisingForm = () => {
                     <label htmlFor='yes'>
                       <input
                         id='Answer10-2'
-                        name="allocating"
+                        name="Budget_Allocation"
                         type="radio"
-                        value="Answer10-2"
+                        value="50% on Facebook"
                         className="w-4 h-4"
                         required
                       />
@@ -1115,9 +1118,9 @@ const PaidAdvertisingForm = () => {
                   <div>
                     <input
                       id='Answer10-2'
-                      name="allocating"
+                      name="Budget_Allocation"
                       type="radio"
-                      value="Answer10-2"
+                      value="30% on Google Ads"
                       className="w-4 h-4"
                       required
                     />
@@ -1129,7 +1132,7 @@ const PaidAdvertisingForm = () => {
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="scalingbudget">
                 Are you open to scaling the budget if the ads perform well?
                 </label>
-                <textarea name="scalingbudget" className='p-2 md:p-3 w-full h-40 bg-transparent border border-iceblue focus:border-2 rounded-sm md:rounded-md focus:border-white'>
+                <textarea name="Budget_Scaling" className='p-2 md:p-3 w-full h-40 bg-transparent border border-iceblue focus:border-2 rounded-sm md:rounded-md focus:border-white'>
                 </textarea>
               </div>
 
@@ -1137,7 +1140,7 @@ const PaidAdvertisingForm = () => {
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="contingency">
                 Do you have a contingency plan or budget in case the initial strategy needs adjustment?
                 </label>
-                <textarea name="contingency" className='p-2 md:p-3 w-full h-40 bg-transparent border border-iceblue focus:border-2 rounded-sm md:rounded-md focus:border-white'>
+                <textarea name="Contingency_Plan" className='p-2 md:p-3 w-full h-40 bg-transparent border border-iceblue focus:border-2 rounded-sm md:rounded-md focus:border-white'>
                 </textarea>
               </div>
 
@@ -1151,7 +1154,8 @@ const PaidAdvertisingForm = () => {
               transition={{ duration: 1, delay: 2, ease: "easeOut" }}
               className="wow fadeInUp"
             >
-              <h1 className='text-2xl font-bold py-3'> (11) Integration with Other Marketing Channels </h1>
+              <hr className='mt-10 mb-5'/>
+              <h1 className='text-2xl font-bold py-3'> 11. Integration with Other Marketing Channels </h1>
 
               <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="marketingchannel">
               Are there any other marketing channels or campaigns you’re running that we should align with?
@@ -1160,9 +1164,9 @@ const PaidAdvertisingForm = () => {
                   <div>
                       <input
                         id='email-marketing'
-                        name="marketingchannel"
+                        name="Marketing_Channels"
                         type="radio"
-                        value="email-marketing"
+                        value="Email marketing"
                         className="w-4 h-4"
                         required
                       />                
@@ -1172,7 +1176,7 @@ const PaidAdvertisingForm = () => {
                   <div>
                     <input
                       id='SEO'
-                      name="marketingchannel"
+                      name="Marketing_Channels"
                       type="radio"
                       value="SEO"
                       className="w-4 h-4"
@@ -1184,9 +1188,9 @@ const PaidAdvertisingForm = () => {
                   <div>
                     <input
                       id='offline-prootions'
-                      name="marketingchannel"
+                      name="Marketing_Channels"
                       type="radio"
-                      value="offline-prootions"
+                      value="Offline promotions"
                       className="w-4 h-4"
                       required
                     />
@@ -1200,22 +1204,22 @@ const PaidAdvertisingForm = () => {
                 </label>
                 <input
                   id="crm"
-                  name="crm"
+                  name="Integration_With_Paid_Ads"
                   type="text"
                   placeholder='type here the answer'
                   className="w-full md:text-lg text-md p-2 md:p-3 border border-iceblue placeholder-slate-700 rounded-sm md:rounded-md bg-transparent font-light text-gray-200"
                   required
                 />
               </div>
-
-              <h1 className='text-2xl font-bold py-3'> (06) Competitor Analysis </h1>
+              <hr className='mt-5 mb-5'/>
+              <h1 className='text-2xl font-bold py-3'> 12. Competitor Analysis </h1>
               <div className='pb-5'>
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="paidadd">
                 How should the paid ads complement your organic social media content?
                 </label>
                 <input
                   id="paidadd"
-                  name="paidadd"
+                  name="Paid_Ads_Complement"
                   type="text"
                   placeholder='type here the answer'
                   className="w-full md:text-lg text-md p-2 md:p-3 border border-iceblue placeholder-slate-700 rounded-sm md:rounded-md bg-transparent font-light text-gray-200"
@@ -1225,8 +1229,8 @@ const PaidAdvertisingForm = () => {
 
               
             {/* this is twelveth section */}
-
-              <h1 className='text-2xl font-bold py-3'> (12) Additional Preferences </h1>
+            <hr className='mt-10 mb-5'/>
+              <h1 className='text-2xl font-bold py-3'> 13. Additional Preferences </h1>
 
               <div className='pb-5'>
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="creativeideas">
@@ -1234,7 +1238,7 @@ const PaidAdvertisingForm = () => {
                 </label>
                 <input
                   id="creativeideas"
-                  name="creativeideas"
+                  name="Creative_Ideas"
                   type="text"
                   className="w-full md:text-lg text-md p-2 md:p-3 border border-iceblue placeholder-slate-700 rounded-sm md:rounded-md bg-transparent font-light text-gray-200"
                   placeholder='type here the answer'
@@ -1248,7 +1252,7 @@ const PaidAdvertisingForm = () => {
                 </label>
                 <input
                   id="contenttype"
-                  name="contenttype"
+                  name="Content_Type"
                   type="text"
                   className="w-full md:text-lg text-md p-2 md:p-3 border border-iceblue placeholder-slate-700 rounded-sm md:rounded-md bg-transparent font-light text-gray-200"
                   placeholder='type here the answer'
@@ -1264,9 +1268,9 @@ const PaidAdvertisingForm = () => {
                   <label htmlFor='Answer1'>
                     <input
                       id='Answer12-1'
-                      name="addstyle"
+                      name="Particular_Preferences"
                       type="radio"
-                      value="Answer12-1"
+                      value="Humorous"
                       className="w-4 h-4"
                       required
                     />
@@ -1277,9 +1281,9 @@ const PaidAdvertisingForm = () => {
                 <div>
                   <input
                     id='Answer12-2'
-                    name="addstyle"
+                    name="Particular_Preferences"
                     type="radio"
-                    value="Answer12-2"
+                    value="Serious"
                     className="w-4 h-4"
                     required
                   />
@@ -1289,9 +1293,9 @@ const PaidAdvertisingForm = () => {
                 <div>
                   <input
                     id='Answer12-3'
-                    name="addstyle"
+                    name="Particular_Preferences"
                     type="radio"
-                    value="Answer12-3"
+                    value="Urgent"
                     className="w-4 h-4"
                     required
                   />

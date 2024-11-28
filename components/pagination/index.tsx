@@ -2,7 +2,6 @@
 import { useState, useRef } from 'react';
 import { WebDesign, SocialMediaManagement, PaidAdvertising, MobileAppDevelopment, Copywriting, Contentcreation } from '@/components/Roadmap';
 import { motion, useInView } from 'framer-motion';
-import Image from 'next/image';
 
 export default function TabsComponent() {
   const [activeTab, setActiveTab] = useState(null);
@@ -14,9 +13,9 @@ export default function TabsComponent() {
       <div className="mt-10 m-auto container lg:px-10">
         <div className="mb-4 border-gray-700">
           <motion.div
-            ref={ref} // Attach the ref to the element
+            ref={ref} 
             initial={{ y: -50, opacity: 0 }}
-            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -50 }} // Only animate when in view
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -50 }} 
             transition={{ duration: 0.5, delay: 0, ease: "easeOut" }}
             className="wow fadeInUp"
           >
@@ -285,9 +284,10 @@ export default function TabsComponent() {
                     <div className='pb-5'>
                       <h1 className='border-iceblue bg-black/90 border p-2 font-semibold md:text-2xl rounded-md shadow-[0_0_15px_5px_rgba(56,182,255,0.1)] text-center'> Introduction </h1>
                       <p className='pt-2 text-md text-gray-300 font-extralight text-justify'>
-                        At <span className='font-bold'>ROIInnovators</span>, our paid advertising services are designed to drive targeted traffic and boost conversions.
-                        We create tailored ad campaigns across platforms like Google, Facebook, TikTok and Instagram, optimizing every dollar to ensure maximum ROI.
-                        From strategy to execution, we help you reach the right audience and achieve measurable results that grow your business. Let’s turn clicks into customers!
+                        At <span className='font-bold'>ROIInnovators</span>, we manage your social media so you can focus on growing your business. 
+                        We create engaging content, build brand awareness, and foster meaningful connections with your audience across platforms like Facebook, 
+                        Instagram, TikTok and LinkedIn. Our data-driven strategies ensure consistent growth and measurable results. Let us handle your social media 
+                        presence, and watch your business thrive!
                       </p>
                     </div>
                   </motion.div>
