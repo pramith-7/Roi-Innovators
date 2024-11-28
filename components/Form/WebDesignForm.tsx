@@ -20,19 +20,19 @@ const WebDesignForm = () => {
     const formDatab = new FormData(formEle);
     e.preventDefault();
 
-          //check box data seperation with comma
-          const feature = formDatab.getAll("Feature");
-          const intergration = formDatab.getAll("Intergration");
-          const content = formDatab.getAll("Content");
-          const userExperience = formDatab.getAll("UserExperience");
-    
-          formDatab.set("Feature", feature.join(", "));
-          formDatab.set("Intergration", intergration.join(", "));
-          formDatab.set("Content", content.join(", "));
-          formDatab.set("UserExperience", userExperience.join(", "));
-    
-      
-    
+    //check box data seperation with comma
+    const feature = formDatab.getAll("Feature");
+    const intergration = formDatab.getAll("Intergration");
+    const content = formDatab.getAll("Content");
+    const userExperience = formDatab.getAll("UserExperience");
+
+    formDatab.set("Feature", feature.join(", "));
+    formDatab.set("Intergration", intergration.join(", "));
+    formDatab.set("Content", content.join(", "));
+    formDatab.set("UserExperience", userExperience.join(", "));
+
+
+
     fetch(
       "https://script.google.com/macros/s/AKfycbyPuYNiD0Zj3tll2sHUX-OeEa_fHoMJKpdH9Il2gY55GIz8FfViqNbEs7sd1xqPfjRMsA/exec",
       {
@@ -46,25 +46,26 @@ const WebDesignForm = () => {
       })
       .catch((error) => {
         console.log(error);
-      });  
+      });
 
-      //check data is missing and if not then redirect to thank you page
-        window.location.href = "/thankyou";
-      
+    //check data is missing and if not then redirect to thank you page
+    window.location.href = "/thankyou";
+
   }
 
   return (
     <>
-      <div className="absolute top-[50%] opacity-55 justify-center z-[-1] transition -translate-x-96">
-        <div className="w-[350px] h-[800px] rounded-full blur-[100px] bg-gradientbg2 "> </div>
+<section className='relative overflow-x-clip'>
+<div className="absolute opacity-55 justify-center z-[-1] transition md:-translate-x-80 -translate-x-96">
+        <div className="w-[400px] h-[800px] rounded-full blur-[100px] bg-gradientbg2 "> </div>
       </div>
-      <div className="absolute top-[300%] right-0 translate-x-96 opacity-55 z-[-1]">
+      <div className="absolute bottom-0 right-0 md:translate-x-72 translate-x-96 opacity-55 z-[-1]">
         <div className="w-[340px] h-[800px] rounded-full blur-[100px] bg-gradientbg2"></div>
       </div>
 
-      <h2 className="p-4 text-center text-4xl font-bold text-iceblue mb-4 border-b-2 border-iceblue">- Web Design - </h2>
+
+      <h2 className="p-4 text-center text-4xl font-bold text-iceblue mb-4 border-b-2 border-iceblue">Web Design</h2>
       <div className="container mx-auto px-2 md:px-20 flex flex-col lg:flex-row lg:space-x-12" id="Contact">
-        {/* Contact Form */}
 
         <div className="lg:w-full">
           <form className="form" method="POST" onSubmit={(e) => Submit(e)}>
@@ -75,8 +76,8 @@ const WebDesignForm = () => {
               transition={{ duration: 1, delay: 0, ease: "easeOut" }}
               className="wow fadeInUp"
             >
-              <h1 className='text-2xl font-bold py-3'> (1) Business Overview </h1>
-              
+              <h1 className='text-2xl font-bold py-3'> 1. Business Overview </h1>
+
               <div className='pb-5'>
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="company">
                   What the name of your Company / Business ?
@@ -180,7 +181,7 @@ const WebDesignForm = () => {
               transition={{ duration: 1, delay: 0.5, ease: "easeOut" }}
               className="wow fadeInUp"
             >
-              <h1 className='text-2xl font-bold py-3'> (02) Website Goals </h1>
+              <h1 className='text-2xl font-bold py-3'> 02. Website Goals </h1>
               <div className='pb-5'>
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="goal">
                   What are the primary goals of your website ?
@@ -445,7 +446,7 @@ const WebDesignForm = () => {
                     type="checkbox"
                     value="text"
                     className="w-4 h-4"
-                    
+
                   />
                   <label htmlFor='text'> Text </label>
                 </div>
@@ -764,6 +765,8 @@ const WebDesignForm = () => {
           </form >
         </div >
       </div >
+      </section>
+    
     </>
 
 

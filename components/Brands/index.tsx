@@ -70,8 +70,8 @@ const SingleBrand = ({ brand }: { brand: Brand }) => {
   const { href, image, name } = brand;
 
   return (
-    <div className="grayscale hover:grayscale-0 flex w-full items-center justify-center py-[15px] max-w-full">
-      <p className="relative md:h-14 md:w-14 h-8 w-8">
+    <div className="grayscale hover:grayscale-0 flex w-full items-center justify-center py-[5px] max-w-full">
+      <p className="relative md:h-10 md:w-10 h-8 w-8">
         <Image src={image} alt={name} fill />  
       </p>
       <p className="font-blue text-iceblue md:text-xl text-xs line-height-2 text-left ml-2"> {name} </p>

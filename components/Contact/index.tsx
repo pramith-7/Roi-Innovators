@@ -1,11 +1,9 @@
-import NewsLatterBox from "./NewsLatterBox";
-
 const Contact = () => {
   return (
-    <section id="contact" className="overflow-hidden py-16 md:py-20 lg:py-28">
+    <section id="contact" className="overflow-hidden">
       <div className="container xl:px-10">
         <div className="-mx-4 flex flex-wrap">
-          <div className="w-full px-4 lg:w-7/12 xl:w-8/12">
+          <div className="w-full px-4">
             <div
               className="wow fadeInUp mb-12 rounded-md bg-primary/[3%] py-11 px-8 bg-dark sm:p-[55px] lg:mb-5 lg:px-8 xl:p-[55px]"
               data-wow-delay=".15s
@@ -29,8 +27,9 @@ const Contact = () => {
                       </label>
                       <input
                         type="text"
+                        name="name"
                         placeholder="Enter your name"
-                        className="w-full rounded-md border border-transparent py-3 px-6 text-base text-body-color placeholder-body-color outline-none focus:border-primary focus-visible:shadow-none bg-[#242B51] shadow-signUp"
+                        className="w-full rounded-md border border-transparent py-3 px-6 text-base text-white placeholder-body-color outline-none focus:border-primary focus-visible:shadow-none bg-[#242B51] shadow-signUp"
                       />
                     </div>
                   </div>
@@ -44,8 +43,9 @@ const Contact = () => {
                       </label>
                       <input
                         type="email"
+                        name="email"
                         placeholder="Enter your email"
-                        className="w-full rounded-md border border-transparent py-3 px-6 text-base text-body-color placeholder-body-color shadow-one outline-none focus:border-primary focus-visible:shadow-none bg-[#242B51] shadow-signUp"
+                        className="w-full rounded-md border border-transparent py-3 px-6 text-base text-white placeholder-body-color shadow-one outline-none focus:border-primary focus-visible:shadow-none bg-[#242B51] shadow-signUp"
                       />
                     </div>
                   </div>
@@ -61,21 +61,32 @@ const Contact = () => {
                         name="message"
                         rows={5}
                         placeholder="Enter your Message"
-                        className="w-full resize-none rounded-md border border-transparent py-3 px-6 text-base text-body-color placeholder-body-color outline-none focus:border-primary focus-visible:shadow-none bg-[#242B51] shadow-signUp"
+                        className="w-full resize-none rounded-md border border-transparent py-3 px-6 text-base text-white placeholder-body-color outline-none focus:border-primary focus-visible:shadow-none bg-[#242B51] shadow-signUp"
                       ></textarea>
+                    </div>
+                  </div>
+                  {/* checkbox with newsletter submission*/}
+                  <div className="px-4">
+                    <div className="mb-8">
+                      <label className="flex items-center">
+                        <input
+                          type="checkbox"
+                          className="w-6 h-6"
+                        />
+                        <span className="ml-2 text-sm text-white">
+                          Subscribe to our Newsletter
+                        </span>
+                      </label>
                     </div>
                   </div>
                   <div className="w-full px-4">
                     <button className="rounded-md bg-primary py-4 px-9 text-base font-medium text-white transition duration-300 ease-in-out hover:bg-opacity-80 hover:shadow-signUp">
-                      Submit Ticket
+                      Send
                     </button>
                   </div>
                 </div>
               </form>
             </div>
-          </div>
-          <div className="w-full px-4 lg:w-5/12 xl:w-4/12">
-            <NewsLatterBox />
           </div>
         </div>
       </div>
