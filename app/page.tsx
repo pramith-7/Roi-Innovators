@@ -1,7 +1,7 @@
 import Hero from "@/components/Hero";
 import AboutSectionOne from "@/components/About/AboutSectionOne";
 import Brands from "@/components/Brands";
-import ScrollUp from "@/components/Common/ScrollUp";
+import ScrollToTop from "@/components/ScrollToTop";
 import Contact from "@/components/Contact";
 import Video from "@/components/Video";
 import Pricing from "@/components/Pricing";
@@ -14,9 +14,9 @@ const inter = Inter({ subsets: ["latin"] });
 export default function Home() {
   return (
     <>
+      <ScrollToTop />
       {/* <Roadmap /> */}
       <Hero />
-      <ScrollUp />
       <AboutSectionOne />
       <Video />
       <Brands />

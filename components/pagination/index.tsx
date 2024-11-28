@@ -1,7 +1,8 @@
 "use client";
 import { useState, useRef } from 'react';
-import { WebDesign, SocialMediaManagement } from '@/components/Roadmap';
+import { WebDesign, SocialMediaManagement , PaidAdvertising , MobileAppDevelopment , Copywriting , Contentcreation } from '@/components/Roadmap';
 import { motion, useInView } from 'framer-motion';
+import Image from 'next/image';
 
 export default function TabsComponent() {
   const [activeTab, setActiveTab] = useState(null);
@@ -183,15 +184,18 @@ export default function TabsComponent() {
             </li>
           </ul>
         </div>
+        </div>
 
         {/* Tabs Content */}
-        <div id="default-styled-tab-content">
+        <div id="default-styled-tab-content" className="bg-[url('https://data.moonscdn.com/prompt/slices/2/watermarked/blue-road-black-background_JAKLl.png')] bg-cover">
+        <div className='bg-black/50'>
+        <div className="container lg:px-10">
           {/* Web Development & Web Design Tab Content */}
           {activeTab === 'webdesign' && (
             <>
 
               <div
-                className="p-4 rounded-lg bg-slate-950/40 bg-cover bg-center border-2 border-gray-800"
+                className="p-4 rounded-lg"
                 id="styled-webdesign"
                 role="tabpanel"
                 aria-labelledby="webdesign-tab"
@@ -202,7 +206,7 @@ export default function TabsComponent() {
                   animate={{ translateY: 0, opacity: 1 }}
                   transition={{ duration: 0.7 }}
                 >
-                  <h1 className='md:text-4xl text-black my-7 py-3 text-center font-bold bg-sky-600 rounded-md'> Web Design </h1>
+                  <h1 className='text-2xl md:text-4xl text-black my-7 py-3 text-center font-bold bg-sky-600 rounded-md'> Web Design </h1>
                 </motion.div>
 
                 <motion.div
@@ -210,13 +214,25 @@ export default function TabsComponent() {
                   animate={{ translateY: 0, opacity: 1 }}
                   transition={{ duration: 0.7, delay: 0.3 }}
                 >
-                  <div className='pb-5'>
-                    <h1 className='my-2 border-iceblue border p-2 font-semibold md:text-2xl rounded-md shadow-[0_0_15px_5px_rgba(56,182,255,0.1)]'> (01). Introduction </h1>
-                    <p className='p-2 text-md text-gray-300 font-extralight text-justify'> 
+                  <div className='md:flex w-full'>
+                  <div className='pb-5 md:w-5/12 bg-black/90 border shadow-[0_0_15px_5px_rgba(56,182,255,0.1)] border-iceblue mb-5 md:mr-5 p-5 rounded-lg'>
+                 
+                     <Image
+                      src="/images/services/Web-Design.png"
+                      alt="Web Design"
+                      width={300}
+                      height={260}
+                      className='w-[300px] h-[260px] m-auto'  
+                    />
+                  </div>
+                  <div className='pb-5 md:w-7/12'>
+                    <h1 className='border-iceblue bg-black/90 border p-2 font-semibold md:text-2xl rounded-md shadow-[0_0_15px_5px_rgba(56,182,255,0.1)]'> (01). Introduction </h1>
+                    <p className='pt-2 text-md text-gray-300 font-extralight text-justify'> 
                       At <span className='font-bold'>ROIInnovators</span>, we craft custom websites that blend stunning design with flawless functionality. 
                       Our web design services ensure your site reflects your brand’s identity, while our development team builds responsive, SEO-optimized websites that deliver a seamless user experience across all devices. 
                       Whether it’s a sleek landing page or a full e-commerce platform, we bring your vision to life and drive real business results. Let us transform your online presence today!
                     </p>
+                  </div>
                   </div>
                 </motion.div>
 
@@ -226,7 +242,7 @@ export default function TabsComponent() {
                   transition={{ duration: 0.7, delay: 0.6 }}
                 >
                   <div className='pb-5'>
-                    <h1 className='my-2 border-iceblue border p-2 font-semibold md:text-2xl rounded-md shadow-[0_0_15px_5px_rgba(56,182,255,0.1)]'> (02). Milestone Map </h1>
+                    <h1 className='my-2 border-iceblue bg-black/90 border p-2 font-semibold md:text-2xl rounded-md shadow-[0_0_15px_5px_rgba(56,182,255,0.1)]'> (02). Milestone Map </h1>
                     <WebDesign />
                     <hr className='border-iceblue shadow-[0_0_15px_5px_rgba(56,182,255,0.1)]' />
                   </div>
@@ -249,7 +265,7 @@ export default function TabsComponent() {
             <>
 
               <div
-                className="p-4 rounded-lg bg-slate-950/40 bg-cover bg-center border-2 border-gray-800"
+                className="p-4 rounded-lg"
                 id="styled-socialmediamanagement"
                 role="tabpanel"
                 aria-labelledby="socialmediamanagement-tab"
@@ -268,15 +284,24 @@ export default function TabsComponent() {
                   animate={{ translateY: 0, opacity: 1 }}
                   transition={{ duration: 0.7, delay: 0.3 }}
                 >
-                  <div className='pb-5'>
-                    <h1 className='my-2 border-iceblue border p-2 font-semibold md:text-2xl rounded-md shadow-[0_0_15px_5px_rgba(56,182,255,0.1)]'> (01). Introduction </h1>
-                    <p className='p-2 text-md text-gray-300 font-extralight text-justify'>
-                    At <span className='font-bold'>ROIInnovators</span>, we create custom mobile apps that elevate your business. 
-                    From concept to launch, we develop intuitive, high-performance apps for iOS and Android, designed to engage users and streamline your operations. 
-                    Whether it’s an app to boost customer interaction or simplify internal processes, we deliver innovative solutions tailored to your goals. Let’s turn your app idea into reality!
-
-
+                  <div className='md:flex w-full'>
+                  <div className='pb-5 md:w-5/12 bg-black/90 border shadow-[0_0_15px_5px_rgba(56,182,255,0.1)] border-iceblue mb-5 md:mr-5 p-5 rounded-lg'>
+                      <Image
+                        src="/images/services/Social-Media-Managment.png"
+                        alt="Social Media Management"
+                        width={300}
+                        height={260}
+                        className='w-[300px] h-[260px] m-auto'
+                      />
+                  </div>
+                  <div className='md:w-7/12 pb-5'>
+                    <h1 className='border-iceblue bg-black/90 border p-2 font-semibold md:text-2xl rounded-md shadow-[0_0_15px_5px_rgba(56,182,255,0.1)]'> (01). Introduction </h1>
+                    <p className='pt-2 text-md text-gray-300 font-extralight text-justify'>
+                    At <span className='font-bold'>ROIInnovators</span>, our paid advertising services are designed to drive targeted traffic and boost conversions. 
+                      We create tailored ad campaigns across platforms like Google, Facebook, TikTok and Instagram, optimizing every dollar to ensure maximum ROI. 
+                      From strategy to execution, we help you reach the right audience and achieve measurable results that grow your business. Let’s turn clicks into customers!
                     </p>
+                  </div>
                   </div>
                 </motion.div>
 
@@ -286,7 +311,7 @@ export default function TabsComponent() {
                   transition={{ duration: 0.7, delay: 0.6 }}
                 >
                   <div className='pb-5'>
-                    <h1 className='my-2 border-iceblue border p-2 font-semibold md:text-2xl rounded-md shadow-[0_0_15px_5px_rgba(56,182,255,0.1)]'> (02). Milestone Map </h1>
+                    <h1 className='my-2 border-iceblue border bg-black/90 p-2 font-semibold md:text-2xl rounded-md shadow-[0_0_15px_5px_rgba(56,182,255,0.1)]'> (02). Milestone Map </h1>
                     <SocialMediaManagement />
                     <hr className='border-iceblue shadow-[0_0_15px_5px_rgba(56,182,255,0.1)]' />
                   </div>
@@ -306,7 +331,7 @@ export default function TabsComponent() {
             <>
 
               <div
-                className="p-4 rounded-lg bg-slate-950/40 bg-cover bg-center border-2 border-gray-800"
+                className="p-4 rounded-lg"
                 id="styled-profile"
                 role="tabpanel"
                 aria-labelledby="profile-tab"
@@ -317,7 +342,7 @@ export default function TabsComponent() {
                   animate={{ translateY: 0, opacity: 1 }}
                   transition={{ duration: 0.7 }}
                 >
-                  <h1 className='md:text-4xl text-black my-7 py-3 text-center font-bold bg-sky-600 rounded-md'> Web Design </h1>
+                  <h1 className='md:text-4xl text-black my-7 py-3 text-center font-bold bg-sky-600 rounded-md'> Paid Advertising </h1>
                 </motion.div>
 
                 <motion.div
@@ -325,13 +350,24 @@ export default function TabsComponent() {
                   animate={{ translateY: 0, opacity: 1 }}
                   transition={{ duration: 0.7, delay: 0.3 }}
                 >
-                  <div className='pb-5'>
-                    <h1 className='my-2 border-iceblue border p-2 font-semibold md:text-2xl rounded-md shadow-[0_0_15px_5px_rgba(56,182,255,0.1)]'> (01). Introduction </h1>
+                 <div className='md:flex w-full'>
+                  <div className='pb-5 md:w-5/12 bg-black/90 border shadow-[0_0_15px_5px_rgba(56,182,255,0.1)] border-iceblue mb-5 md:mr-5 p-5 rounded-lg'>
+                      <Image
+                          src="/images/services/Paid-Ads.png"
+                          alt="Paid Advertising"
+                          width={300}
+                          height={260}
+                          className='w-[300px] h-[260px] m-auto'
+                        />
+                  </div>
+                  <div className='md:w-7/12 pb-5'>
+                    <h1 className='border-iceblue border bg-black/90 p-2 font-semibold md:text-2xl rounded-md shadow-[0_0_15px_5px_rgba(56,182,255,0.1)]'> (01). Introduction </h1>
                     <p className='p-2 text-md text-gray-300 font-extralight text-justify'> At <span className='font-bold'>ROIInnovators</span>, our paid advertising services are designed to drive targeted traffic and boost conversions. 
                       We create tailored ad campaigns across platforms like Google, Facebook, TikTok and Instagram, optimizing every dollar to ensure maximum ROI. 
                       From strategy to execution, we help you reach the right audience and achieve measurable results that grow your business. Let’s turn clicks into customers!
 
                     </p>
+                  </div>
                   </div>
                 </motion.div>
 
@@ -341,8 +377,8 @@ export default function TabsComponent() {
                   transition={{ duration: 0.7, delay: 0.6 }}
                 >
                   <div className='pb-5'>
-                    <h1 className='my-2 border-iceblue border p-2 font-semibold md:text-2xl rounded-md shadow-[0_0_15px_5px_rgba(56,182,255,0.1)]'> (02). Milestone Map </h1>
-                    <WebDesign />
+                    <h1 className='my-2 border-iceblue border bg-black/90 p-2 font-semibold md:text-2xl rounded-md shadow-[0_0_15px_5px_rgba(56,182,255,0.1)]'> (02). Milestone Map </h1>
+                    <PaidAdvertising />
                     <hr className='border-iceblue shadow-[0_0_15px_5px_rgba(56,182,255,0.1)]' />
                   </div>
                   <div className='flex w-full justify-center'>
@@ -361,7 +397,7 @@ export default function TabsComponent() {
             <>
 
               <div
-                className="p-4 rounded-lg bg-slate-950/40 bg-cover bg-center border-2 border-gray-800"
+                className="p-4 rounded-lg"
                 id="styled-profile"
                 role="tabpanel"
                 aria-labelledby="profile-tab"
@@ -372,7 +408,7 @@ export default function TabsComponent() {
                   animate={{ translateY: 0, opacity: 1 }}
                   transition={{ duration: 0.7 }}
                 >
-                  <h1 className='md:text-4xl text-black my-7 py-3 text-center font-bold bg-sky-600 rounded-md'> Web Design </h1>
+                  <h1 className='md:text-4xl text-black my-7 py-3 text-center font-bold bg-sky-600 rounded-md'> Mobile App Development </h1>
                 </motion.div>
 
                 <motion.div
@@ -380,13 +416,22 @@ export default function TabsComponent() {
                   animate={{ translateY: 0, opacity: 1 }}
                   transition={{ duration: 0.7, delay: 0.3 }}
                 >
-                  <div className='pb-5'>
-                    <h1 className='my-2 border-iceblue border p-2 font-semibold md:text-2xl rounded-md shadow-[0_0_15px_5px_rgba(56,182,255,0.1)]'> (01). Introduction </h1>
-                    <p className='p-2 text-md text-gray-300 font-extralight text-justify'> At <span className='font-bold'>ROIInnovators</span>, we manage your social media so you can focus on growing your business. 
-                      We create engaging content, build brand awareness, and foster meaningful connections with your audience across platforms like Facebook, Instagram, TikTok and LinkedIn. 
-                      Our data-driven strategies ensure consistent growth and measurable results. Let us handle your social media presence, and watch your business thrive!
-
-                    </p>
+                 <div className='md:flex w-full'>
+                  <div className='pb-5 md:w-5/12 bg-black/90 border shadow-[0_0_15px_5px_rgba(56,182,255,0.1)] border-iceblue mb-5 md:mr-5 p-5 rounded-lg'>
+                      <Image
+                          src="/images/services/mobile-app-dev.png"
+                          alt="Mobile App Development"
+                          width={300}
+                          height={260}
+                          className='w-[300px] h-[260px] m-auto'
+                        />
+                  </div>
+                  <div className='md:w-7/12 pb-5'>
+                    <h1 className='border-iceblue border bg-black/90 p-2 font-semibold md:text-2xl rounded-md shadow-[0_0_15px_5px_rgba(56,182,255,0.1)]'> (01). Introduction </h1>
+                    <p className='p-2 text-md text-gray-300 font-extralight text-justify'> <span className="font-bold">ROIInnovators</span>, we create custom mobile apps that elevate your business. 
+                    From concept to launch, we develop intuitive, high-performance apps for iOS and Android, designed to engage users and streamline your operations. 
+                    Whether it’s an app to boost customer interaction or simplify internal processes, we deliver innovative solutions tailored to your goals. Let’s turn your app idea into reality!
+                  </div>
                   </div>
                 </motion.div>
 
@@ -396,8 +441,8 @@ export default function TabsComponent() {
                   transition={{ duration: 0.7, delay: 0.6 }}
                 >
                   <div className='pb-5'>
-                    <h1 className='my-2 border-iceblue border p-2 font-semibold md:text-2xl rounded-md shadow-[0_0_15px_5px_rgba(56,182,255,0.1)]'> (02). Milestone Map </h1>
-                    <WebDesign />
+                    <h1 className='my-2 border-iceblue border bg-black/90 p-2 font-semibold md:text-2xl rounded-md shadow-[0_0_15px_5px_rgba(56,182,255,0.1)]'> (02). Milestone Map </h1>
+                    <MobileAppDevelopment/>
                     <hr className='border-iceblue shadow-[0_0_15px_5px_rgba(56,182,255,0.1)]' />
                   </div>
                   <div className='flex w-full justify-center'>
@@ -416,7 +461,7 @@ export default function TabsComponent() {
             <>
 
               <div
-                className="p-4 rounded-lg bg-slate-950/40 bg-cover bg-center border-2 border-gray-800"
+                className="p-4 rounded-lg"
                 id="styled-profile"
                 role="tabpanel"
                 aria-labelledby="profile-tab"
@@ -427,7 +472,7 @@ export default function TabsComponent() {
                   animate={{ translateY: 0, opacity: 1 }}
                   transition={{ duration: 0.7 }}
                 >
-                  <h1 className='md:text-4xl text-black my-7 py-3 text-center font-bold bg-sky-600 rounded-md'> Web Design </h1>
+                  <h1 className='md:text-4xl text-black my-7 py-3 text-center font-bold bg-sky-600 rounded-md'> Copy Writing </h1>
                 </motion.div>
 
                 <motion.div
@@ -435,13 +480,24 @@ export default function TabsComponent() {
                   animate={{ translateY: 0, opacity: 1 }}
                   transition={{ duration: 0.7, delay: 0.3 }}
                 >
-                  <div className='pb-5'>
-                    <h1 className='my-2 border-iceblue border p-2 font-semibold md:text-2xl rounded-md shadow-[0_0_15px_5px_rgba(56,182,255,0.1)]'> (01). Introduction </h1>
+                 <div className='md:flex w-full'>
+                  <div className='pb-5 md:w-5/12 bg-black/90 border shadow-[0_0_15px_5px_rgba(56,182,255,0.1)] border-iceblue mb-5 md:mr-5 p-5 rounded-lg'>
+                      <Image
+                            src="/images/services/Copywriting.png"
+                            alt="Copy Writing"
+                            width={300}
+                            height={260}
+                            className='w-[300px] h-[260px] m-auto'
+                          />
+                  </div>
+                  <div className='md:w-7/12 pb-5'>
+                    <h1 className='border-iceblue border bg-black/90 p-2 font-semibold md:text-2xl rounded-md shadow-[0_0_15px_5px_rgba(56,182,255,0.1)]'> (01). Introduction </h1>
                     <p className='p-2 text-md text-gray-300 font-extralight text-justify'> At <span className='font-bold'>ROIInnovators</span>, our copywriting services focus on crafting compelling text that grabs attention and drives action. 
                       Copywriting is the art of creating persuasive content for websites, ads, and social media that speaks directly to your audience and encourages them to engage with your business. 
                       Whether you need catchy headlines or engaging product descriptions, we’ll help tell your story and boost conversions with words that work!
 
                     </p>
+                  </div>
                   </div>
                 </motion.div>
 
@@ -451,8 +507,8 @@ export default function TabsComponent() {
                   transition={{ duration: 0.7, delay: 0.6 }}
                 >
                   <div className='pb-5'>
-                    <h1 className='my-2 border-iceblue border p-2 font-semibold md:text-2xl rounded-md shadow-[0_0_15px_5px_rgba(56,182,255,0.1)]'> (02). Milestone Map </h1>
-                    <WebDesign />
+                    <h1 className='my-2 border-iceblue border bg-black/90 p-2 font-semibold md:text-2xl rounded-md shadow-[0_0_15px_5px_rgba(56,182,255,0.1)]'> (02). Milestone Map </h1>
+                    <Copywriting />
                     <hr className='border-iceblue shadow-[0_0_15px_5px_rgba(56,182,255,0.1)]' />
                   </div>
                   <div className='flex w-full justify-center'>
@@ -471,7 +527,7 @@ export default function TabsComponent() {
             <>
 
               <div
-                className="p-4 rounded-lg bg-slate-950/40 bg-cover bg-center border-2 border-gray-800"
+                className="p-4 rounded-lg"
                 id="styled-profile"
                 role="tabpanel"
                 aria-labelledby="profile-tab"
@@ -482,7 +538,7 @@ export default function TabsComponent() {
                   animate={{ translateY: 0, opacity: 1 }}
                   transition={{ duration: 0.7 }}
                 >
-                  <h1 className='md:text-4xl text-black my-7 py-3 text-center font-bold bg-sky-600 rounded-md'> Web Design </h1>
+                  <h1 className='md:text-4xl text-black my-7 py-3 text-center font-bold bg-sky-600 rounded-md'> Content Creation </h1>
                 </motion.div>
 
                 <motion.div
@@ -490,13 +546,24 @@ export default function TabsComponent() {
                   animate={{ translateY: 0, opacity: 1 }}
                   transition={{ duration: 0.7, delay: 0.3 }}
                 >
-                  <div className='pb-5'>
-                    <h1 className='my-2 border-iceblue border p-2 font-semibold md:text-2xl rounded-md shadow-[0_0_15px_5px_rgba(56,182,255,0.1)]'> (01). Introduction </h1>
+                 <div className='md:flex w-full'>
+                  <div className='pb-5 md:w-5/12 bg-black/90 border shadow-[0_0_15px_5px_rgba(56,182,255,0.1)] border-iceblue mb-5 md:mr-5 p-5 rounded-lg'>
+                      <Image
+                          src="/images/services/Content-Creation.png"
+                          alt="Content Creation"
+                          width={300}
+                          height={260}
+                          className='w-[300px] h-[260px] m-auto'
+                        />
+                  </div>
+                  <div className='md:w-7/12 pb-5'>
+                    <h1 className='border-iceblue border bg-black/90 p-2 font-semibold md:text-2xl rounded-md shadow-[0_0_15px_5px_rgba(56,182,255,0.1)]'> (01). Introduction </h1>
                     <p className='p-2 text-md text-gray-300 font-extralight text-justify'> At <span className='font-bold'>ROIInnovators</span>, we create captivating content that speaks to your audience and elevates your brand. 
                       From eye-catching visuals to engaging videos, we craft content tailored to your business goals. To get you started, we’re offering one free video—no strings attached! 
                       Let’s showcase what we can do and help your business stand out online.
 
                     </p>
+                  </div>
                   </div>
                 </motion.div>
 
@@ -506,8 +573,8 @@ export default function TabsComponent() {
                   transition={{ duration: 0.7, delay: 0.6 }}
                 >
                   <div className='pb-5'>
-                    <h1 className='my-2 border-iceblue border p-2 font-semibold md:text-2xl rounded-md shadow-[0_0_15px_5px_rgba(56,182,255,0.1)]'> (02). Milestone Map </h1>
-                    <WebDesign />
+                    <h1 className='my-2 border-iceblue border bg-black/90 p-2 font-semibold md:text-2xl rounded-md shadow-[0_0_15px_5px_rgba(56,182,255,0.1)]'> (02). Milestone Map </h1>
+                    <Contentcreation />
                     <hr className='border-iceblue shadow-[0_0_15px_5px_rgba(56,182,255,0.1)]' />
                   </div>
                   <div className='flex w-full justify-center'>
@@ -520,62 +587,12 @@ export default function TabsComponent() {
               </div>
             </>
           )}
+          </div>
         </div>
       </div>
     </section>
   );
 }
 
-function CoursePreview({ title, videoTitle, videoDescription, modules }) {
-  const [activeModule, setActiveModule] = useState(null);
 
-  const toggleModule = (index) => {
-    setActiveModule(activeModule === index ? null : index);
-  };
-
-  return (
-    <div className="flex flex-col lg:flex-row justify-between items-start gap-8 p-6 lg:p-12 bg-gray-900 text-white min-h-screen">
-      {/* Video Section */}
-      <div className="w-full lg:w-2/3">
-        <div className="bg-gray-800 p-6 rounded-lg">
-          <img
-            src="https://via.placeholder.com/800x400"
-            alt="Video Placeholder"
-            className="w-full h-auto rounded-lg mb-6"
-          />
-          <h2 className="text-2xl font-semibold mb-4">{videoTitle}</h2>
-          <hr className="border-gray-700 mb-4" />
-          <p className="text-sm text-gray-400">{videoDescription}</p>
-        </div>
-      </div>
-
-      {/* Module List Section */}
-      <div className="w-full lg:w-1/3">
-        <div className="bg-gray-800 rounded-lg p-4">
-          {modules.map((module, index) => (
-            <div key={index} className="mb-2">
-              <button
-                onClick={() => toggleModule(index)}
-                className={`w-full flex justify-between items-center p-4 text-left rounded-lg transition ${activeModule === index
-                  ? 'bg-blue-600 text-white'
-                  : 'bg-gray-700 text-white hover:bg-gray-600'
-                  }`}
-              >
-                <span>{module.title}</span>
-                <span>{activeModule === index ? '-' : '+'}</span>
-              </button>
-              {activeModule === index && (
-                <div className="p-4 bg-gray-700 mt-2 rounded-lg">
-                  <p className="text-sm text-gray-300">{module.content}</p>
-                </div>
-              )}
-            </div>
-          ))}
-        </div>
-      </div>
-    </div>
-
-
-  );
-}
 

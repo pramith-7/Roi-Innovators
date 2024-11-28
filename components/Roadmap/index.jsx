@@ -4,7 +4,9 @@ import {
   socialMediaManagementData , 
   mobileAppDevelopmentData ,  
   paidAdvertisingData , 
-  copywritingData } from '@/components/Roadmap/RoadmapData';
+  copywritingData,
+  contentCreationData
+ } from '@/components/Roadmap/RoadmapData';
 
 export const WebDesign = () => {
   return (
@@ -49,7 +51,7 @@ export const SocialMediaManagement = () => {
   );
 };
 
-export const mobileAppDevelopment = () => {
+export const MobileAppDevelopment = () => {
   return (
     <div className="">
       <section className="roadmap">
@@ -70,7 +72,7 @@ export const mobileAppDevelopment = () => {
   );
 };
 
-export const paidAdvertising = () => {
+export const PaidAdvertising = () => {
   return (
     <div className="">
       <section className="roadmap">
@@ -91,7 +93,7 @@ export const paidAdvertising = () => {
   );
 };
 
-export const copywriting = () => {
+export const Copywriting = () => {
   return (
     <div className="">
       <section className="roadmap">
@@ -111,4 +113,28 @@ export const copywriting = () => {
     </div>
   );
 };
+
+
+
+export const Contentcreation = () => {
+  return (
+    <div className="">
+      <section className="roadmap">
+          <div className="roadmap__timeline">
+          <div className="roadmap__line"> </div>
+          {contentCreationData.map((item, index) => (
+            <RoadMapItem
+              key={item.id}
+              stage={item.stage}
+              goal={item.goal}
+              activities={item.activities}
+              isEven={index % 2 === 0}
+            />
+          ))}
+        </div>
+      </section>
+    </div>
+  );
+};
+
 

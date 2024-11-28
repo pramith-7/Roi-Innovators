@@ -38,7 +38,7 @@ const AboutSectionOne = () => {
                 ref={ref} // Attach the ref to the element
                 initial={{ x: -100, opacity: 0 }}
                 animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -100 }} // Only animate when in view
-                transition={{ duration: 1, delay: 0, ease: "easeOut" }}
+                transition={{ duration: 0.5, ease: "easeOut" }}
                 className="wow fadeInUp"
               >
                 <h1 className="mb-3 mbtext-3xl font-bold !leading-tight text-white text-3xl md:text-[45px]">
