@@ -430,7 +430,7 @@ export default function TabsComponent() {
                     <h1 className='border-iceblue border bg-black/90 p-2 font-semibold md:text-2xl rounded-md shadow-[0_0_15px_5px_rgba(56,182,255,0.1)]'> (01). Introduction </h1>
                     <p className='p-2 text-md text-gray-300 font-extralight text-justify'> <span className="font-bold">ROIInnovators</span>, we create custom mobile apps that elevate your business. 
                     From concept to launch, we develop intuitive, high-performance apps for iOS and Android, designed to engage users and streamline your operations. 
-                    Whether it’s an app to boost customer interaction or simplify internal processes, we deliver innovative solutions tailored to your goals. Let’s turn your app idea into reality!
+                    Whether it’s an app to boost customer interaction or simplify internal processes, we deliver innovative solutions tailored to your goals. Let’s turn your app idea into reality! </p>
                   </div>
                   </div>
                 </motion.div>
