@@ -71,14 +71,14 @@ const AboutSectionOne = () => {
                 className="wow fadeInUp"
               >
                 <div
-                  className="wow fadeInUp relative mx-auto aspect-[25/24] max-w-[500px] lg:mr-5 border-2 border-iceblue hover:scale-105 transition-all duration-300"
+                  className="wow fadeInUp relative mx-auto aspect-[25/24] max-w-[500px] lg:mr-5 border-2 border-iceblue hover:scale-105 transition-all duration-300 rounded-2xl shadow-[0_0_15px_5px_rgba(56,182,255,0.3)"
                   data-wow-delay=".2s"
                 >
                   <Image
                     src="/images/logo/logo.png"
                     alt="about-image"
                     fill
-                    className="mx-auto max-w-full"
+                    className="mx-auto max-w-full rounded-2xl"
                   />
                 </div>
               </motion.div>

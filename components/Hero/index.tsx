@@ -39,7 +39,7 @@ const Video = () => {
                             transition={{ duration: 0.5, delay: 0.25, ease: "easeOut" }}
                             className="wow fadeInUp"
                         >
-                            <p className="text-iceblue font-semibold tracking-widest leading-normal text-sm md:text-md lg:px-54 lg:text-xl py-5">
+                            <p className="text-iceblue font-semibold tracking-widest leading-normal text-sm md:text-md lg:px-54 lg:text-xl py-5 animate-gradient bg-gradient-to-r from-primary via-iceblue to-blue-700 bg-[length:200%_auto] text-transparent bg-clip-text animate-gradient">
                                 RoiInnovator Is a Place , Where We Transform <br /> Your Middle-Class Business Into a Powerful Digital Presence Tool for Business Growth.
                             </p>
                         </motion.div>

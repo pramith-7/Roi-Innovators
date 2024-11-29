@@ -415,7 +415,7 @@ const MobileAppDevelopmentForm = () => {
 
               <div className='pb-5'>
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="regulation">
-                Is there anything else you'd like us to know about your project?
+                Is there anything else you would like us to know about your project?
                 </label>
                 <textarea name="Comments" placeholder=" Type anything.. " className='placeholder-slate-700 p-2 md:p-3 w-full h-40 bg-transparent border border-iceblue focus:border-2 rounded-sm md:rounded-md focus:border-white' >
                 </textarea>

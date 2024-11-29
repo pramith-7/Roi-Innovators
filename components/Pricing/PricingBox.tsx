@@ -10,7 +10,7 @@ const PricingBox = (props: {
   return (
     <div className="w-full">
       <div
-        className="wow fadeInUp relative z-10 rounded-md px-8 py-10 shadow-signUp bg-[#1D2144]"
+        className="wow fadeInUp z-10 rounded-3xl px-8 py-10 shadow-signUp bg-[#1D2144]"
         data-wow-delay=".1s"
       >
         <div className="flex items-center justify-between">
@@ -23,12 +23,12 @@ const PricingBox = (props: {
           </h4>
         </div>
         <p className="mb-7 text-base text-body-color">{subtitle}</p>
-        <div className="mb-8 border-b border-white border-opacity-10">
+        <div>{children}</div>
+        <div className="mt-8 border-t border-white border-opacity-10">
           <button className="flex w-full items-center justify-center rounded-md bg-primary p-3 text-base font-semibold text-white transition duration-300 ease-in-out hover:bg-opacity-80 hover:shadow-signUp">
             Start Free Trial
           </button>
         </div>
-        <div>{children}</div>
         <div className="absolute bottom-0 right-0 z-[-1]">
           <svg
             width="179"
@@ -70,6 +70,7 @@ const PricingBox = (props: {
                 <stop stopColor="#4A6CF7" stopOpacity="0.62" />
                 <stop offset="1" stopColor="#4A6CF7" stopOpacity="0" />
               </linearGradient>
+              
             </defs>
           </svg>
         </div>
