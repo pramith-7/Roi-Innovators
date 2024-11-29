@@ -23,6 +23,6 @@
       }
     ]
   },
-  "include": ["next-env.d.ts", ".next/types/**/*.ts", "**/*.ts", "**/*.tsx", "components/Roadmap/index.jsx", "components/Pagination/index.tsx", "components/Roadmap/RoadMapItem.jsx"],
+  "include": ["next-env.d.ts", ".next/types/**/*.ts", "**/*.ts", "**/*.tsx", "components/Roadmap/index.jsx", "components/Pagination/index.tsx", "components/Roadmap/RoadMapItem.jsx", "components/Hero/index.tsx"],
   "exclude": ["node_modules"]
 }
