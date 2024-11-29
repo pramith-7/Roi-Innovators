@@ -32,8 +32,7 @@ export default function RootLayout({
       <head />
 
       <body className="bg-gradient-black-blue">
-        <Providers>
-   
+        <Providers> 
           {children}
           <Footer />
         </Providers>
