@@ -92,43 +92,43 @@ export const socialMediaManagementData = [
 export const paidAdvertisingData = [
   {
     id: 1,
-    stage: 'Initial Consultation',
+    stage: '01. Initial Consultation',
     goal: 'Understand your business objectives and target audience.',
     activities: 'Discuss advertising goals, budget, and preferred platforms.'
   },
   {
     id: 2,
-    stage: 'Strategy Development',
+    stage: '02. Strategy Development',
     goal: 'Create a tailored advertising strategy.',
     activities: 'Research keywords, audience segmentation, and ad formats.'
   },
   {
     id: 3,
-    stage: 'Ad Creation',
+    stage: '03. Ad Creation',
     goal: 'Design compelling ads that resonate with your audience.',
     activities: 'Develop ad copy, visuals, and landing pages for campaigns.'
   },
   {
     id: 4,
-    stage: 'Campaign Setup',
+    stage: '04. Campaign Setup',
     goal: 'Launch targeted advertising campaigns across selected platforms.',
     activities: 'Set up ads on Google, Facebook, Instagram, etc., and configure tracking.'
   },
   {
     id: 5,
-    stage: 'Monitoring & Optimization',
+    stage: '05. Monitoring & Optimization',
     goal: 'Ensure optimal performance of ad campaigns.',
     activities: 'Track key metrics, adjust bids, and refine targeting for better results.'
   },
   {
     id: 6,
-    stage: 'Reporting & Analysis',
+    stage: '06. Reporting & Analysis',
     goal: 'Evaluate campaign effectiveness and ROI.',
     activities: 'Provide detailed reports on performance metrics and insights for improvement.'
   },
   {
     id: 7,
-    stage: 'Ongoing Management',
+    stage: '07. Ongoing Management',
     goal: 'Maintain campaign success and adapt to market changes.',
     activities: 'Continuously optimize campaigns and introduce new strategies as needed.'
   }
@@ -137,43 +137,43 @@ export const paidAdvertisingData = [
 export const mobileAppDevelopmentData = [
   {
     id: 1,
-    stage: 'Initial Consultation',
+    stage: '01. Initial Consultation',
     goal: 'Understand your app vision and target audience.',
     activities: 'Discuss app objectives, features, and market analysis.'
   },
   {
     id: 2,
-    stage: 'Wireframing & Prototyping',
+    stage: '02. Wireframing & Prototyping',
     goal: 'Create a blueprint for the app’s layout and functionality.',
     activities: 'Develop wireframes and interactive prototypes for feedback.'
   },
   {
     id: 3,
-    stage: 'Design Phase',
+    stage: '03. Design Phase',
     goal: 'Establish the visual identity of the app.',
     activities: 'Create UI/UX designs that enhance user experience and engagement.'
   },
   {
     id: 4,
-    stage: 'Development',
+    stage: '04. Development',
     goal: 'Build a fully functional app for iOS and Android.',
     activities: 'Code the app, integrating front-end and back-end functionalities.'
   },
   {
     id: 5,
-    stage: 'Testing & Quality Assurance',
+    stage: '05. Testing & Quality Assurance',
     goal: 'Ensure optimal performance and user experience.',
     activities: 'Conduct rigorous testing for bugs, performance issues, and compatibility.'
   },
   {
     id: 6,
-    stage: 'Final Review & Launch',
+    stage: '06. Final Review & Launch',
     goal: 'Prepare the app for public release.',
     activities: 'Obtain client approval, make final tweaks, and launch the app.'
   },
   {
     id: 7,
-    stage: 'Post-Launch Support',
+    stage: '07. Post-Launch Support',
     goal: 'Ensure continued success and app performance.',
     activities: 'Provide updates, maintenance, and user feedback analysis.'
   }
@@ -183,40 +183,81 @@ export const mobileAppDevelopmentData = [
 export const copywritingData = [
   {
     id: 1,
-    stage: 'Initial Consultation',
+    stage: '01. Initial Consultation',
     goal: 'Understand your business, target audience, and messaging needs.',
     activities: 'Discuss brand voice, tone, and specific copywriting goals (web content, ads, product descriptions, etc.).'
   },
   {
     id: 2,
-    stage: 'Research & Strategy Development',
+    stage: '02. Research & Strategy Development',
     goal: 'Develop a tailored copywriting strategy.',
     activities: 'Conduct research on the target audience, competitors, and relevant industry trends. Create a plan outlining content structure and key messaging points.'
   },
   {
     id: 3,
-    stage: 'Drafting Initial Copy',
+    stage: '03. Drafting Initial Copy',
     goal: 'Produce high-quality, persuasive copy aligned with your brand.',
     activities: 'Write the initial copy for the required materials, ensuring clarity, engagement, and alignment with your brand\'s tone.'
   },
   {
     id: 4,
-    stage: 'Client Review & Feedback',
+    stage: '04. Client Review & Feedback',
     goal: 'Ensure the copy meets your expectations and business needs.',
     activities: 'Present the draft copy to you for feedback. Make revisions based on your input to perfect the message.'
   },
   {
     id: 5,
-    stage: 'Final Approval & Optimization',
+    stage: '05. Final Approval & Optimization',
     goal: 'Finalize the copy for distribution or publishing.',
-    activities: 'Refine the copy for SEO, readability, and effectiveness. Ensure it’s optimized for the intended platform (web, social, print, etc.).'
+    activities: 'Refine the copy for SEO, readability, and effectiveness. Ensure it\’s optimized for the intended platform (web, social, print, etc.).'
   },
   {
     id: 6,
-    stage: 'Ongoing Adjustments & Additional Projects',
+    stage: '06. Ongoing Adjustments & Additional Projects',
     goal: 'Maintain consistency and relevance across all content.',
     activities: 'Continue refining copy as your business evolves, creating additional content as needed for ongoing campaigns or new projects.'
   }
 ];
+
+
+export const contentCreationData = [
+  {
+    id: 1,
+    stage: '01. Initial Consultation',
+    goal: 'Understand your business, target audience, and messaging needs.',
+    activities: 'Discuss brand voice, tone, and specific copywriting goals (web content, ads, product descriptions, etc.).'
+  },
+  {
+    id: 2,
+    stage: '02. Research & Strategy Development',
+    goal: 'Develop a tailored copywriting strategy.',
+    activities: 'Conduct research on the target audience, competitors, and relevant industry trends. Create a plan outlining content structure and key messaging points.'
+  },
+  {
+    id: 3,
+    stage: '03. Drafting Initial Copy',
+    goal: 'Produce high-quality, persuasive copy aligned with your brand.',
+    activities: 'Write the initial copy for the required materials, ensuring clarity, engagement, and alignment with your brand\'s tone.'
+  },
+  {
+    id: 4,
+    stage: '04. Client Review & Feedback',
+    goal: 'Ensure the copy meets your expectations and business needs.',
+    activities: 'Present the draft copy to you for feedback. Make revisions based on your input to perfect the message.'
+  },
+  {
+    id: 5,
+    stage: '05. Final Approval & Optimization',
+    goal: 'Finalize the copy for distribution or publishing.',
+    activities: 'Refine the copy for SEO, readability, and effectiveness. Ensure it\’s optimized for the intended platform (web, social, print, etc.).'
+  },
+  {
+    id: 6,
+    stage: '06. Ongoing Adjustments & Additional Projects',
+    goal: 'Maintain consistency and relevance across all content.',
+    activities: 'Continue refining copy as your business evolves, creating additional content as needed for ongoing campaigns or new projects.'
+  }
+];
+
 
 

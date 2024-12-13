@@ -1,14 +1,13 @@
 import { Inter } from "@next/font/google";
-import WebDesignForm from "@/components/Form/WebDesignForm";
+import PaidAdvertisingForm from "@/components/Form/PaidAdvertisingForm";
+
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
-
-
   return (
     <>
-      <WebDesignForm />
+      <PaidAdvertisingForm />
     </>
   );
 }

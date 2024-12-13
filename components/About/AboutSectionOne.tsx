@@ -38,7 +38,7 @@ const AboutSectionOne = () => {
                 ref={ref} // Attach the ref to the element
                 initial={{ x: -100, opacity: 0 }}
                 animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -100 }} // Only animate when in view
-                transition={{ duration: 1, delay: 0, ease: "easeOut" }}
+                transition={{ duration: 0.5, ease: "easeOut" }}
                 className="wow fadeInUp"
               >
                 <h1 className="mb-3 mbtext-3xl font-bold !leading-tight text-white text-3xl md:text-[45px]">
@@ -71,14 +71,14 @@ const AboutSectionOne = () => {
                 className="wow fadeInUp"
               >
                 <div
-                  className="wow fadeInUp relative mx-auto aspect-[25/24] max-w-[500px] lg:mr-5 border-2 border-iceblue hover:scale-105 transition-all duration-300"
+                  className="wow fadeInUp relative mx-auto aspect-[25/24] max-w-[500px] lg:mr-5 border-2 border-iceblue hover:scale-105 transition-all duration-300 rounded-2xl shadow-[0_0_15px_5px_rgba(56,182,255,0.3)"
                   data-wow-delay=".2s"
                 >
                   <Image
                     src="/images/logo/logo.png"
                     alt="about-image"
                     fill
-                    className="mx-auto max-w-full"
+                    className="mx-auto max-w-full rounded-2xl"
                   />
                 </div>
               </motion.div>
