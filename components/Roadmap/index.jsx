@@ -17,6 +17,7 @@ export const WebDesign = () => {
           {webDesignData.map((item, index) => (
             <RoadMapItem
               key={item.id}
+              id={item.id}
               stage={item.stage}
               goal={item.goal}
               activities={item.activities}
@@ -39,6 +40,7 @@ export const SocialMediaManagement = () => {
           {socialMediaManagementData.map((item, index) => (
             <RoadMapItem
               key={item.id}
+              id={item.id}
               stage={item.stage}
               goal={item.goal}
               activities={item.activities}
@@ -60,6 +62,7 @@ export const MobileAppDevelopment = () => {
           {mobileAppDevelopmentData.map((item, index) => (
             <RoadMapItem
               key={item.id}
+              id={item.id}
               stage={item.stage}
               goal={item.goal}
               activities={item.activities}
@@ -81,6 +84,7 @@ export const PaidAdvertising = () => {
           {paidAdvertisingData.map((item, index) => (
             <RoadMapItem
               key={item.id}
+              id={item.id}
               stage={item.stage}
               goal={item.goal}
               activities={item.activities}
@@ -102,6 +106,7 @@ export const Copywriting = () => {
           {copywritingData.map((item, index) => (
             <RoadMapItem
               key={item.id}
+              id={item.id}
               stage={item.stage}
               goal={item.goal}
               activities={item.activities}
@@ -125,6 +130,7 @@ export const Contentcreation = () => {
           {contentCreationData.map((item, index) => (
             <RoadMapItem
               key={item.id}
+              id={item.id}
               stage={item.stage}
               goal={item.goal}
               activities={item.activities}

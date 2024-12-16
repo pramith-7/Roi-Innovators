@@ -10,8 +10,6 @@ const checkIcon = (
   </svg>
 );
 
-
-
 const AboutSectionOne = () => {
   const List = ({ text }) => (
     <p className="mb-5 flex items-center text-lg font-medium text-body-color">
@@ -22,24 +20,22 @@ const AboutSectionOne = () => {
     </p>
   );
 
-  // Create a reference for the element
   const ref = useRef(null);
-  // Hook to detect if the element is in view
   const isInView = useInView(ref, { once: true });
 
   return (
-    <section id="about" className="my-10 relative overflow-x-clip">
-      <div className="container xl:px-10">
+    <section id="about" className="mt-10 relative overflow-x-clip">
+      <div className="container lg:px-10">
         <div className="pb-16 border-white/[.15] md:pb-20 lg:pb-28">
           <div className="-mx-4 flex flex-wrap items-center">
             <div className="w-full px-4 lg:w-1/2">
 
               <motion.div
-                ref={ref} // Attach the ref to the element
+                ref={ref}
                 initial={{ x: -100, opacity: 0 }}
-                animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -100 }} // Only animate when in view
+                animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -100 }}
                 transition={{ duration: 0.5, ease: "easeOut" }}
-                className="wow fadeInUp"
+                className="wow fadeInUp mb-5"
               >
                 <h1 className="mb-3 mbtext-3xl font-bold !leading-tight text-white text-3xl md:text-[45px]">
                   About Our Company
@@ -49,24 +45,13 @@ const AboutSectionOne = () => {
                   we would have to take care of our families and provide for them. It was at this juncture that one of our friends had an
                   ingenious idea to offer a service tailored for average business owners, a means to enhance their business sales.
                 </p>
-              </motion.div>
-
-              <div
-                className="wow fadeInUp mb-12 max-w-[570px] lg:mb-0"
-                data-wow-delay=".15s"
-              >
-
-              </div>
+              </motion.div>   
             </div>
-
             <div className="w-full px-4 lg:w-1/2">
-
-
-
               <motion.div
-                ref={ref} // Attach the ref to the element
+                ref={ref}
                 initial={{ x: 100, opacity: 0 }}
-                animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 100 }} // Only animate when in view
+                animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 100 }}
                 transition={{ duration: 1, delay: 0, ease: "easeOut" }}
                 className="wow fadeInUp"
               >

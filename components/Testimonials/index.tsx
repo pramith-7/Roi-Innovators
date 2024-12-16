@@ -1,82 +1,57 @@
 "use client";
-import { motion , useInView } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { Testimonial } from "@/types/testimonial";
 import SectionTitle from "../Common/SectionTitle";
 import SingleTestimonial from "./SingleTestimonial";
 
 const testimonialData: Testimonial[] = [
-  {
-    id: 1,
-    name: "Innorative Pricing for Financial Flexibility",
-    image: "/images/testimonials/1.png",
-    delays: 0.1
-
-  },
-  {
-    id: 2,
-    name: "Strategic Partnership",
-    image: "/images/testimonials/1.png",
-    delays: 0.3
-  },
-  {
-    id: 3,
-    name: "Tailored Solutions",
-    image: "/images/testimonials/1.png",
-    delays: 0.6
-  },
-  {
-    id: 4,
-    name: "Comprehensive Services",
-    image: "/images/testimonials/1.png",
-    delays: 0.9
-  }
+  { id: 1, name: "Innovative Pricing for Financial Flexibility", image: "/images/testimonials/1.png", delay: 0.1 },
+  { id: 2, name: "Strategic Partnership", image: "/images/testimonials/1.png", delay: 0.3 },
+  { id: 3, name: "Tailored Solutions", image: "/images/testimonials/1.png", delay: 0.6 },
+  { id: 4, name: "Comprehensive Services", image: "/images/testimonials/1.png", delay: 0.9 },
 ];
 
 const Testimonials = () => {
-
-      // Create a reference for the element
-      const ref = useRef(null);
-      // Hook to detect if the element is in view
-      const isInView = useInView(ref, { once: true }); 
-
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
 
   return (
-    <section id="benifits" className="relative bg-primary/[.03] py-16 md:py-20 lg:py-28">
+    <section id="benefits" className="relative py-16 md:py-20 lg:py-28 overflow-x-clip">
       <div className="absolute opacity-20 justify-center z-[-1] transition-all translate-x-80 translate-y-24">
-        <div className="w-[800px] h-[600px] rounded-full blur-[100px] bg-gradientbg "> </div>
+        <div className="w-[800px] h-[600px] rounded-full blur-[100px] bg-gradientbg"></div>
       </div>
 
       <div className="container px-10">
-      <motion.div
-                 ref={ref} // Attach the ref to the element
-                 initial={{ y: -50, opacity: 0 }}
-                 animate={isInView ? { opacity: 1 , y: 0 } : { opacity: 0 , y:-50 }} // Only animate when in view
-                 transition={{ duration: 1, delay: 0.5, ease: "easeOut" }}
-                 className="wow fadeInUp"
-          >
-        <SectionTitle
-          title="Why Choose US"
-          paragraph="There are the benifitis that we offer for you"
-          center
-        />
-      </motion.div>
+        <motion.div
+          ref={ref}
+          initial={{ y: -50, opacity: 0 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 1, delay: 0.5, ease: "easeOut" }}
+          className="wow fadeInUp"
+        >
+          <SectionTitle
+            title="Why Choose Us"
+            paragraph="Here are the benefits we offer for you"
+            center
+          />
+        </motion.div>
 
         <div className="grid grid-cols-1 gap-x-10 xl:gap-x-8 xl:gap-y-10 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4">
           {testimonialData.map((testimonial) => (
-                  <motion.div
-                  key={testimonial.id}
-                  ref={ref} // Attach the ref to the element
-                  initial={{ y: -50, opacity: 0 }}
-                  animate={isInView ? { opacity: 1 , y: 0 } : { opacity: 0 , y:-50 }} // Only animate when in view
-                  transition={{ duration: 0.5, delay: testimonial.delays, ease: "easeOut" }}
-                  className="wow fadeInUp"
-           >
-            <SingleTestimonial key={testimonial.id} testimonial={testimonial} />
+            <motion.div
+              key={testimonial.id}
+              initial={{ y: -50, opacity: 0 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.5, delay: testimonial.delay, ease: "easeOut" }}
+              className="wow fadeInUp"
+            >
+              <SingleTestimonial key={testimonial.id} testimonial={testimonial} />
             </motion.div>
           ))}
         </div>
       </div>
+
       <div className="absolute top-5 right-0 z-[-1]">
         <svg
           width="238"
@@ -92,8 +67,8 @@ const Testimonials = () => {
             width="196"
             height="541.607"
             rx="2"
-            transform="rotate(51.2997 422.819 -70.8145)"
-            fill="url(#paint0_linear_83:2)"
+            transform="rotate(51.3 422.819 -70.8145)"
+            fill="url(#paint0_linear)"
           />
           <rect
             opacity="0.3"
@@ -102,35 +77,22 @@ const Testimonials = () => {
             width="59.7544"
             height="541.607"
             rx="2"
-            transform="rotate(51.2997 426.568 144.886)"
-            fill="url(#paint1_linear_83:2)"
+            transform="rotate(51.3 426.568 144.886)"
+            fill="url(#paint1_linear)"
           />
           <defs>
-            <linearGradient
-              id="paint0_linear_83:2"
-              x1="517.152"
-              y1="-251.373"
-              x2="517.152"
-              y2="459.865"
-              gradientUnits="userSpaceOnUse"
-            >
+            <linearGradient id="paint0_linear" x1="517.152" y1="-251.373" x2="517.152" y2="459.865" gradientUnits="userSpaceOnUse">
               <stop stopColor="#4A6CF7" />
               <stop offset="1" stopColor="#4A6CF7" stopOpacity="0" />
             </linearGradient>
-            <linearGradient
-              id="paint1_linear_83:2"
-              x1="455.327"
-              y1="-35.673"
-              x2="455.327"
-              y2="675.565"
-              gradientUnits="userSpaceOnUse"
-            >
+            <linearGradient id="paint1_linear" x1="455.327" y1="-35.673" x2="455.327" y2="675.565" gradientUnits="userSpaceOnUse">
               <stop stopColor="#4A6CF7" />
               <stop offset="1" stopColor="#4A6CF7" stopOpacity="0" />
             </linearGradient>
           </defs>
         </svg>
       </div>
+
       <div className="absolute left-0 bottom-5 z-[-1]">
         <svg
           width="279"
@@ -140,68 +102,39 @@ const Testimonials = () => {
           xmlns="http://www.w3.org/2000/svg"
         >
           <g opacity="0.5">
-            <path
-              d="M-57 12L50.0728 74.8548C55.5501 79.0219 70.8513 85.7589 88.2373 79.3692C109.97 71.3821 116.861 60.9642 156.615 63.7423C178.778 65.291 195.31 69.2985 205.911 62.3533C216.513 55.408 224.994 47.7682 243.016 49.1572C255.835 50.1453 265.278 50.8936 278 45.3373"
-              stroke="url(#paint0_linear_72:302)"
-            />
-            <path
-              d="M-57 1L50.0728 63.8548C55.5501 68.0219 70.8513 74.7589 88.2373 68.3692C109.97 60.3821 116.861 49.9642 156.615 52.7423C178.778 54.291 195.31 58.2985 205.911 51.3533C216.513 44.408 224.994 36.7682 243.016 38.1572C255.835 39.1453 265.278 39.8936 278 34.3373"
-              stroke="url(#paint1_linear_72:302)"
-            />
-            <path
-              d="M-57 23L50.0728 85.8548C55.5501 90.0219 70.8513 96.7589 88.2373 90.3692C109.97 82.3821 116.861 71.9642 156.615 74.7423C178.778 76.291 195.31 80.2985 205.911 73.3533C216.513 66.408 224.994 58.7682 243.016 60.1572C255.835 61.1453 265.278 61.8936 278 56.3373"
-              stroke="url(#paint2_linear_72:302)"
-            />
-            <path
-              d="M-57 35L50.0728 97.8548C55.5501 102.022 70.8513 108.759 88.2373 102.369C109.97 94.3821 116.861 83.9642 156.615 86.7423C178.778 88.291 195.31 92.2985 205.911 85.3533C216.513 78.408 224.994 70.7682 243.016 72.1572C255.835 73.1453 265.278 73.8936 278 68.3373"
-              stroke="url(#paint3_linear_72:302)"
-            />
+            {[12, 1, 23, 35].map((offset, index) => (
+              <path
+                key={index}
+                d={`M-57 ${offset}L50.0728 ${offset + 62}C55.5501 ${offset + 67} 70.8513 ${
+                  offset + 73
+                } 88.2373 ${offset + 66}C109.97 ${offset + 59} 116.861 ${
+                  offset + 48
+                } 156.615 ${offset + 51}C178.778 ${offset + 53} 195.31 ${
+                  offset + 57
+                } 205.911 ${offset + 50}C216.513 ${offset + 43} 224.994 ${
+                  offset + 35
+                } 243.016 ${offset + 37}C255.835 ${offset + 38} 265.278 ${
+                  offset + 38
+                } 278 ${offset + 33}`}
+                stroke={`url(#paint${index}_linear)`}
+              />
+            ))}
           </g>
           <defs>
-            <linearGradient
-              id="paint0_linear_72:302"
-              x1="256.267"
-              y1="53.6717"
-              x2="-40.8688"
-              y2="8.15715"
-              gradientUnits="userSpaceOnUse"
-            >
-              <stop stopColor="#4A6CF7" stopOpacity="0" />
-              <stop offset="1" stopColor="#4A6CF7" />
-            </linearGradient>
-            <linearGradient
-              id="paint1_linear_72:302"
-              x1="256.267"
-              y1="42.6717"
-              x2="-40.8688"
-              y2="-2.84285"
-              gradientUnits="userSpaceOnUse"
-            >
-              <stop stopColor="#4A6CF7" stopOpacity="0" />
-              <stop offset="1" stopColor="#4A6CF7" />
-            </linearGradient>
-            <linearGradient
-              id="paint2_linear_72:302"
-              x1="256.267"
-              y1="64.6717"
-              x2="-40.8688"
-              y2="19.1572"
-              gradientUnits="userSpaceOnUse"
-            >
-              <stop stopColor="#4A6CF7" stopOpacity="0" />
-              <stop offset="1" stopColor="#4A6CF7" />
-            </linearGradient>
-            <linearGradient
-              id="paint3_linear_72:302"
-              x1="256.267"
-              y1="76.6717"
-              x2="-40.8688"
-              y2="31.1572"
-              gradientUnits="userSpaceOnUse"
-            >
-              <stop stopColor="#4A6CF7" stopOpacity="0" />
-              <stop offset="1" stopColor="#4A6CF7" />
-            </linearGradient>
+            {[...Array(4)].map((_, i) => (
+              <linearGradient
+                key={i}
+                id={`paint${i}_linear`}
+                x1="256.267"
+                y1={i * 12 - 8}
+                x2="-40.8688"
+                y2={i * 14}
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop stopColor="#4A6CF7" stopOpacity="0" />
+                <stop offset="1" stopColor="#4A6CF7" />
+              </linearGradient>
+            ))}
           </defs>
         </svg>
       </div>

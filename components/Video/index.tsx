@@ -5,15 +5,11 @@ import SectionTitle from "../Common/SectionTitle";
 
 
 const Video = () => {
-
-  // Create a reference for the element
   const ref = useRef(null);
-  // Hook to detect if the element is in view
   const isInView = useInView(ref, { once: true });
 
   return (
-    <section id="video" className="relative z-10 py-5 md:py-10 lg:py-18 overflow-x-clip">
-
+    <section id="video" className="relative overflow-x-clip">
       <div className="absolute opacity-55 justify-center z-[-1] transition -translate-x-96">
         <div className="w-[400px] h-[800px] rounded-full blur-[100px] bg-gradientbg2 "> </div>
       </div>
@@ -23,9 +19,9 @@ const Video = () => {
 
       <div className="container xl:px-10">
         <motion.div
-          ref={ref} // Attach the ref to the element
+          ref={ref}
           initial={{ opacity: 0, y: -40 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -100 }} // Only animate when in view
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -100 }}
           transition={{ duration: 0.5, ease: "easeOut" }}
           className="wow fadeInUp"
         >
@@ -35,34 +31,26 @@ const Video = () => {
             center
           />
         </motion.div>
-
-
         <motion.div
-          ref={ref} // Attach the ref to the element
+          ref={ref}
           initial={{ opacity: 0, y: -40 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -40 }} // Only animate when in view
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -40 }} 
           transition={{ duration: 0.5, delay: 0.25, ease: "easeOut" }}
         >
           <div className="flex justify-center items-center w-full">
-
             <div className="w-full h-[300px] md:h-[400px] max-w-4xl aspect-w-16 aspect-h-80">
 
               <iframe
                 className="w-full h-full"
                 src="https://www.youtube.com/embed/UK1zH4L2DOQ?si=U01QUBkIwOQbquQ_"
                 title="YouTube video player"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allow=""
                 allowFullScreen
               />
-
             </div>
           </div>
         </motion.div>
       </div>
-
-
-
       <div className="flex justify-center items-center w-full m-auto">
         <motion.div
           ref={ref} // Attach the ref to the element

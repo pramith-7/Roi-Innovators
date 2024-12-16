@@ -9,8 +9,9 @@ const PricingBox = (props: {
 
   return (
     <div className="w-full">
+      {/* Add relative positioning to the card container */}
       <div
-        className="wow fadeInUp z-10 rounded-3xl px-8 py-10 shadow-signUp bg-[#1D2144]"
+        className="wow fadeInUp z-10 relative rounded-3xl px-8 py-10 shadow-signUp bg-[#1D2144]"
         data-wow-delay=".1s"
       >
         <div className="flex items-center justify-between">
@@ -18,9 +19,7 @@ const PricingBox = (props: {
             $<span className="amount">{price}</span>
             <span className="time text-body-color">/{duration}</span>
           </h3>
-          <h4 className="mb-2 text-xl font-bold text-white">
-            {packageName}
-          </h4>
+          <h4 className="mb-2 text-xl font-bold text-white">{packageName}</h4>
         </div>
         <p className="mb-7 text-base text-body-color">{subtitle}</p>
         <div>{children}</div>
@@ -29,7 +28,7 @@ const PricingBox = (props: {
             Start Free Trial
           </button>
         </div>
-        <div className="absolute bottom-0 right-0 z-[-1]">
+        <div className="absolute bottom-20 right-0">
           <svg
             width="179"
             height="158"
@@ -70,7 +69,6 @@ const PricingBox = (props: {
                 <stop stopColor="#4A6CF7" stopOpacity="0.62" />
                 <stop offset="1" stopColor="#4A6CF7" stopOpacity="0" />
               </linearGradient>
-              
             </defs>
           </svg>
         </div>

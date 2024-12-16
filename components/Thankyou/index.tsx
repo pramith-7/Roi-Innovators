@@ -35,7 +35,7 @@ const Thankyou = () => {
             <h1 className="py-5 text-2xl md:text-4xl font-bold text-white">Your form has been submitted successfully!</h1>
             <Link href="/">
               <button className="bg-black border-2 border-iceblue hover:bg-iceblue hover:text-black hover:border-black text-white font-bold py-2 px-10 rounded mt-4">
-                OK
+                 Go to Homepage
               </button>
             </Link>
           </div>
