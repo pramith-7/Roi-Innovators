@@ -41,6 +41,18 @@ const WebDesignForm = () => {
                 e.preventDefault();
                 const formData = new FormData(e.currentTarget);
 
+                const Platforms = formData.getAll("Platforms");
+                const sharingContents = formData.getAll("Sharing-Contents");
+                const primaryGoals = formData.getAll("Primary-Goals");
+                const contentTypes = formData.getAll("Content-Types");
+                const metrics = formData.getAll("Metrics");
+            
+                formData.set("Platforms", Platforms.join(", "));
+                formData.set("Sharing-Contents", sharingContents.join(", "));
+                formData.set("Primary-Goals", primaryGoals.join(", "));
+                formData.set("Content-Types", contentTypes.join(", "));
+                formData.set("Metrics", metrics.join(", "));
+
                 try {
                   const response = await fetch('https://script.google.com/macros/s/AKfycbz_VH4pTir1i-e4jkDR36OcU-QO3GaWQoXB0tobjkluckNplvI0nQ9VhBIeOMGFHok33g/exec', {
                     method: 'POST',
@@ -184,7 +196,6 @@ const WebDesignForm = () => {
 
               <div className='grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 pb-10 gap-1'>
                 <div>
-                  <label htmlFor='platform'>
                     <input
                       id='facebook'
                       name="Platforms"
@@ -192,7 +203,6 @@ const WebDesignForm = () => {
                       value="facebook"
                       className="w-4 h-4"
                     />
-                  </label>
                   <label htmlFor='facebook'> Facebook </label>
                 </div>
 
@@ -462,7 +472,7 @@ const WebDesignForm = () => {
               </h1>
 
               <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="contenttype">
-                What types of content do you think resonate most with your audience?
+                What types of contents do you think resonate most with your audience?
               </label>
 
               <div className='grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 pb-10 gap-1'>
@@ -479,10 +489,10 @@ const WebDesignForm = () => {
 
                 <div>
                   <input
-                    id=' promotional,'
+                    id='promotional,'
                     name="Content-Types"
                     type="checkbox"
-                    value=" promotional,"
+                    value=" promotional"
                     className="w-4 h-4"
                   />
                   <label htmlFor='promotional,'>  Promotional </label>
@@ -490,13 +500,13 @@ const WebDesignForm = () => {
 
                 <div>
                   <input
-                    id='customer_engagement'
+                    id='customer-engagement'
                     name="Content-Types"
                     type="checkbox"
                     value="customer_engagement"
                     className="w-4 h-4"
                   />
-                  <label htmlFor='customer_engagement'> Customer Engagement </label>
+                  <label htmlFor='customer-engagement'> Customer Engagement </label>
                 </div>
 
                 <div>
@@ -1050,11 +1060,11 @@ const WebDesignForm = () => {
               </h1>
               <div className='pb-5'>
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="platforms">
-                  Are there any specific platforms you would like to focus on or avoid?
+                  Are there any specific platforms you would like to focus on ?
                 </label>
                 <input
                   id="platforms"
-                  name="Platforms"
+                  name="Focused-Platforms"
                   type="text"
                   className="w-full md:text-lg text-md p-2 md:p-3 border border-iceblue rounded-sm md:rounded-md bg-transparent font-light text-gray-200"
                   required

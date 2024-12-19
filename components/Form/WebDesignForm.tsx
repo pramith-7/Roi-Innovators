@@ -41,6 +41,16 @@ const WebDesignForm = () => {
                 e.preventDefault();
                 const formData = new FormData(e.currentTarget);
 
+                const feature = formData.getAll("Features");
+                const intergration = formData.getAll("Intergration");
+                const content = formData.getAll("Content-Types");
+                const userExperience = formData.getAll("User-Experience");
+            
+                formData.set("Features", feature.join(", "));
+                formData.set("Intergration", intergration.join(", "));
+                formData.set("Content-Types", content.join(", "));
+                formData.set("User-Experience", userExperience.join(", "));
+
                 try {
                   const response = await fetch('https://script.google.com/macros/s/AKfycbz_VH4pTir1i-e4jkDR36OcU-QO3GaWQoXB0tobjkluckNplvI0nQ9VhBIeOMGFHok33g/exec', {
                     method: 'POST',
