@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import ServiceBlock from "./serviceBlock";
 
-export default function Services() {
+export const Services = () => {
   const services = [
     { title: "Web Design", imgSrc: "/images/services/Web-Design.png", order: "textFirst" },
     { title: "Social Media Management", imgSrc: "/images/services/Social-Media-Managment.png", order: "imageFirst" },
@@ -14,6 +14,12 @@ export default function Services() {
 
   return (
     <div className="font-sans">
+      <div className="absolute opacity-20 md:opacity-55 justify-center z-[-1] transition -translate-x-96">
+        <div className="w-[400px] h-[1000px] rounded-full blur-[100px] bg-gradientbg2 "> </div>
+      </div>
+      <div className="absolute right-0 translate-x-80 opacity-20 md:opacity-55 z-[-1]">
+        <div className="w-[340px] h-[1000px] rounded-full blur-[100px] bg-gradientbg2"></div>
+      </div>
       <div className="container mx-auto">
         {/* Header Section */}
         <div className="text-center">
@@ -21,7 +27,7 @@ export default function Services() {
             initial={{ opacity: 0, y: -40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease: "easeOut" }}
-            className="text-white text-3xl leading-tight md:text-[45px] font-bold p-4 xl:px-72 my-14"
+            className="text-white text-3xl leading-tight md:text-[45px] font-bold p-4 xl:px-72"
           >
             Our Digital Marketing Services
           </motion.h1>
@@ -41,3 +47,6 @@ export default function Services() {
     </div>
   );
 }
+
+export default Services;
+ 

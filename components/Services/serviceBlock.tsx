@@ -29,7 +29,7 @@ function ServiceBlock({ title, imgSrc, order, index }) {
                 width={300}
                 height={300}
                 alt={title}
-                className="w-72 h-auto m-auto p-8 bg-teal-400/5 rounded-2xl"
+                className="w-72 h-auto m-auto p-8 bg-teal-400/5 rounded-2xl hover:scale-105 transition duration-300"
               />
             </div>
             <div className="absolute top-0 bottom-0 left-1/2 w-1 bg-teal-400 hidden md:block"></div>
@@ -67,7 +67,7 @@ function ServiceBlock({ title, imgSrc, order, index }) {
                 width={300}
                 height={300}
                 alt={title}
-                className="w-72 h-auto m-auto p-8 bg-iceblue/5 rounded-2xl"
+                className="w-72 h-auto m-auto p-8 bg-iceblue/5 rounded-2xl hover:scale-105 transition duration-300"
               />
             </div>
           </>

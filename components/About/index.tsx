@@ -24,7 +24,7 @@ const AboutSectionOne = () => {
   const isInView = useInView(ref, { once: true });
 
   return (
-    <section id="about" className="mt-10 relative overflow-x-clip">
+    <section id="about" className="relative overflow-x-clip">
       <div className="container lg:px-10">
         <div className="pb-16 border-white/[.15] md:pb-20 lg:pb-28">
           <div className="-mx-4 flex flex-wrap items-center">

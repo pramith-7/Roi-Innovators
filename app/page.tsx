@@ -1,6 +1,6 @@
 
 import Hero from "@/components/Hero";
-import AboutSectionOne from "@/components/About";
+import About from "@/components/About";
 import Brands from "@/components/Brands";
 import Contact from "@/components/Contact";
 import Video from "@/components/Video";
@@ -16,8 +16,8 @@ export default function Home() {
     <>
       <ScrollTop />
       <Hero />
-      <AboutSectionOne />
       <Video />
+      <About />
       <Services />
       <Brands />
       <Pagination />

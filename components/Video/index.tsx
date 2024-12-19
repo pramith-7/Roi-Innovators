@@ -9,28 +9,8 @@ const Video = () => {
   const isInView = useInView(ref, { once: true });
 
   return (
-    <section id="video" className="relative overflow-x-clip">
-      <div className="absolute opacity-55 justify-center z-[-1] transition -translate-x-96">
-        <div className="w-[400px] h-[800px] rounded-full blur-[100px] bg-gradientbg2 "> </div>
-      </div>
-      <div className="absolute right-0 translate-x-80 opacity-55 z-[-1]">
-        <div className="w-[340px] h-[800px] rounded-full blur-[100px] bg-gradientbg2"></div>
-      </div>
-
+    <section id="video" className="relative overflow-x-clip py-20">
       <div className="container xl:px-10">
-        <motion.div
-          ref={ref}
-          initial={{ opacity: 0, y: -40 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -100 }}
-          transition={{ duration: 0.5, ease: "easeOut" }}
-          className="wow fadeInUp"
-        >
-          <SectionTitle
-            title="WHAT WE ARE CAPABLE OF DOING ?"
-            paragraph="RoiInnovator is a place, where we transform your middle-class business into a powerful digital presence tool for business growth."
-            center
-          />
-        </motion.div>
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: -40 }}

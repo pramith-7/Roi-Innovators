@@ -13,7 +13,7 @@ const RoadMapItem = ({ id, stage, goal, activities, isEven }) => {
         ref={ref}
         initial={{ opacity: 0, y: -40 }}
         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -100 }}
-        transition={{ duration: 0.5, delay: 1, ease: "easeOut" }}
+        transition={{ duration: 0.5, delay: 0.5, ease: "easeOut" }}
       >
         <div
           className={`roadmap-item transition duration-500 hover:-translate-y-3  ${isEven ? 'roadmap-item--even' : 'roadmap-item--odd'
