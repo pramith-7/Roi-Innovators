@@ -13,6 +13,7 @@ export const Services = () => {
   ];
 
   return (
+    <section id="services" className="relative overflow-x-clip">
     <div className="font-sans">
       <div className="absolute opacity-20 md:opacity-55 justify-center z-[-1] transition -translate-x-96">
         <div className="w-[400px] h-[1000px] rounded-full blur-[100px] bg-gradientbg2 "> </div>
@@ -45,6 +46,7 @@ export const Services = () => {
         ))}
       </div>
     </div>
+    </section>
   );
 }
 

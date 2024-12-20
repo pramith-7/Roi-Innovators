@@ -17,7 +17,7 @@ const Testimonials = () => {
   const isInView = useInView(ref, { once: true });
 
   return (
-    <section id="benefits" className="relative py-16 md:py-20 lg:py-28 overflow-x-clip">
+    <section id="benifits" className="relative py-16 md:py-20 lg:py-28 overflow-x-clip">
       <div className="absolute opacity-20 justify-center z-[-1] transition-all translate-x-80 translate-y-24">
         <div className="w-[800px] h-[600px] rounded-full blur-[100px] bg-gradientbg"></div>
       </div>

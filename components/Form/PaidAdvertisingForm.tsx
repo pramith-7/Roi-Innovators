@@ -8,13 +8,7 @@ import { FaHome } from "react-icons/fa";
 
 const PaidAdvertisingForm = () => {
 
-  // Create a reference for the element
   const ref1 = useRef(null);
-  const ref2 = useRef(null);
-  const ref3 = useRef(null);
-  const ref4 = useRef(null);
-
-  // Hook to detect if the element is in view
   const isInView = useInView(ref1, { once: true });
 
   return (
@@ -33,13 +27,55 @@ const PaidAdvertisingForm = () => {
             </button>
           </Link>
           <h2 className="text-4xl md:text-6xl mt-4 pt-3 pb-8 text-center font-bold underline bg-gradient-to-r from-primary via-iceblue to-dark bg-[length:200%_auto] text-transparent bg-clip-text animate-gradient">
-            Paid Advertising          
+            Paid Advertising
           </h2>
           <div className="w-10"></div>
-        </div>   
+        </div>
         <div className="container mx-auto px-2 md:px-20 flex flex-col lg:flex-row lg:space-x-12" id="Contact">
           <div className="lg:w-full">
-            <form className="">
+            <form
+              onSubmit={async (e) => {
+                e.preventDefault();
+                const formData = new FormData(e.currentTarget);
+
+                const primaryGoals = formData.getAll("Primary_Goal");
+                const targetAudiance = formData.getAll("Target_Audience");
+                const platforms = formData.getAll("Platforms");
+                const adContentType = formData.getAll("Ad_Content_Type");
+                const creatives = formData.getAll("Creatives");
+                const focusedOn = formData.getAll("FocusedOn");
+                const kpi = formData.getAll("KPIs");
+                const targetingPreferences = formData.getAll("Targeting_Preferences");
+                const marketingChennels = formData.getAll("Marketing_Channels");
+
+                formData.set("Primary_Goal", primaryGoals.join(" , "));
+                formData.set("Target_Audience", targetAudiance.join(" , "));
+                formData.set("Platforms", platforms.join(" , "));
+                formData.set("Ad_Content_Type", adContentType.join(" , "));
+                formData.set("Creatives", creatives.join(" , "));
+                formData.set("FocusedOn", focusedOn.join(" , "));
+                formData.set("KPIs", kpi.join(" , "));
+                formData.set("Targeting_Preferences", targetingPreferences.join(" , "));
+                formData.set("Marketing_Channels", marketingChennels.join(" , "));
+
+                try {
+                  const response = await fetch('https://script.google.com/macros/s/AKfycbz_VH4pTir1i-e4jkDR36OcU-QO3GaWQoXB0tobjkluckNplvI0nQ9VhBIeOMGFHok33g/exec', {
+                    method: 'POST',
+                    body: formData,
+                  });
+
+                  const result = await response.json();
+                  if (result.result === 'success') {
+                    window.location.href = '/thankyou';
+                  } else {
+                    alert(`Error: ${result.message}`);
+                  }
+                } catch (error) {
+                  console.error('Error submitting form:', error);
+                  alert('An error occurred. Please try again later.');
+                }
+              }}
+            >
               <motion.div
                 ref={ref1} // Attach the ref to the element
                 initial={{ y: -100, opacity: 0 }}
@@ -47,6 +83,8 @@ const PaidAdvertisingForm = () => {
                 transition={{ duration: 1, delay: 0, ease: "easeOut" }}
                 className="wow fadeInUp"
               >
+                <input type="hidden" name="formName" value="Paid_Advertising" />
+                <input type="hidden" name="Submited-Time" value={new Date().toLocaleString()} />
                 <h1 className='text-2xl font-bold py-3'> 1. Business Overview </h1>
 
                 <div className='pb-5'>
@@ -55,7 +93,7 @@ const PaidAdvertisingForm = () => {
                   </label>
                   <input
                     id="company"
-                    name="Company_Name"
+                    name="Company"
                     type="text"
                     placeholder='type here the answer'
                     className="w-full md:text-lg text-md p-2 md:p-3 border border-iceblue placeholder-slate-700 rounded-sm md:rounded-md bg-transparent font-light text-gray-200"
@@ -70,11 +108,10 @@ const PaidAdvertisingForm = () => {
                   <div>
                     <input
                       id='primarygoal-1'
-                      name="Primary_Goal"
-                      type="radio"
+                      name="Primary_Goals"
+                      type="checkbox"
                       value="Increasing Brand Awareness"
                       className="w-4 h-4"
-                      required
                     />
                     <label htmlFor='primarygoal-1'> Increasing Brand Awareness </label>
                   </div>
@@ -82,11 +119,10 @@ const PaidAdvertisingForm = () => {
                   <div>
                     <input
                       id='primarygoal-2'
-                      name="Primary_Goal"
-                      type="radio"
+                      name="Primary_Goals"
+                      type="checkbox"
                       value="Driving Website Traffic"
                       className="w-4 h-4"
-                      required
                     />
                     <label htmlFor='primarygoal-2'> Driving Website Traffic </label>
                   </div>
@@ -94,11 +130,10 @@ const PaidAdvertisingForm = () => {
                   <div>
                     <input
                       id='primarygoal-3'
-                      name="Primary_Goal"
-                      type="radio"
+                      name="Primary_Goals"
+                      type="checkbox"
                       value="Generating Leads"
                       className="w-4 h-4"
-                      required
                     />
                     <label htmlFor='primarygoal-3'> Generating Leads </label>
                   </div>
@@ -106,11 +141,10 @@ const PaidAdvertisingForm = () => {
                   <div>
                     <input
                       id='primarygoal-4'
-                      name="Primary_Goal"
-                      type="radio"
+                      name="Primary_Goals"
+                      type="checkbox"
                       value="Boosting Sales"
                       className="w-4 h-4"
-                      required
                     />
                     <label htmlFor='primarygoal-4'> Boosting Sales </label>
                   </div>
@@ -118,43 +152,27 @@ const PaidAdvertisingForm = () => {
                   <div>
                     <input
                       id='primarygoal-5'
-                      name="Primary_Goal"
-                      type="radio"
+                      name="Primary_Goals"
+                      type="checkbox"
                       value="Promoting Specific Products/Services"
                       className="w-4 h-4"
-                      required
                     />
                     <label htmlFor='primarygoal-5'> Promoting Specific Products/Services </label>
                   </div>
                 </div>
 
-                <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="secondarygoal">
-                  Are there any secondary goals you want to achieve?
-                </label>
-                <div className='grid md:grid-cols-2 grid-cols-1 pb-10 gap-1'>
-                  <div>
-                    <input
-                      id='secondarygoal-1'
-                      name="Secondary_Goal"
-                      type="radio"
-                      value="Growing Social Media Followers"
-                      className="w-4 h-4"
-                      required
-                    />
-                    <label htmlFor='secondarygoal-1'> Growing Social Media Followers </label>
-                  </div>
-
-                  <div>
-                    <input
-                      id='secondarygoal-2'
-                      name="Secondary_Goal"
-                      type="radio"
-                      value="Building an Email List"
-                      className="w-4 h-4"
-                      required
-                    />
-                    <label htmlFor='secondarygoal-2'> Building an Email List </label>
-                  </div>
+                <div className='pb-5'>
+                  <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="secondarygoal">
+                    Are there any secondary goals you want to achieve?
+                  </label>
+                  <input
+                    id="Secondary_Goals"
+                    name="Secondary_Goals"
+                    type="text"
+                    placeholder='type here the answer'
+                    className="w-full md:text-lg text-md p-2 md:p-3 border border-iceblue placeholder-slate-700 rounded-sm md:rounded-md bg-transparent font-light text-gray-200"
+                    required
+                  />
                 </div>
 
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="action">
@@ -211,7 +229,6 @@ const PaidAdvertisingForm = () => {
                       type="checkbox"
                       value="Age"
                       className="w-4 h-4"
-                      required
                     />
                     <label htmlFor='audiance-1'> Age </label>
                   </div>
@@ -223,7 +240,6 @@ const PaidAdvertisingForm = () => {
                       type="checkbox"
                       value="Gender"
                       className="w-4 h-4"
-                      required
                     />
                     <label htmlFor='audiance-2'> Gender </label>
                   </div>
@@ -235,7 +251,6 @@ const PaidAdvertisingForm = () => {
                       type="checkbox"
                       value="Location"
                       className="w-4 h-4"
-                      required
                     />
                     <label htmlFor='audiance-3'> Location </label>
                   </div>
@@ -247,7 +262,6 @@ const PaidAdvertisingForm = () => {
                       type="checkbox"
                       value="Interests"
                       className="w-4 h-4"
-                      required
                     />
                     <label htmlFor='audiance-4'> Interests </label>
                   </div>
@@ -259,7 +273,6 @@ const PaidAdvertisingForm = () => {
                       type="checkbox"
                       value="Buying Behaviour"
                       className="w-4 h-4"
-                      required
                     />
                     <label htmlFor='audiance-5'> Buying Behaviour </label>
                   </div>
@@ -300,15 +313,13 @@ const PaidAdvertisingForm = () => {
 
                 <div className='grid md:grid-cols-2 grid-cols-1 pb-10 gap-1'>
                   <div>
-                    <label htmlFor='Answer1'>
-                      <input
-                        id='Answer1'
-                        name="Platforms"
-                        type="checkbox"
-                        value="Facebook"
-                        className="w-4 h-4"
-                      />
-                    </label>
+                    <input
+                      id='Answer1'
+                      name="Platforms"
+                      type="checkbox"
+                      value="Facebook"
+                      className="w-4 h-4"
+                    />
                     <label htmlFor='Answer1'> Facebook </label>
                   </div>
 
@@ -353,8 +364,9 @@ const PaidAdvertisingForm = () => {
                   <span className=''> EURO </span>
                   <input
                     id="budget"
-                    name="budget"
+                    name="Monthly_Budget"
                     type="number"
+                    min="0"
                     className="w-1/3 md:w-3/12 md:text-lg text-md p-2 md:p-3 border border-iceblue rounded-sm md:rounded-md bg-transparent font-light text-gray-200"
                     required
                   />
@@ -446,7 +458,7 @@ const PaidAdvertisingForm = () => {
                   <div>
                     <input
                       id='creative-1'
-                      name="Creative"
+                      name="Creatives"
                       type="checkbox"
                       value="Product Photos"
                       className="w-4 h-4"
@@ -457,7 +469,7 @@ const PaidAdvertisingForm = () => {
                   <div>
                     <input
                       id='creative-2'
-                      name="Creative"
+                      name="Creatives"
                       type="checkbox"
                       value="Videos"
                       className="w-4 h-4"
@@ -468,7 +480,7 @@ const PaidAdvertisingForm = () => {
                   <div>
                     <input
                       id='creative-3'
-                      name="Creative"
+                      name="Creatives"
                       type="checkbox"
                       value="Graphic design"
                       className="w-4 h-4"
@@ -601,7 +613,6 @@ const PaidAdvertisingForm = () => {
                       type="checkbox"
                       value="Holiday Sales"
                       className="w-4 h-4"
-                      required
                     />
                     <label htmlFor='focus-1'> Holiday Sales </label>
                   </div>
@@ -663,23 +674,21 @@ const PaidAdvertisingForm = () => {
                 </label>
                 <div className='grid md:grid-cols-2 grid-cols-1 pb-10 gap-1'>
                   <div>
-                    <label htmlFor='Answer1'>
-                      <input
-                        id='strategy-1'
-                        name="Preferred_Bidding_Strategy"
-                        type="radio"
-                        value="Cost per Click (CPC)"
-                        className="w-4 h-4"
-                        required
-                      />
-                    </label>
+                    <input
+                      id='strategy-1'
+                      name="Preferred_Bidding_Strategy"
+                      type="radio"
+                      value="Cost per Click (CPC)"
+                      className="w-4 h-4"
+                      required
+                    />
                     <label htmlFor='strategy-1'> Cost per Click (CPC) </label>
                   </div>
 
                   <div>
                     <input
                       id='strategy-2'
-                      name="strategy"
+                      name="Preferred_Bidding_Strategy"
                       type="radio"
                       value="Cost per Thousand Impressions"
                       className="w-4 h-4"
@@ -691,7 +700,7 @@ const PaidAdvertisingForm = () => {
                   <div>
                     <input
                       id='strategy-3'
-                      name="strategy"
+                      name="Preferred_Bidding_Strategy"
                       type="radio"
                       value="Conversion Optimization"
                       className="w-4 h-4"
@@ -759,9 +768,8 @@ const PaidAdvertisingForm = () => {
                       id='kpi-1'
                       name="KPIs"
                       type="checkbox"
-                      value="Answer7-1"
+                      value="Click-Through Rate"
                       className="w-4 h-4"
-                      required
                     />
                     <label htmlFor='kpi-1'> Click-Through Rate (CTR) </label>
                   </div>
@@ -773,7 +781,6 @@ const PaidAdvertisingForm = () => {
                       type="checkbox"
                       value="Conversion Rate"
                       className="w-4 h-4"
-                      required
                     />
                     <label htmlFor='kpi-2'>  Conversion Rate </label>
                   </div>
@@ -785,7 +792,6 @@ const PaidAdvertisingForm = () => {
                       type="checkbox"
                       value="Cost per Acquisition (CPA)"
                       className="w-4 h-4"
-                      required
                     />
                     <label htmlFor='kpi-3'>  Cost per Acquisition (CPA) </label>
                   </div>
@@ -797,7 +803,6 @@ const PaidAdvertisingForm = () => {
                       type="checkbox"
                       value="Return on Ad Spend (ROAS)"
                       className="w-4 h-4"
-                      required
                     />
                     <label htmlFor='kpi-4'>  Return on Ad Spend (ROAS) </label>
                   </div>
@@ -808,16 +813,14 @@ const PaidAdvertisingForm = () => {
                 </label>
                 <div className='grid md:grid-cols-2 grid-cols-1 pb-10 gap-1'>
                   <div>
-                    <label htmlFor='Answer1'>
-                      <input
-                        id='tools-1'
-                        name="Tracking_Tools"
-                        type="radio"
-                        value="Google Analytics"
-                        className="w-4 h-4"
-                        required
-                      />
-                    </label>
+                    <input
+                      id='tools-1'
+                      name="Tracking_Tools"
+                      type="radio"
+                      value="Google Analytics"
+                      className="w-4 h-4"
+                      required
+                    />
                     <label htmlFor='tools-1'> Google Analytics </label>
                   </div>
 
@@ -839,16 +842,14 @@ const PaidAdvertisingForm = () => {
                 </label>
                 <div className='grid md:grid-cols-2 grid-cols-1 pb-10 gap-1'>
                   <div>
-                    <label htmlFor='Answer1'>
-                      <input
-                        id='perfomance-1'
-                        name="Reports_Frequency"
-                        type="radio"
-                        value="Weekly"
-                        className="w-4 h-4"
-                        required
-                      />
-                    </label>
+                    <input
+                      id='perfomance-1'
+                      name="Reports_Frequency"
+                      type="radio"
+                      value="Weekly"
+                      className="w-4 h-4"
+                      required
+                    />
                     <label htmlFor='perfomance-1'> Weekly </label>
                   </div>
 
@@ -906,7 +907,6 @@ const PaidAdvertisingForm = () => {
                       type="checkbox"
                       value="Retargeting Website Visitors"
                       className="w-4 h-4"
-                      required
                     />
                     <label htmlFor='Answer8-1'> Retargeting Website Visitors </label>
                   </div>
@@ -1010,24 +1010,24 @@ const PaidAdvertisingForm = () => {
                   </div>
                 </div>
 
-                <div>
+                <div className="pb-5">
                   <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="disclaimers">
                     Do you have any legal disclaimers or terms that need to be included in the ads?
                   </label>
-                  <textarea name="Disclaimers" className='p-2 md:p-3 w-full h-40 bg-transparent border border-iceblue focus:border-2 rounded-sm md:rounded-md focus:border-white'>
+                  <textarea name="Disclaimers" className='p-2 md:p-3 w-full h-40 bg-transparent border border-iceblue focus:border-2 rounded-sm md:rounded-md focus:border-white' required>
                   </textarea>
                 </div>
 
-                <div>
+                <div className="pb-5">
                   <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="regulation">
                     Are there any industry regulations we need to consider when creating your ads?
                   </label>
-                  <textarea name="Industry_Regulations" className='p-2 md:p-3 w-full h-40 bg-transparent border border-iceblue focus:border-2 rounded-sm md:rounded-md focus:border-white'>
+                  <textarea name="Industry_Regulations" className='p-2 md:p-3 w-full h-40 bg-transparent border border-iceblue focus:border-2 rounded-sm md:rounded-md focus:border-white' required>
                   </textarea>
                 </div>
 
 
-                <hr className='mt-5 mb-5' />
+                <hr className='mt-20 mb-5' />
                 <h1 className='text-2xl font-bold py-3'> 10. Budget Allocation & Scaling </h1>
                 <div>
                   <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="allocating">
@@ -1059,19 +1059,26 @@ const PaidAdvertisingForm = () => {
                     </div>
                   </div>
 
-                  <div>
-                    <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="scalingbudget">
-                      Are you open to scaling the budget if the ads perform well?
-                    </label>
-                    <textarea name="Budget_Scaling" className='p-2 md:p-3 w-full h-40 bg-transparent border border-iceblue focus:border-2 rounded-sm md:rounded-md focus:border-white'>
-                    </textarea>
-                  </div>
+                  <div className='pb-5'>
+                  <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="budget">
+                  Are you open to scaling the budget if the ads perform well?
+                  </label>
+                  <input
+                    id="budget"
+                    name="Budget_Scaling"
+                    type="text"
+                    className="w-full md:text-lg text-md p-2 md:p-3 border border-iceblue placeholder-slate-700 rounded-sm md:rounded-md bg-transparent font-light text-gray-200"
+                    placeholder='type here the answer'
+                    required
+                  />
+                </div>
+
 
                   <div>
                     <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="contingency">
                       Do you have a contingency plan or budget in case the initial strategy needs adjustment?
                     </label>
-                    <textarea name="Contingency_Plan" className='p-2 md:p-3 w-full h-40 bg-transparent border border-iceblue focus:border-2 rounded-sm md:rounded-md focus:border-white'>
+                    <textarea name="Contingency_Plan" className='p-2 md:p-3 w-full h-40 bg-transparent border border-iceblue focus:border-2 rounded-sm md:rounded-md focus:border-white' required>
                     </textarea>
                   </div>
 
@@ -1091,7 +1098,6 @@ const PaidAdvertisingForm = () => {
                       type="checkbox"
                       value="Email marketing"
                       className="w-4 h-4"
-                      required
                     />
                     <label htmlFor='email-marketing'> Email marketing </label>
                   </div>
@@ -1103,7 +1109,6 @@ const PaidAdvertisingForm = () => {
                       type="checkbox"
                       value="SEO"
                       className="w-4 h-4"
-                      required
                     />
                     <label htmlFor='SEO'> SEO </label>
                   </div>
@@ -1115,7 +1120,6 @@ const PaidAdvertisingForm = () => {
                       type="checkbox"
                       value="Offline promotions"
                       className="w-4 h-4"
-                      required
                     />
                     <label htmlFor='offline-prootions'> Offline promotions </label>
                   </div>

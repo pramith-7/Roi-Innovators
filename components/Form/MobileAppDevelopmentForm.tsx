@@ -41,7 +41,29 @@ const MobileAppDevelopmentForm = () => {
           {/* Contact Form */}
 
           <div className="lg:w-full">
-            <form className="">
+          <form
+              onSubmit={async (e) => {
+                e.preventDefault();
+                const formData = new FormData(e.currentTarget);
+
+                try {
+                  const response = await fetch('https://script.google.com/macros/s/AKfycbz_VH4pTir1i-e4jkDR36OcU-QO3GaWQoXB0tobjkluckNplvI0nQ9VhBIeOMGFHok33g/exec', {
+                    method: 'POST',
+                    body: formData,
+                  });
+
+                  const result = await response.json();
+                  if (result.result === 'success') {
+                    window.location.href = '/thankyou';
+                  } else {
+                    alert(`Error: ${result.message}`);
+                  }
+                } catch (error) {
+                  console.error('Error submitting form:', error);
+                  alert('An error occurred. Please try again later.');
+                }
+              }}
+            >
               <motion.div
                 ref={ref1} // Attach the ref to the element
                 initial={{ y: -100, opacity: 0 }}
@@ -49,6 +71,8 @@ const MobileAppDevelopmentForm = () => {
                 transition={{ duration: 1, delay: 0, ease: "easeOut" }}
                 className="wow fadeInUp"
               >
+                <input type="hidden" name="formName" value="Mobile_App_Development" />
+                <input type="hidden" name="Submited-Time" value={new Date().toLocaleString()} />
                 <h1 className='text-2xl font-bold py-3'> 1. Business Overview </h1>
 
                 <div className='pb-5'>
@@ -95,7 +119,7 @@ const MobileAppDevelopmentForm = () => {
                 <h1 className='text-2xl font-bold py-3'> 2. Contact Information </h1>
                 <div className='pb-5'>
                   <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="persona">
-                    Your Name:
+                    Your Name : 
                   </label>
                   <input
                     id="Customer_Name"
@@ -108,7 +132,7 @@ const MobileAppDevelopmentForm = () => {
                 </div>
                 <div className='pb-5'>
                   <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="persona">
-                    Email Address:
+                    Email Address :
                   </label>
                   <input
                     id="Customer_Email"
@@ -121,16 +145,15 @@ const MobileAppDevelopmentForm = () => {
                 </div>
                 <div className='pb-5'>
                   <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="persona">
-                    Phone number:
+                    Phone number :
                   </label>
                   <input
                     id="Customer_Phone"
                     name="Customer_Phone"
                     type="tel"
-                    pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
-                    size={10}
+                    size={12}
                     className="w-full md:text-lg text-md p-2 md:p-3 border border-iceblue placeholder-slate-700 rounded-sm md:rounded-md bg-transparent font-light text-gray-200"
-                    placeholder=" Type your Phone Number here eg:- 123-4567890"
+                    placeholder="+94123456789"
                     required
                   />
                 </div>
@@ -152,34 +175,32 @@ const MobileAppDevelopmentForm = () => {
                     required
                   />
                 </div>
-                <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="budget">
+                <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="website">
                   Do you already have a website or social media presence?
                 </label>
                 <div className='grid md:grid-cols-2 grid-cols-1 pb-10 gap-1'>
                   <div>
-                    <label htmlFor='Answer1'>
                       <input
-                        id='answer1'
+                        id='website-yes'
                         name="Social_Media_Presence"
                         type="radio"
                         value="Yes"
                         className="w-4 h-4"
                         required
                       />
-                    </label>
-                    <label htmlFor='Answer1'> Yes </label>
+                    <label htmlFor='website-yes'> Yes </label>
                   </div>
 
                   <div>
                     <input
-                      id='Answer2'
+                      id='website-no'
                       name="Social_Media_Presence"
                       type="radio"
                       value="No"
                       className="w-4 h-4"
                       required
                     />
-                    <label htmlFor='Answer2'> No </label>
+                    <label htmlFor='website-no'> No </label>
                   </div>
                 </div>
 
@@ -187,18 +208,18 @@ const MobileAppDevelopmentForm = () => {
                   <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="regulation">
                     If Yes, please provide the Links.
                   </label>
-                  <textarea name="Social_Media_Presence" placeholder=" Paste Link Here " className='placeholder-slate-700 p-2 md:p-3 w-full h-20 bg-transparent border border-iceblue focus:border-2 rounded-sm md:rounded-md focus:border-white' >
+                  <textarea name="Social_Media_Presence_Reason" placeholder=" Paste Link Here " className='placeholder-slate-700 p-2 md:p-3 w-full h-20 bg-transparent border border-iceblue focus:border-2 rounded-sm md:rounded-md focus:border-white' >
                   </textarea>
                 </div>
 
-                <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="budget">
+                <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="platform">
                   What platforms do you want the app to be developed for?
                 </label>
                 <div className='grid md:grid-cols-2 grid-cols-1 pb-10 gap-1'>
                   <div>
                     <label htmlFor='Answer1'>
                       <input
-                        id='answer1'
+                        id='platform-1'
                         name="Platforms"
                         type="radio"
                         value="Android"
@@ -206,31 +227,31 @@ const MobileAppDevelopmentForm = () => {
                         required
                       />
                     </label>
-                    <label htmlFor='Answer1'> Android </label>
+                    <label htmlFor='platform-1'> Android </label>
                   </div>
 
                   <div>
                     <input
-                      id='Answer2'
+                      id='platform-2'
                       name="Platforms"
                       type="radio"
                       value="IOS"
                       className="w-4 h-4"
                       required
                     />
-                    <label htmlFor='Answer2'> IOS </label>
+                    <label htmlFor='platform-2'> IOS </label>
                   </div>
 
                   <div>
                     <input
-                      id='Answer2'
+                      id='platform-3'
                       name="Platforms"
                       type="radio"
                       value="Both"
                       className="w-4 h-4"
                       required
                     />
-                    <label htmlFor='Answer2'> Both </label>
+                    <label htmlFor='platform-3'> Both </label>
                   </div>
                 </div>
 
@@ -242,7 +263,7 @@ const MobileAppDevelopmentForm = () => {
                     id="Mobile_App_Purpose"
                     name="Launch_Date"
                     type="date"
-                    className="w-full md:text-lg text-md p-2 md:p-3 border border-iceblue placeholder-slate-700 rounded-sm md:rounded-md bg-transparent font-light text-gray-200"
+                    className="w-full md:w-1/3 md:text-lg text-md p-2 md:p-3 border border-iceblue placeholder-slate-700 rounded-sm md:rounded-md bg-transparent font-light text-gray-200"
                     placeholder=""
                     required
                   />
@@ -258,51 +279,49 @@ const MobileAppDevelopmentForm = () => {
                   </textarea>
                 </div>
 
-                <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="budget">
+                <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="intergration">
                   Do you need any integrations with existing systems?
                 </label>
                 <div className='grid md:grid-cols-2 grid-cols-1 pb-10 gap-1'>
                   <div>
-                    <label htmlFor='Answer1'>
                       <input
-                        id='answer1'
+                        id='intergration-1'
                         name="Integration_Systems"
                         type="radio"
                         value="POS"
                         className="w-4 h-4"
                         required
                       />
-                    </label>
-                    <label htmlFor='Answer1'> POS </label>
+                    <label htmlFor='intergration-1'> POS </label>
                   </div>
 
                   <div>
                     <input
-                      id='Answer2'
+                      id='intergration-2'
                       name="Integration_Systems"
                       type="radio"
                       value="CRM"
                       className="w-4 h-4"
                       required
                     />
-                    <label htmlFor='Answer2'> CRM </label>
+                    <label htmlFor='intergration-2'> CRM </label>
                   </div>
 
                   <div>
                     <input
-                      id='Answer2'
+                      id='intergration-3'
                       name="Integration_Systems"
                       type="radio"
                       value="Third-party Tools"
                       className="w-4 h-4"
                       required
                     />
-                    <label htmlFor='Answer2'> Third-party Tools </label>
+                    <label htmlFor='intergration-3'> Third-party Tools </label>
                   </div>
                 </div>
 
                 <div className='pb-5'>
-                  <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="persona">
+                  <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="analytics">
                     Would you like us to include analytics to track user behavior and app performance?
                   </label>
                   <input
@@ -358,15 +377,16 @@ const MobileAppDevelopmentForm = () => {
                 <h1 className='text-2xl font-bold py-3'> 7. Budget & Expectations </h1>
 
                 <div className='pb-5'>
-                  <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="competitors">
-                    Do you have a budget range for this project?
+                  <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="budget">
+                    What is your budget for social media advertising?
                   </label>
+                  <span className=''> EURO </span>
                   <input
-                    id="competitors"
+                    id="budget"
                     name="Budget_Range"
-                    type="text"
-                    placeholder='Type here the answer eg:- €5000 - €10000'
-                    className="w-full md:text-lg text-md p-2 md:p-3 border border-iceblue placeholder-slate-700 rounded-sm md:rounded-md bg-transparent font-light text-gray-200"
+                    type="number"
+                    min="0"
+                    className="w-1/3 md:w-3/12 md:text-lg text-md p-2 md:p-3 border border-iceblue rounded-sm md:rounded-md bg-transparent font-light text-gray-200"
                     required
                   />
                 </div>
