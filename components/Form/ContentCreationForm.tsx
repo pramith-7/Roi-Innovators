@@ -41,7 +41,34 @@ const ContentCreationForm = () => {
           {/* Contact Form */}
 
           <div className="lg:w-full">
-            <form className="">
+            <form className=""
+            
+            onSubmit={async (e) => {
+              e.preventDefault();
+              const formData = new FormData(e.currentTarget);
+
+              const platform = formData.getAll("Platforms");
+                       
+              formData.set("Platforms", platform.join(", "));
+              try {
+                const response = await fetch('https://script.google.com/macros/s/AKfycbz_VH4pTir1i-e4jkDR36OcU-QO3GaWQoXB0tobjkluckNplvI0nQ9VhBIeOMGFHok33g/exec', {
+                  method: 'POST',
+                  body: formData,
+                });
+
+                const result = await response.json();
+                if (result.result === 'success') {
+                  window.location.href = '/thankyou';
+                } else {
+                  alert(`Error: ${result.message}`);
+                }
+              } catch (error) {
+                console.error('Error submitting form:', error);
+                alert('An error occurred. Please try again later.');
+              }
+            }}
+
+            >
               <motion.div
                 ref={ref1} // Attach the ref to the element
                 initial={{ y: -100, opacity: 0 }}
@@ -49,6 +76,8 @@ const ContentCreationForm = () => {
                 transition={{ duration: 1, delay: 0, ease: "easeOut" }}
                 className="wow fadeInUp"
               >
+                <input type="hidden" name="formName" value="Content_Creation" />
+                <input type="hidden" name="Submited-Time" value={new Date().toLocaleString()} />
                 <h1 className='text-2xl font-bold py-3'> 1. Content Goals & Objectives </h1>
 
                 <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="primarygoal">
@@ -221,8 +250,8 @@ const ContentCreationForm = () => {
                     How would you describe your brand’s voice and tone?
                   </label>
                   <input
-                    id="Brand_Voice"
-                    name="Brand_Voice"
+                    id="Brand_Voice_Description"
+                    name="Brand_Voice_Description"
                     type="text"
                     className="w-full md:text-lg text-md p-2 md:p-3 border border-iceblue placeholder-slate-700 rounded-sm md:rounded-md bg-transparent font-light text-gray-200"
                     placeholder="e.g. formal, casual, humorous, authoritative"
@@ -236,8 +265,8 @@ const ContentCreationForm = () => {
 
                   </label>
                   <input
-                    id="Specific_Elements"
-                    name="Specific_Elements"
+                    id="Specific_Elements_Included"
+                    name="Specific_Elements_Included"
                     type="text"
                     className="w-full md:text-lg text-md p-2 md:p-3 border border-iceblue placeholder-slate-700 rounded-sm md:rounded-md bg-transparent font-light text-gray-200"
                     placeholder="e.g., slogans, catchphrases "
@@ -254,8 +283,8 @@ const ContentCreationForm = () => {
                     What types of content are you most interested in creating?
                   </label>
                   <input
-                    id="Types_Of_Content"
-                    name="Types_Of_Content"
+                    id="Interested_Content_Type"
+                    name="Interested_Content_Type"
                     type="text"
                     placeholder='e.g. blog posts, social media posts, videos, infographics, product photography'
                     className="w-full md:text-lg text-md p-2 md:p-3 border border-iceblue placeholder-slate-700 rounded-sm md:rounded-md bg-transparent font-light text-gray-200"
@@ -282,8 +311,8 @@ const ContentCreationForm = () => {
                     Do you want to focus on any particular content themes or topics?
                   </label>
                   <input
-                    id="Focus_Topics"
-                    name="Focus_Topics"
+                    id="Focused_Content_Themes"
+                    name="Focused_Content_Themes"
                     type="text"
                     placeholder='e.g. how-tos, industry news, behind-the-scenes, customer stories'
                     className="w-full md:text-lg text-md p-2 md:p-3 border border-iceblue placeholder-slate-700 rounded-sm md:rounded-md bg-transparent font-light text-gray-200"
@@ -304,7 +333,7 @@ const ContentCreationForm = () => {
                   <div>
                     <input
                       id='offers-1'
-                      name="Content_Frequency"
+                      name="New_Content_Frequency"
                       type="radio"
                       value="Daily"
                       className="w-4 h-4"
@@ -316,7 +345,7 @@ const ContentCreationForm = () => {
                   <div>
                     <input
                       id='offers-2'
-                      name="Content_Frequency"
+                      name="New_Content_Frequency"
                       type="radio"
                       value="Weekly"
                       className="w-4 h-4"
@@ -328,7 +357,7 @@ const ContentCreationForm = () => {
                   <div>
                     <input
                       id='offers-3'
-                      name="Content_Frequency"
+                      name="New_Content_Frequency"
                       type="radio"
                       value="Monthly"
                       className="w-4 h-4"
@@ -357,8 +386,8 @@ const ContentCreationForm = () => {
                     Do you have a content calendar or schedule in mind?
                   </label>
                   <input
-                    id="Content_Schedule"
-                    name="Content_Schedule"
+                    id="Content_Calendar"
+                    name="Content_Calendar"
                     type="text"
                     placeholder='Type here the answer'
                     className="w-full md:text-lg text-md p-2 md:p-3 border border-iceblue placeholder-slate-700 rounded-sm md:rounded-md bg-transparent font-light text-gray-200"
@@ -373,8 +402,8 @@ const ContentCreationForm = () => {
                     What style of visuals do you prefer?
                   </label>
                   <input
-                    id="Style_of_Visuals"
-                    name="Style_of_Visuals"
+                    id="Visual_Style"
+                    name="Visual_Style"
                     type="text"
                     placeholder='e.g. minimalist, vibrant, illustrative, realistic'
                     className="w-full md:text-lg text-md p-2 md:p-3 border border-iceblue placeholder-slate-700 rounded-sm md:rounded-md bg-transparent font-light text-gray-200"
@@ -449,8 +478,8 @@ const ContentCreationForm = () => {
                     Who will be responsible for approving the content before it goes live?
                   </label>
                   <input
-                    id="Responsible_Personnal"
-                    name="Responsible_Personnal"
+                    id="Responsible_Parties"
+                    name="Responsible_Parties"
                     type="text"
                     placeholder='type here the answer'
                     className="w-full md:text-lg text-md p-2 md:p-3 border border-iceblue placeholder-slate-700 rounded-sm md:rounded-md bg-transparent font-light text-gray-200"
@@ -463,8 +492,8 @@ const ContentCreationForm = () => {
                     What is your preferred review and approval process?
                   </label>
                   <input
-                    id="Approval_Process"
-                    name="Approval_Process"
+                    id="Preferred_Review_Process"
+                    name="Preferred_Review_Process"
                     type="text"
                     placeholder='e.g., first drafts, feedback rounds'
                     className="w-full md:text-lg text-md p-2 md:p-3 border border-iceblue placeholder-slate-700 rounded-sm md:rounded-md bg-transparent font-light text-gray-200"
@@ -496,9 +525,9 @@ const ContentCreationForm = () => {
                   <div>
                     <input
                       id='customaudiance-yes'
-                      name="Admired_content"
+                      name="Admired_Competitors"
                       type="radio"
-                      value="Email List"
+                      value="Yes"
                       className="w-4 h-4"
                       required
                     />
@@ -508,7 +537,7 @@ const ContentCreationForm = () => {
                   <div>
                     <input
                       id='customaudiance-no'
-                      name="Admired_content"
+                      name="Admired_Competitors"
                       type="radio"
                       value="No"
                       className="w-4 h-4"
@@ -620,8 +649,8 @@ const ContentCreationForm = () => {
                     Do you have any specific distribution strategies or times you want to post?
                   </label>
                   <input
-                    id="Specific_Distribution_Strategies"
-                    name="Specific_Distribution_Strategies"
+                    id="Distribution_Strategies"
+                    name="Distribution_Strategies"
                     type="text"
                     placeholder='type here the answer'
                     className="w-full md:text-lg text-md p-2 md:p-3 border border-iceblue placeholder-slate-700 rounded-sm md:rounded-md bg-transparent font-light text-gray-200"
@@ -670,8 +699,8 @@ const ContentCreationForm = () => {
                     How do you plan to measure the success of the content?
                   </label>
                   <input
-                    id="Measure_Success"
-                    name="Measure_Success"
+                    id="Success_Measurements"
+                    name="Success_Measurements"
                     type="text"
                     placeholder='e.g., social media analytics, sales data, customer feedback'
                     className="w-full md:text-lg text-md p-2 md:p-3 border border-iceblue placeholder-slate-700 rounded-sm md:rounded-md bg-transparent font-light text-gray-200"
@@ -684,8 +713,8 @@ const ContentCreationForm = () => {
                     Do you have any previous content performance data that we can review to guide the creation of new content?
                   </label>
                   <input
-                    id="previous_content"
-                    name="previous_content"
+                    id="Previous_Content_Datas"
+                    name="Previous_Content_Datas"
                     type="text"
                     placeholder='type here the answer'
                     className="w-full md:text-lg text-md p-2 md:p-3 border border-iceblue placeholder-slate-700 rounded-sm md:rounded-md bg-transparent font-light text-gray-200"
@@ -762,8 +791,8 @@ const ContentCreationForm = () => {
                     Do you plan to expand your content types or channels in the future?
                   </label>
                   <input
-                    id="Expand_Content"
-                    name="Expand_Content"
+                    id="Expandings_In_Future"
+                    name="Expandings_In_Future"
                     type="text"
                     placeholder='e.g. starting a YouTube channel, creating a blog'
                     className="w-full md:text-lg text-md p-2 md:p-3 border border-iceblue placeholder-slate-700 rounded-sm md:rounded-md bg-transparent font-light text-gray-200"
@@ -823,7 +852,7 @@ const ContentCreationForm = () => {
                   <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="regulation">
                     Are there any content types or topics you’d like to avoid?
                   </label>
-                  <textarea name="Avoid_Content" placeholder=" Type here the answer  " className='placeholder-slate-700 p-2 md:p-3 w-full h-40 bg-transparent border border-iceblue focus:border-2 rounded-sm md:rounded-md focus:border-white' >
+                  <textarea name="Avoid_Content_Type" placeholder=" Type here the answer  " className='placeholder-slate-700 p-2 md:p-3 w-full h-40 bg-transparent border border-iceblue focus:border-2 rounded-sm md:rounded-md focus:border-white' >
                   </textarea>
                 </div>
 

@@ -41,7 +41,38 @@ const CopyWritingForm = () => {
           {/* Contact Form */}
 
           <div className="lg:w-full">
-            <form className="">
+            <form
+            
+            onSubmit={async (e) => {
+              e.preventDefault();
+              const formData = new FormData(e.currentTarget);
+
+              const AdContentType = formData.getAll("Ad_Content_Type");
+              const ExsistingCreatives = formData.getAll("Exsisting_Creatives");
+                       
+              formData.set("Ad_Content_Type", AdContentType.join(", "));
+              formData.set("Exsisting_Creatives", ExsistingCreatives.join(", "));
+
+              try {
+                const response = await fetch('https://script.google.com/macros/s/AKfycbz_VH4pTir1i-e4jkDR36OcU-QO3GaWQoXB0tobjkluckNplvI0nQ9VhBIeOMGFHok33g/exec', {
+                  method: 'POST',
+                  body: formData,
+                });
+
+                const result = await response.json();
+                if (result.result === 'success') {
+                  window.location.href = '/thankyou';
+                } else {
+                  alert(`Error: ${result.message}`);
+                }
+              } catch (error) {
+                console.error('Error submitting form:', error);
+                alert('An error occurred. Please try again later.');
+              }
+            }}
+
+
+            >
               <motion.div
                 ref={ref1} // Attach the ref to the element
                 initial={{ y: -100, opacity: 0 }}
@@ -49,6 +80,8 @@ const CopyWritingForm = () => {
                 transition={{ duration: 1, delay: 0, ease: "easeOut" }}
                 className="wow fadeInUp"
               >
+                <input type="hidden" name="formName" value="Copy_Writing" />
+                <input type="hidden" name="Submited-Time" value={new Date().toLocaleString()} />
                 <h1 className='text-2xl font-bold py-3'> 1. Objectives & Goals </h1>
 
                 <div className='pb-5'>
@@ -297,38 +330,38 @@ const CopyWritingForm = () => {
 
                 <div className='grid md:grid-cols-2 grid-cols-1 pb-10 gap-1'>
                   <div>
-                    <label htmlFor='Answer1'>
+                    <label htmlFor='Exsisting_Creatives'>
                       <input
-                        id='Answer1'
-                        name="Creative"
+                        id='Exsisting_Creatives'
+                        name="Exsisting_Creatives"
                         type="checkbox"
                         value="Product Photos"
                         className="w-4 h-4"
                       />
                     </label>
-                    <label htmlFor='Answer1'> Product Photos </label>
+                    <label htmlFor='Exsisting_Creatives'> Product Photos </label>
                   </div>
 
                   <div>
                     <input
-                      id='Answer2'
-                      name="Creative"
+                      id='Exsisting_Creatives'
+                      name="Exsisting_Creatives"
                       type="checkbox"
                       value="Videos"
                       className="w-4 h-4"
                     />
-                    <label htmlFor='Answer2'> Videos </label>
+                    <label htmlFor='Exsisting_Creatives'> Videos </label>
                   </div>
 
                   <div>
                     <input
-                      id='Answer3'
-                      name="Creative"
+                      id='Exsisting_Creatives'
+                      name="Exsisting_Creatives"
                       type="checkbox"
                       value="Graphic design"
                       className="w-4 h-4"
                     />
-                    <label htmlFor='Answer3'> Graphic design </label>
+                    <label htmlFor='Exsisting_Creatives'> Graphic design </label>
                   </div>
                 </div>
 
@@ -337,9 +370,9 @@ const CopyWritingForm = () => {
                 </label>
                 <div className='grid md:grid-cols-2 grid-cols-1 pb-10 gap-1'>
                   <div>
-                    <label htmlFor='Answer1'>
+                    <label htmlFor='CTA'>
                       <input
-                        id='Answer1'
+                        id='CTA'
                         name="CTA"
                         type="radio"
                         value="Shop Now"
@@ -347,43 +380,44 @@ const CopyWritingForm = () => {
                         required
                       />
                     </label>
-                    <label htmlFor='Answer1'> Shop Now </label>
+                    <label htmlFor='CTA'> Shop Now </label>
                   </div>
 
                   <div>
                     <input
-                      id='Answer2'
+                      id='CTA'
                       name="CTA"
                       type="radio"
                       value="Learn More"
                       className="w-4 h-4"
                       required
                     />
-                    <label htmlFor='Answer2'> Learn More </label>
+                    <label htmlFor='CTA'> Learn More </label>
                   </div>
 
                   <div>
                     <input
-                      id='Answer3'
+                      id='CTA'
                       name="CTA"
                       type="radio"
                       value="Sign Up"
                       className="w-4 h-4"
                       required
                     />
-                    <label htmlFor='Answer3'> Sign Up </label>
+                    <label htmlFor='CTA'> Sign Up </label>
                   </div>
                 </div>
 
                 <div className='pb-5'>
                   <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="preferences">
-                    Do you have any specific design preferences or brand guidelines? (e.g., color schemes, fonts, logos)
+                    Do you have any specific design preferences or brand guidelines?
                   </label>
                   <input
                     id="preferences"
                     name="Preferences"
                     type="text"
-                    className="w-full md:text-lg text-md p-2 md:p-3 border border-iceblue rounded-sm md:rounded-md bg-transparent font-light text-gray-200"
+                    placeholder='e.g. color schemes, fonts, logos'
+                    className="w-full md:text-lg text-md p-2 md:p-3 border border-iceblue placeholder-slate-700 rounded-sm md:rounded-md bg-transparent font-light text-gray-200"
                     required
                   />
                 </div>
@@ -513,7 +547,7 @@ const CopyWritingForm = () => {
                 <h1 className='text-2xl font-bold py-3'> 6. Competitor Analysis </h1>
                 <div className='pb-5'>
                   <label className="md:text-lg text-md block text-gray-400 font-sans mb-2" htmlFor="competitors">
-                    Are there any competitors whose copywriting you admire?(What do you like about their approach?)
+                    Are there any competitors whose copywriting you admire?(What do you like about their approach?
                   </label>
                   <input
                     id="competitors"
