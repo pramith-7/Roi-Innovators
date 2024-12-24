@@ -32,11 +32,6 @@
   }
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
-
 li {
   list-style: none;
 }

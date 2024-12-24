@@ -20,7 +20,7 @@
     "@tsparticles/react": "^3.0.0",
     "eslint-config-next": "13.1.6",
     "framer-motion": "^11.9.0",
-    "lenis": "^1.1.17",
+    "lenis": "^1.1.18",
     "mui": "^0.0.1",
     "next": "^13.1.6",
     "next-themes": "^0.2.1",
@@ -35,7 +35,6 @@
     "react-vertical-timeline-component": "^3.6.0",
     "reactjs-popup": "^2.0.6",
     "sharp": "^0.33.5",
-    "smooth-scrollbar": "^8.8.4",
     "startup-nextjs-template": "file:",
     "tsparticles": "^3.7.1"
   },
