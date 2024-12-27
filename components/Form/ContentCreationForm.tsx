@@ -637,7 +637,7 @@ const ContentCreationForm = () => {
                       id='platform-4'
                       name="Platforms"
                       type="checkbox"
-                      value="LinkedIn'"
+                      value="LinkedIn"
                       className="w-4 h-4"
                     />
                     <label htmlFor='platform-4'> LinkedIn </label>
