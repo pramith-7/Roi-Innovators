@@ -11,6 +11,7 @@ import {
   Copywriting,
   Contentcreation,
 } from "@/components/Roadmap";
+import { PricingpaidAdvertistment, PricingSocialMediamanagement, PricingWebDesign } from "../Pricing";
 
 const tabConfig = [
   {
@@ -21,6 +22,7 @@ const tabConfig = [
      seamless user experience across all devices. Whether it’s a sleek landing page or a full e-commerce platform, we bring your vision to 
      life and drive real business results. Let us transform your online presence today!`,
     component: <WebDesign />,
+    pricing:<PricingWebDesign />
   },
   {
     id: "socialmediamanagement",
@@ -29,6 +31,7 @@ const tabConfig = [
     and foster meaningful connections with your audience across platforms like Facebook, Instagram, TikTok and LinkedIn. Our data-driven strategies ensure consistent
     growth and measurable results. Let us handle your social media presence, and watch your business thrive!`,
     component: <SocialMediaManagement />,
+    pricing:<PricingSocialMediamanagement />
   },
   {
     id: "paidadvertising",
@@ -38,6 +41,7 @@ const tabConfig = [
      maximum ROI. From strategy to execution, we help you reach the right audience and achieve measurable results that grow your business. 
      Let’s turn clicks into customers!`,
     component: <PaidAdvertising />,
+    pricing:<PricingpaidAdvertistment/>
   },
   {
     id: "mobileappdevelopment",
@@ -69,7 +73,15 @@ export default function TabsComponent() {
   const [activeTab, setActiveTab] = useState(tabConfig[0].id);
 
   const ref = useRef(null);
+  const ref1 = useRef(null);
+  const ref2 = useRef(null);
+  const ref3 = useRef(null);
+  const ref4 = useRef(null);
   const isInView = useInView(ref, { once: true });
+  const isInView1 = useInView(ref, { once: true });
+  const isInView2 = useInView(ref2, { once: true });
+  const isInView3 = useInView(ref3, { once: true });
+  const isInView4 = useInView(ref3, { once: true });
 
   return (
     <section
@@ -95,9 +107,9 @@ export default function TabsComponent() {
           <div className="bg-slate-950/85">
             <div className="py-5 mt-10 container mx-auto z-10">
               <motion.p
-                ref={ref}
+                ref={ref1}
                 initial={{ opacity: 0, y: -40 }}
-                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -100 }}
+                animate={isInView1 ? { opacity: 1, y: 0 } : { opacity: 0, y: -100 }}
                 transition={{ duration: 0.5, ease: "easeOut" }}
                 className="text-body-color text-xl md:text-2xl pt-10 pb-2"
               >
@@ -107,9 +119,9 @@ export default function TabsComponent() {
 
               {/* Tabs */}
               <motion.ul
-                ref={ref}
+                ref={ref2}
                 initial={{ opacity: 0, y: -40 }}
-                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -100 }}
+                animate={isInView2 ? { opacity: 1, y: 0 } : { opacity: 0, y: -100 }}
                 transition={{ duration: 0.5, delay:0.3, ease: "easeOut" }}
                 className="flex flex-wrap justify-center text-center text-xs md:text-base mb-4"
                 role="tablist"
@@ -139,9 +151,9 @@ export default function TabsComponent() {
                     activeTab === id && (
                       <motion.div
                         key={id}
-                        ref={ref}
+                        ref={ref3}
                         initial={{ opacity: 0, y: -40 }}
-                        animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -100 }}
+                        animate={isInView3 ? { opacity: 1, y: 0 } : { opacity: 0, y: -100 }}
                         transition={{ duration: 0.5, delay:0.5 ,ease: "easeOut" }}
                         role="tabpanel"
                         aria-labelledby={`${id}-tab`}
@@ -177,6 +189,24 @@ export default function TabsComponent() {
             </div>
           </div>
         </div>
+        <div>
+                {tabConfig.map(
+                  ({ id, pricing }) =>
+                    activeTab === id && (                      
+                      <motion.div
+                      key={id}
+                      ref={ref4}
+                      initial={{ opacity: 0, y: -40 }}
+                      animate={isInView4 ? { opacity: 1, y: 0 } : { opacity: 0, y: -100 }}
+                      transition={{ duration: 0.5, delay:0.5 ,ease: "easeOut" }}
+                      role="tabpanel"
+                      aria-labelledby={`${id}-tab`}
+                    >                     
+                          {pricing}
+                    </motion.div>                         
+                    )
+                )}
+              </div>
       </div>
     </section>
   );

@@ -4,7 +4,6 @@ import About from "@/components/About";
 import Brands from "@/components/Brands";
 import Contact from "@/components/Contact";
 import Video from "@/components/Video";
-import Pricing from "@/components/Pricing";
 import Testimonials from "@/components/Testimonials";
 import Pagination from "@/components/Paginations";
 import ScrollTop from "@/components/ScrollToTop";
@@ -21,7 +20,6 @@ export default function Home() {
       <Services />
       <Brands />
       <Pagination />
-      <Pricing />
       <Testimonials />
       <Contact />
     </>
